@@ -6,25 +6,28 @@ A skill is a folder with a `SKILL.md` in it. Claude reads the description, decid
 
 ## What's here
 
+### Customer success
+
 | Skill | What it does |
 | :--- | :--- |
-| [`call-recap-follow-up`](skills/call-recap-follow-up) | Turns a call into an honest read of how it went, plus every follow-up email it generated, grouped by recipient and staged as drafts. Recorder-agnostic: it uses whichever meeting tool you have connected, and asks you for the transcript when you have none. |
-| [`email-critic`](skills/email-critic) | Stress-tests an email you have already drafted against the source transcript and the account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
-| [`chat-context`](skills/chat-context) | Carries context between chats. Handoff mode writes a structured context file when a session ends; resume mode reads it back and states what was loaded before doing any work. |
-| [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. Fires on request, or on its own when a task looks expensive. |
+| [`renewal-risk-read`](skills/renewal-risk-read) | Produces a defensible read on whether an account will renew — the decision, the decider, the mechanism, the dollars and the play. Built on the principle that usage tells you about the user while the renewal is decided by the buyer. |
+| [`business-review-prep`](skills/business-review-prep) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, three to five themes, and an explicit ask. Tells you when a business review is the wrong meeting to run. |
+| [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can point to, with success criteria carrying a baseline and the early signals that predict a bad year. |
+| [`call-recap-follow-up`](skills/call-recap-follow-up) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Recorder-agnostic. |
+| [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose. |
+
+### General
+
+Useful in any role, included because customer success work runs long sessions and heavy context.
+
+| Skill | What it does |
+| :--- | :--- |
+| [`chat-context`](skills/chat-context) | Carries context between chats. Handoff writes a structured context file; resume reads it back and states what was loaded. |
+| [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. |
 
 ### They work without any setup
 
-You do not need a workspace, a `CLAUDE.md`, a `MEMORY.md`, connectors or file access. Every skill states its floor in a **What this needs** section and runs from there:
-
-| | Works with nothing but | Gets better with |
-| :--- | :--- | :--- |
-| `call-recap-follow-up` | a pasted transcript | a meeting recorder, a mailbox, account notes, a voice guide |
-| `email-critic` | the draft itself | the transcript, the thread, account notes, a voice guide |
-| `chat-context` | nothing — the handoff prints in chat to paste forward | file access, which turns handoffs into a saved trail with an index |
-| `optimize-tokens` | nothing | nothing |
-
-Missing context never blocks a skill. It changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
+You do not need a workspace, a `CLAUDE.md`, connectors or file access. Every skill states its floor in a **What this needs** section and runs from there — most work from what you paste into the chat. Missing context never blocks a skill; it changes what the skill can honestly claim, and each one says which checks it could not run rather than guessing around the gap.
 
 ## Install
 
