@@ -1,0 +1,25 @@
+{
+  "name": "cs-pulse-skills",
+  "owner": {
+    "name": "CS Pulse",
+    "url": "https://github.com/CSPulse"
+  },
+  "metadata": {
+    "description": "AI skills for customer success work",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "cs-skills",
+      "description": "Four skills for customer-facing work and long sessions: post-call follow-up drafting from any meeting recorder, email critique, chat handoffs, and token efficiency",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/call-recap-follow-up",
+        "./skills/chat-context",
+        "./skills/email-critic",
+        "./skills/optimize-tokens"
+      ]
+    }
+  ]
+}
