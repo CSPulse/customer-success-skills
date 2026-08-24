@@ -35,7 +35,7 @@ You do not need a workspace, a `CLAUDE.md`, connectors or file access. Every ski
 
 ```
 /plugin marketplace add CSPulse/Skills
-/plugin install cs-skills@cs-pulse-skills
+/plugin install cs-skills@cspulse-skills
 ```
 
 ### Claude.ai and Cowork
