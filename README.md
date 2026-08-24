@@ -30,8 +30,6 @@ Missing context never blocks a skill. It changes what the skill can honestly cla
 
 ### Claude Code
 
-This repository is private, so `/plugin marketplace add` works only for accounts with read access to it.
-
 ```
 /plugin marketplace add CSPulse/Skills
 /plugin install cs-skills@cs-pulse-skills
