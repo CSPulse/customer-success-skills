@@ -39,8 +39,8 @@ The trigger conditions in plain language. Include the cases where it should
 Instructions written as directives to Claude, not as description. "Read the
 transcript in full" beats "this skill reads transcripts."
 
-Where the skill depends on something in the user's workspace — a style guide,
-an accounts folder, a naming convention — say so as an optional input and
+Where the skill depends on something in the user's workspace - a style guide,
+an accounts folder, a naming convention - say so as an optional input and
 degrade gracefully when it isn't there.
 
 ## Step 2: [Action]
@@ -66,5 +66,5 @@ section is what separates a skill from a prompt.
 
 ## Supporting files
 
-- `references/<topic>.md` — detail loaded only when the step needs it
-- `assets/<template>.md` — templates the skill writes from
+- `references/<topic>.md` - detail loaded only when the step needs it
+- `assets/<template>.md` - templates the skill writes from

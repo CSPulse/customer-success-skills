@@ -3,16 +3,16 @@ name: optimize-tokens
 description: >
   Token optimization advisor for the user. Triggers in two situations:
   (1) When the user explicitly says "optimize tokens", "reduce tokens", "token efficient", or asks how to prompt better for efficiency.
-  (2) When a request is detectably token-heavy — e.g., involves processing many files, large rewrites, multi-step research, full document generation, long context dumps — and a lighter approach could achieve the same result.
+  (2) When a request is detectably token-heavy - e.g., involves processing many files, large rewrites, multi-step research, full document generation, long context dumps - and a lighter approach could achieve the same result.
   Always prioritize quality over reduction. This skill is about eliminating waste, not restricting output.
   Use this skill proactively when you sense the request could be restructured to save significant tokens without quality loss.
 ---
 
 # Optimize Tokens
 
-The goal is simple: help the user get the same quality output with less token waste. Not fewer results — fewer unnecessary round-trips, context repetition, and bloated prompts.
+The goal is simple: help the user get the same quality output with less token waste. Not fewer results - fewer unnecessary round-trips, context repetition, and bloated prompts.
 
-**Core principle**: Quality comes first. Token savings that compromise output are not savings — they're regressions. Always confirm the quality bar before optimizing.
+**Core principle**: Quality comes first. Token savings that compromise output are not savings - they're regressions. Always confirm the quality bar before optimizing.
 
 ---
 
@@ -52,18 +52,18 @@ Always ask (or assess from context): **What quality level does this output need?
 - **Internal / draft / exploratory**: Medium bar. Optimization is welcome.
 - **Quick reference / personal use**: Low bar. Aggressive efficiency is fine.
 
-If unsure, ask: *"This looks like [output type] — should I optimize for speed/efficiency, or does this need full quality?"*
+If unsure, ask: *"This looks like [output type] - should I optimize for speed/efficiency, or does this need full quality?"*
 
 Do not skip this. A token-efficient but wrong output is worse than an expensive correct one.
 
 ### Gate 2: Task complexity check
-Some tasks are inherently expensive — they require full context, multiple files, or detailed output by nature. Before applying optimization:
+Some tasks are inherently expensive - they require full context, multiple files, or detailed output by nature. Before applying optimization:
 
 Ask yourself: *Can this task actually be made lighter without losing something important?*
 
-If the answer is **no** — e.g., generating a full PPTX deck, doing a deep analysis across 10 files, writing a 2,000-word article — say so clearly:
+If the answer is **no** - e.g., generating a full PPTX deck, doing a deep analysis across 10 files, writing a 2,000-word article - say so clearly:
 
-> "This task genuinely needs full token usage to do it well — [reason]. Want me to go ahead without optimization?"
+> "This task genuinely needs full token usage to do it well - [reason]. Want me to go ahead without optimization?"
 
 Wait for confirmation before proceeding.
 
@@ -81,12 +81,12 @@ When rewriting or improving a prompt for efficiency, always show it in this form
 [1-2 sentences on what's driving the token cost]
 
 **Leaner version:**
-> [rewritten prompt — concrete, specific, scoped]
+> [rewritten prompt - concrete, specific, scoped]
 
 **What changes:**
 [What gets cut and why it doesn't affect quality]
 
-**Quality impact:** None / Minimal / Moderate — [brief note]
+**Quality impact:** None / Minimal / Moderate - [brief note]
 
 ---
 
@@ -105,24 +105,24 @@ Instead of: "Can you help me with this email?"
 Better: "Write a 3-sentence follow-up email to a churned customer. Direct tone. No fluff."
 
 **3. Eliminate context repetition**
-If content was already shared earlier in the session, reference it — don't re-paste it.
+If content was already shared earlier in the session, reference it - don't re-paste it.
 "Use the newsletter draft from earlier" > pasting the full draft again.
 
 **4. Batch the asks**
-Instead of 3 separate messages, combine: "Do X, then Y, then give me Z — all in one response."
+Instead of 3 separate messages, combine: "Do X, then Y, then give me Z - all in one response."
 
 **5. Replace open-ended with constrained**
 Instead of: "What should I do about this customer?"
 Better: "Give me 3 options to handle a churned customer who cited pricing. Bullet format."
 
 **6. Point at context instead of re-explaining**
-If a person, project, or piece of context has been explained before, point to wherever it lives — a memory file, a project doc, an earlier message in this session — rather than re-describing it.
+If a person, project, or piece of context has been explained before, point to wherever it lives - a memory file, a project doc, an earlier message in this session - rather than re-describing it.
 
 ---
 
 ## What NOT to optimize
 
-Don't suggest cutting these — they protect quality:
+Don't suggest cutting these - they protect quality:
 - Context that is genuinely new and hasn't been established
 - Creative or strategic tasks where exploration is the point
 - Tasks with external-facing or high-stakes output
@@ -132,4 +132,4 @@ Don't suggest cutting these — they protect quality:
 
 ## Tone
 
-Be direct. Don't be preachy about token usage. One flag, one rewrite, one confirmation — then move. The user doesn't need a lecture; they need a better prompt and a green light.
+Be direct. Don't be preachy about token usage. One flag, one rewrite, one confirmation - then move. The user doesn't need a lecture; they need a better prompt and a green light.
