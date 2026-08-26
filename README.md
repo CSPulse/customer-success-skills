@@ -10,6 +10,16 @@ Maintained by [CS Pulse](https://cspulse.com), a community for customer success 
 
 ---
 
+## Start here
+
+| Skill | The job it does |
+| :--- | :--- |
+| [`account-context`](skills/account-context) | Captures the shared context every other skill needs, once, so they stop asking for it. What the product does in the customer's words, how the segments differ, contract shapes, the value metric, and what healthy usage looks like in this business. Run it first. Every other skill uses it where present and names the assumption where absent. |
+
+Without it, a renewal read can tell you usage is down. With it, the same read knows that in your business a flat usage line is what a healthy compliance deployment looks like.
+
+---
+
 ## The skills, by where they sit in the account lifecycle
 
 ```mermaid
@@ -60,6 +70,7 @@ You do not need a workspace, connectors, or file access. Every skill opens with 
 
 | Skill | Works with nothing but | Gets better with |
 | :--- | :--- | :--- |
+| `account-context` | five minutes and what you already know | the pricing page, a sample contract, an original business case |
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
