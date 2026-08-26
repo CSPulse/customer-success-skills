@@ -1,7 +1,7 @@
 ---
 name: email-critic
 description: >
-  Stress-tests a customer email the user has already drafted and returns a straight verdict plus a tightened version, checked against the source transcript, the account plan and their voice principles rather than in a vacuum. Trigger whenever the user pastes or points at a draft email and asks any of: "is this good", "would you send this", "review this email", "critique this", "tighten this", "make this better", "does this sound right", "too long?", "what would you change", or shares a draft with no instruction at all - a bare draft is a request for a read on it. Also trigger when they say an email "feels off" or ask how a customer will take it. Use this for drafts that already exist; use call-recap-follow-up when the input is a recording and no draft has been written yet.
+  Stress-tests a customer email the user has already drafted and returns a straight verdict plus a tightened version, checked against the source transcript, the account plan and their voice principles rather than in a vacuum. Trigger whenever the user pastes or points at a draft email and asks any of: "is this good", "would you send this", "review this email", "critique this", "tighten this", "make this better", "does this sound right", "too long?", "what would you change", or shares a draft with no instruction at all - a bare draft is a request for a read on it. Also trigger when they say an email "feels off" or ask how a customer will take it. Use this for drafts that already exist; use call-recap when the input is a recording and no draft has been written yet.
 ---
 
 # Email Critic

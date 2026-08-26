@@ -1,7 +1,7 @@
 ---
-name: renewal-risk-read
+name: renewal-risk
 description: >
-  Produces a defensible read on whether an account will renew - the decision, the decider, the mechanism, the evidence, the dollars at stake and the play - rather than a colour on a dashboard. Trigger whenever the user asks "will they renew", "is this account at risk", "renewal risk", "churn risk", "should I be worried about this account", "what's the read on", "health check on", or names an account and a renewal date in the same breath. Also trigger when preparing for a forecast call, a risk review, or a QBR on an account whose renewal is inside two quarters. Use business-review-prep when the job is running the meeting; use this when the job is deciding what is true. The skill works from whatever evidence exists and states plainly what it could not check.
+  Produces a defensible read on whether an account will renew - the decision, the decider, the mechanism, the evidence, the dollars at stake and the play - rather than a colour on a dashboard. Trigger whenever the user asks "will they renew", "is this account at risk", "renewal risk", "churn risk", "should I be worried about this account", "what's the read on", "health check on", or names an account and a renewal date in the same breath. Also trigger when preparing for a forecast call, a risk review, or a QBR on an account whose renewal is inside two quarters. Use business-review when the job is running the meeting; use this when the job is deciding what is true. The skill works from whatever evidence exists and states plainly what it could not check.
 ---
 
 # Renewal Risk Read

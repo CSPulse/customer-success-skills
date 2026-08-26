@@ -1,4 +1,4 @@
-# CS Skills
+# Customer Success Skills
 
 **Open resource hub for Customer Success teams - and the business units that sit next to them.**
 
@@ -14,27 +14,18 @@ Maintained by [CS Pulse](https://cspulse.com), a community for customer success 
 
 ```mermaid
 flowchart LR
-    A["<b>Onboarding</b><br/>onboarding-plan"] --> B["<b>Adoption</b><br/>call-recap-follow-up<br/>email-critic"]
-    B --> C["<b>Value</b><br/>business-review-prep"] --> D["<b>Renewal</b><br/>renewal-risk-read"]
+    A["<b>Onboarding</b><br/>onboarding-plan"] --> B["<b>Adoption</b><br/>call-recap<br/>email-critic"]
+    B --> C["<b>Value</b><br/>business-review"] --> D["<b>Renewal</b><br/>renewal-risk"]
     D -.-> B
 ```
 
 | Skill | The job it does |
 | :--- | :--- |
 | [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can name, not a checklist your team can close. Success criteria carry a baseline, and it covers the three reasons a customer refuses to commit to one. |
-| [`call-recap-follow-up`](skills/call-recap-follow-up) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
+| [`call-recap`](skills/call-recap) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
 | [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
-| [`business-review-prep`](skills/business-review-prep) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
-| [`renewal-risk-read`](skills/renewal-risk-read) | Produces a defensible read on whether an account will renew - the decision, the decider, the mechanism, the dollars and the play. Built on the principle that usage describes the user while the renewal is decided by the buyer. |
-
-### Also included
-
-Not customer success specific, but useful in any role that runs long sessions and heavy context.
-
-| Skill | The job it does |
-| :--- | :--- |
-| [`chat-context`](skills/chat-context) | Carries context between chats. Handoff writes a structured context file; resume reads it back and states what was loaded. |
-| [`optimize-tokens`](skills/optimize-tokens) | Spots token-heavy requests before they run and proposes a cheaper approach that gets the same answer. |
+| [`business-review`](skills/business-review) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
+| [`renewal-risk`](skills/renewal-risk) | Produces a defensible read on whether an account will renew - the decision, the decider, the mechanism, the dollars and the play. Built on the principle that usage describes the user while the renewal is decided by the buyer. |
 
 ---
 
@@ -49,7 +40,7 @@ See [Using skills in Claude](https://support.claude.com/en/articles/12512180-usi
 ### Claude Code
 
 ```
-/plugin marketplace add CSPulse/cs-skills
+/plugin marketplace add CSPulse/customer-success-skills
 /plugin install cs-skills@cspulse-skills
 ```
 
@@ -69,10 +60,10 @@ You do not need a workspace, connectors, or file access. Every skill opens with 
 
 | Skill | Works with nothing but | Gets better with |
 | :--- | :--- | :--- |
-| `renewal-risk-read` | what you know about the account | usage data, mailbox history, the account plan |
-| `business-review-prep` | the account and the date | their stated goals, outcome data, the attendee list |
+| `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
+| `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
-| `call-recap-follow-up` | a pasted transcript | a meeting recorder, a mailbox, account notes |
+| `call-recap` | a pasted transcript | a meeting recorder, a mailbox, account notes |
 | `email-critic` | the draft itself | the transcript, the thread, a voice guide |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one names the checks it could not run rather than guessing around the gap.
@@ -98,13 +89,6 @@ This is meant to be a hub, not a monologue. If you run customer success and a sk
 Two rules for anything added here: nothing may be a prerequisite, so every skill must run with no workspace and no connectors; and every skill states the failure it exists to prevent.
 
 ---
-
-## Credits
-
-Two skills worth having are other people's work and are not republished here:
-
-- [garrytan/gstack](https://github.com/garrytan/gstack) - `office-hours` and the rest of Garry Tan's planning stack. MIT.
-- [blader/humanizer](https://github.com/blader/humanizer) - strips AI-writing tells from text. MIT.
 
 ## License
 

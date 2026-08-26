@@ -1,7 +1,7 @@
 ---
-name: business-review-prep
+name: business-review
 description: >
-  Prepares a customer business review that earns the next meeting - the customer's goals first, value proved in their numbers, three to five themes, and an explicit ask - instead of a usage readout nobody asked for. Trigger whenever the user says "QBR", "EBR", "business review", "quarterly review", "exec review", "prep for my customer meeting", "build the deck for", "what should I present to", or names an account and an upcoming review in the same breath. Also trigger when they ask whether they should run a review at all. Use renewal-risk-read when the job is deciding whether the account will renew; this skill is for the meeting. It will tell the user when a business review is the wrong meeting to run.
+  Prepares a customer business review that earns the next meeting - the customer's goals first, value proved in their numbers, three to five themes, and an explicit ask - instead of a usage readout nobody asked for. Trigger whenever the user says "QBR", "EBR", "business review", "quarterly review", "exec review", "prep for my customer meeting", "build the deck for", "what should I present to", or names an account and an upcoming review in the same breath. Also trigger when they ask whether they should run a review at all. Use renewal-risk when the job is deciding whether the account will renew; this skill is for the meeting. It will tell the user when a business review is the wrong meeting to run.
 ---
 
 # Business Review Prep

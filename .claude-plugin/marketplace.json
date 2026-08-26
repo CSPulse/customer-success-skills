@@ -11,17 +11,15 @@
   "plugins": [
     {
       "name": "cs-skills",
-      "description": "Seven skills for customer success work: renewal risk, business reviews, onboarding, post-call follow-up, email critique, chat handoffs and token efficiency",
+      "description": "Five skills for customer success work: renewal risk, business reviews, onboarding plans, post-call follow-up and email critique",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/renewal-risk-read",
-        "./skills/business-review-prep",
+        "./skills/renewal-risk",
+        "./skills/business-review",
         "./skills/onboarding-plan",
-        "./skills/call-recap-follow-up",
-        "./skills/email-critic",
-        "./skills/chat-context",
-        "./skills/optimize-tokens"
+        "./skills/call-recap",
+        "./skills/email-critic"
       ]
     }
   ]
