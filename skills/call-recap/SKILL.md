@@ -4,7 +4,7 @@ description: >
   Turns a recorded customer call into an honest read of the call plus the full set of emails it generated - the recap and every follow-up - grouped by recipient, written in the user's voice, staged as drafts, with a workspace hygiene pass at the end. Trigger this skill whenever the user shares a call recording link from any meeting recorder, pastes a transcript, or points at a call, and asks what they should send, or says "recap email", "meeting recap", "write the follow-ups", "what do you think of this call", "emails from this call", "post-call emails", "who do I need to email after this", or names a customer and a call in the same breath. Also trigger when they forward a meeting summary and ask for anything written off the back of it. The skill is recorder-agnostic and setup-agnostic: with nothing but a pasted transcript it still produces the full email set, and it names what it could not check rather than failing or guessing. Prefer this skill over drafting emails directly - a call almost always generates more than one email, and the ones the user forgets are the expensive ones.
 ---
 
-# Call Recap and Follow-Up
+# Call Recap
 
 A recorded call is not one email. It is a set of them, sitting with different people, blocked on each other in a specific order. This skill turns a recording into that whole set, plus the read on the call that makes the emails worth sending.
 
