@@ -8,7 +8,7 @@ Nine skills today, grouped into seven categories and built out over time. The fu
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
-Maintained by [CS Pulse](https://cspulse.com), a community for customer success practitioners. Free, MIT licensed, and built to be forked and argued with.
+Maintained by [CS Pulse](https://cspulse.com?ref=github), a community for customer success practitioners. Free, MIT licensed, and built to be forked and argued with.
 
 ---
 
