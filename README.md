@@ -52,6 +52,9 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | [`call-recap`](skills/call-recap) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
 | [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
 | [`business-review`](skills/business-review) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
+| [`health-read`](skills/health-read) | Audits an account health score instead of reporting it. Separates what is measured from what is inferred, finds the inputs that are proxies, and asks whether the score has ever been tested against accounts that actually left. |
+| [`stakeholder-map`](skills/stakeholder-map) | Maps who decides an account's outcome by what they can do to it rather than by job title. Flags who has never actually been met, tests for single-threading, and tracks who went quiet. |
+| [`churn-postmortem`](skills/churn-postmortem) | Works out why an account actually left, separating the reason given from the mechanism. Keeps what was detectable at the time apart from what is only obvious in hindsight, and checks whether the loss was one of a correlated set. |
 | [`renewal-risk`](skills/renewal-risk) | Produces a defensible read on whether an account will renew: the decision, the decider, the mechanism, the dollars and the play. Built on the principle that usage describes the user while the renewal is decided by the buyer. |
 
 <!-- SKILLS:END -->
@@ -64,7 +67,7 @@ Seven categories, built out over time. Six skills exist today and the rest are p
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
-| **Read the account** | `renewal-risk` | `account-research` · `health-read` · `stakeholder-map` · `churn-postmortem` |
+| **Read the account** | `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | `account-research` |
 | **Run the set-piece** | `onboarding-plan` · `business-review` | `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` |
 | **Handle the conversation** | `call-recap` | `call-prep` · `hard-conversation` · `exec-conversation` |
 | **Write to the customer** | `email-critic` | `customer-update` · `one-pager` |
@@ -135,6 +138,9 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | Skill | Works with nothing but | Gets better with |
 | :--- | :--- | :--- |
 | `account-context` | five minutes and what you already know | the pricing page, a sample contract, an original business case |
+| `health-read` | the score and roughly what goes into it | the input values, the trend, and what churned accounts scored |
+| `stakeholder-map` | the names you know | email and meeting history, the original deal notes |
+| `churn-postmortem` | what you remember | the account history, the support record, the original business case |
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
