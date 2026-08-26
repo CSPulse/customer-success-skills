@@ -2,7 +2,9 @@
 
 **An open library of AI skills for the work customer success actually does.**
 
-Reading renewal risk. Running business reviews. Planning onboarding. Turning a call into the follow-ups it generated. Stress-testing an email before it goes out.
+Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
+
+Nine skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -28,14 +30,19 @@ That is the difference between a library and a pile. Without it, a renewal read 
 
 ```mermaid
 flowchart TB
-    AC["<b>account-context</b><br/>product · segments · contract shapes<br/>value metric · what healthy looks like here"]
-    AC --> A["<b>Onboarding</b><br/>onboarding-plan"]
-    AC --> B["<b>Adoption</b><br/>call-recap<br/>email-critic"]
-    AC --> C["<b>Value</b><br/>business-review"]
-    AC --> D["<b>Renewal</b><br/>renewal-risk"]
-    A --> B --> C --> D
-    D -.-> B
+    AC["<b>account-context</b><br/><i>the product, the segments, the contract shapes,<br/>the value metric, what healthy looks like here</i>"]
+
+    AC --> R["<b>Read the account</b><br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
+    AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review"]
+    AC --> C["<b>Handle the conversation</b><br/>call-recap"]
+    AC --> W["<b>Write to the customer</b><br/>email-critic"]
+
+    R -.->|"what is true"| S
+    S -.->|"what happened"| C
+    C -.->|"what to send"| W
 ```
+
+Four of the seven categories have skills today. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
