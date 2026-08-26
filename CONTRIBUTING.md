@@ -75,6 +75,9 @@ Say why something is true, not that it is. "Ticket volume alone signals nothing 
 - [ ] No em dashes
 - [ ] No real customer, employer or personal names anywhere
 - [ ] The folder name, the frontmatter `name`, and the entry in `.claude-plugin/marketplace.json` all match
+- [ ] The README is updated in **all five places**: the skills table, the category table, the "works with nothing but" table, **the diagram**, and **the opening paragraph**
+
+That last pair is the one that gets missed. The three tables have a row per skill, so a missing one is visible. The diagram and the opening prose have no per-skill structure, so nothing about them looks incomplete when they are.
 
 ---
 

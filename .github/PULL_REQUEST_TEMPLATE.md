@@ -21,6 +21,12 @@
 - [ ] No em dashes
 - [ ] No real customer, employer or personal names
 - [ ] Folder name, frontmatter `name` and the `marketplace.json` entry all match
+- [ ] **README updated in all five places**, if this adds or removes a skill:
+  - [ ] the skills table
+  - [ ] the category table (built against planned)
+  - [ ] the "works with nothing but" table
+  - [ ] **the diagram** under "How these work together"
+  - [ ] **the opening paragraph**, if the shape of the library changed
 
 ## Anything a reviewer should look at closely
 
