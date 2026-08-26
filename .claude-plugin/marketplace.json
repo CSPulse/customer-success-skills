@@ -11,12 +11,15 @@
   "plugins": [
     {
       "name": "cs-skills",
-      "description": "Six skills for customer success work, built on a shared account-context spine: renewal risk, business reviews, onboarding plans, post-call follow-up and email critique",
+      "description": "Nine skills for customer success work, built on a shared account-context spine: health reads, stakeholder maps, renewal risk, churn postmortems, business reviews, onboarding plans, post-call follow-up and email critique",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/account-context",
+        "./skills/health-read",
+        "./skills/stakeholder-map",
         "./skills/renewal-risk",
+        "./skills/churn-postmortem",
         "./skills/business-review",
         "./skills/onboarding-plan",
         "./skills/call-recap",

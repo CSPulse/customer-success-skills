@@ -53,6 +53,8 @@ Before any signal analysis, answer three questions in one line each:
 
 Check single-threading here too. One relationship means no recovery path when that person leaves.
 
+Where the relationship picture is unclear or stale, `stakeholder-map` does this properly: it sorts people by what they can do to the outcome, carries a column for whether you have actually met them, and gives single-threading a number rather than an impression.
+
 ---
 
 ## Step 3: Read the signals in order of decision-weight
@@ -68,6 +70,8 @@ Work down these tiers. A Tier 1 signal outranks any amount of Tier 2 comfort.
 - Sponsor-specific silence - the working team still engaged while the sponsor has gone quiet, which usually means the decision has moved above your line of sight
 
 ### Tier 2 - usage shape, never usage level
+
+Before leaning on a health score here, be clear how much it can carry. `health-read` audits the score rather than reporting it, and separates the inputs that are measured from the ones that are proxies.
 
 Level is close to worthless. Shape, direction and composition carry the signal:
 
