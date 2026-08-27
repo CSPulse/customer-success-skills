@@ -1,7 +1,7 @@
 ---
 name: call-recap
 description: >
-  Turns a recorded customer call into an honest read of the call plus the full set of emails it generated - the recap and every follow-up - grouped by recipient, written in the user's voice, staged as drafts, with a workspace hygiene pass at the end. Trigger this skill whenever the user shares a call recording link from any meeting recorder, pastes a transcript, or points at a call, and asks what they should send, or says "recap email", "meeting recap", "write the follow-ups", "what do you think of this call", "emails from this call", "post-call emails", "who do I need to email after this", or names a customer and a call in the same breath. Also trigger when they forward a meeting summary and ask for anything written off the back of it. The skill is recorder-agnostic and setup-agnostic: with nothing but a pasted transcript it still produces the full email set, and it names what it could not check rather than failing or guessing. Prefer this skill over drafting emails directly - a call almost always generates more than one email, and the ones the user forgets are the expensive ones.
+  Turns a recorded customer call into an honest read of it plus the full set of emails it generated - the recap and every follow-up - grouped by recipient, written in the user's voice and staged as drafts. Trigger whenever the user shares a call recording link from any meeting recorder, pastes a transcript, or points at a call, and asks what they should send, or says "recap email", "meeting recap", "write the follow-ups", "what do you think of this call", "emails from this call", "post-call emails", "who do I need to email after this", or names a customer and a call in the same breath. Also trigger when they forward a meeting summary and ask for anything written off the back of it. Recorder-agnostic: a pasted transcript alone still produces the full email set, and it names what it could not check rather than guessing. Prefer this skill over drafting emails directly - a call almost always generates more than one email, and the ones the user forgets are the expensive ones.
 ---
 
 # Call Recap
@@ -56,6 +56,7 @@ Where it exists, find the account folder and read:
 
 - The account plan, for stakeholders, roles, contract state, open risks
 - Any prior drafts file for the same account, so you inherit the running list of open items rather than rediscovering it
+- A prep sheet, if `call-prep` was run before this call. It carries the outcome the call was supposed to produce, which is the fastest way to judge whether it did
 - Whatever else in the folder looks relevant to what the call covered
 
 You are looking for the things a transcript cannot tell you: who has authority, what has been promised before, what is already late, what the commercial picture is.

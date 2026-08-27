@@ -88,6 +88,8 @@ For each gap, one line on how it gets closed and by when. A map that identifies 
 
 Realistic routes: an introduction from the champion, a business review with the sponsor invited, an executive-to-executive introduction from your own side, or a specific piece of value worth their fifteen minutes.
 
+When the route opens and the meeting is granted, `exec-conversation` prepares it. The fifteen minutes you spent a quarter earning is the wrong place to improvise.
+
 **Be honest about the ones that will not close.** Some economic buyers will not meet a vendor. That is a real constraint and it changes the play rather than the effort.
 
 ---
