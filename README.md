@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Nine skills today, grouped into seven categories and built out over time. The full list is below.
+Twelve skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -34,7 +34,7 @@ flowchart TB
 
     AC --> R["<b>Read the account</b><br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
     AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review"]
-    AC --> C["<b>Handle the conversation</b><br/>call-recap"]
+    AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
     AC --> W["<b>Write to the customer</b><br/>email-critic"]
 
     R -.->|"what is true"| S
@@ -56,7 +56,10 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | :--- | :--- |
 | [`account-context`](skills/account-context) | Captures the shared context every other skill needs, once, so they stop asking for it. Run this first. |
 | [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can name, not a checklist your team can close. Success criteria carry a baseline, and it covers the three reasons a customer refuses to commit to one. |
+| [`call-prep`](skills/call-prep) | Prepares a call around the one thing it has to produce rather than what you plan to say. Names the outcome in a form that can be failed, finds the landmine before the customer raises it, and sets the ask and the fallback ask. |
 | [`call-recap`](skills/call-recap) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
+| [`hard-conversation`](skills/hard-conversation) | Scripts the conversation you are putting off: a price increase, a feature you will not build, a commitment you missed, or a failure that cost them money. Settles what you can offer and on whose authority before a word is said. |
+| [`exec-conversation`](skills/exec-conversation) | Prepares fifteen minutes with someone three levels up who has no context and did not ask for the meeting. One ask, one number they recognise, and the two questions only they can answer. |
 | [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
 | [`business-review`](skills/business-review) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
 | [`health-read`](skills/health-read) | Audits an account health score instead of reporting it. Separates what is measured from what is inferred, finds the inputs that are proxies, and asks whether the score has ever been tested against accounts that actually left. |
@@ -70,13 +73,13 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Six skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, built out over time. Twelve skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
 | **Read the account** | `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | `account-research` |
 | **Run the set-piece** | `onboarding-plan` · `business-review` | `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` |
-| **Handle the conversation** | `call-recap` | `call-prep` · `hard-conversation` · `exec-conversation` |
+| **Handle the conversation** | `call-prep` · `call-recap` · `hard-conversation` · `exec-conversation` | *Complete* |
 | **Write to the customer** | `email-critic` | `customer-update` · `one-pager` |
 | **Work it internally** | | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` |
 | **Run the book** | | `book-triage` · `account-plan` · `weekly-plan` |
@@ -131,6 +134,9 @@ Once installed, you do not call a skill by name. You describe the job and the ri
 > **"Here's the transcript from my call this morning."**
 > Runs `call-recap`. Returns the honest read plus every follow-up email the call generated, grouped by who receives it.
 
+> **"I have to tell them we are raising their price and I have been putting it off."**
+> Runs `hard-conversation`. Works out what you can offer and on whose authority before a word is said, writes the opening two sentences, and sets the walk-away in advance so you do not improvise a concession you cannot retract.
+
 > **"Set up account context."**
 > Runs `account-context`. Interviews you once, then writes the document the others read.
 
@@ -151,7 +157,10 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
+| `call-prep` | who you are meeting and why | the last recap, recent email history, a stakeholder map |
 | `call-recap` | a pasted transcript | a meeting recorder, a mailbox, account notes |
+| `hard-conversation` | what happened and who it affects | the commitment as it was actually made in writing, the contract |
+| `exec-conversation` | their title and why the meeting exists | ten minutes with the champion, outcome data in their measure |
 | `email-critic` | the draft itself | the transcript, the thread, a voice guide |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one names the checks it could not run rather than guessing around the gap.

@@ -111,6 +111,8 @@ Cut on sight: long introductions, full ticket recaps, feature-by-feature walkthr
 
 Seniority is a permission structure, not just an audience. The more senior the room, the more strategic the conversation is allowed to be - which is an argument for getting the right people there rather than for presenting differently to the wrong ones.
 
+Where the executive is joining for a slice of the meeting rather than the whole of it, `exec-conversation` shapes that slice: one ask, one number they recognise, and questions only they can answer.
+
 Bring fewer of your own people than feels natural. A vendor delegation outnumbering the customer changes the meeting.
 
 ---

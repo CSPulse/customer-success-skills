@@ -56,6 +56,7 @@ Where it exists, find the account folder and read:
 
 - The account plan, for stakeholders, roles, contract state, open risks
 - Any prior drafts file for the same account, so you inherit the running list of open items rather than rediscovering it
+- A prep sheet, if `call-prep` was run before this call. It carries the outcome the call was supposed to produce, which is the fastest way to judge whether it did
 - Whatever else in the folder looks relevant to what the call covered
 
 You are looking for the things a transcript cannot tell you: who has authority, what has been promised before, what is already late, what the commercial picture is.
