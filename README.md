@@ -104,7 +104,7 @@ The folder name inside the ZIP must match the skill's `name` in its frontmatter.
 
 ```
 /plugin marketplace add CSPulse/customer-success-skills
-/plugin install cs-skills@cspulse-skills
+/plugin install customer-success-skills@cspulse
 ```
 
 ### By hand
