@@ -39,7 +39,7 @@ Four situations, and they have different shapes. `references/by-scenario.md` cov
 
 Read the general method below first, then the section for your case.
 
-**Do not run this for:** an escalation already in progress with their executive team, where `exec-conversation` shapes the room, or a routine call that merely contains an awkward item, where `call-prep` covers it under the landmine step.
+**Do not run this for:** an escalation already in progress, where `escalation` runs the first four hours and `exec-conversation` shapes the room if their executive is in it, or a routine call that merely contains an awkward item, where `call-prep` covers it under the landmine step.
 
 ---
 
