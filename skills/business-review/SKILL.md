@@ -133,6 +133,8 @@ If you cannot say what you are asking the customer to decide, do, or fund, the m
 
 The ask does not have to be commercial. An introduction, a data feed, an executive sponsor, a pilot, a decision to stop doing something - all legitimate. What is not legitimate is the expansion conversation disguised as a value review. Customers do not punish the upsell; they punish the disguise.
 
+Where the review does establish that more scope is warranted, `expansion-case` builds the document the champion carries into the budget conversation afterwards, which is a separate meeting on purpose.
+
 Open the meeting by agreeing the agenda, the time, and what both sides want out of it - explicitly including that "no" is an acceptable answer.
 
 ---

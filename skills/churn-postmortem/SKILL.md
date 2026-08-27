@@ -141,6 +141,12 @@ Fill `assets/postmortem-template.md`.
 
 ---
 
+## Where the raw material comes from
+
+The exit conversation is the single richest input to this analysis and it has to be asked for while the account is still winding down. `offboarding` covers getting it, and getting it honestly: separately from the commercial wind-down, with nothing being sold, recorded in their words rather than summarised. Run afterwards on a departure nobody debriefed, this skill is working from memory and the stated reason, which is the version most likely to be wrong.
+
+---
+
 ## Failure modes
 
 - **Producing a category.** "Low adoption" is where the analysis should start, not where it ends

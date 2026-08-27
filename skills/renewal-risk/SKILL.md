@@ -166,7 +166,7 @@ A risk with no ask is a status update.
 - **The play**, matched to the mechanism. A low-adoption playbook fired at a budget-cut risk is pure motion
 - **The owner and the date**
 - **What you need from your own side** - executive time, discount authority, a roadmap commitment, services hours - and what that is worth against the dollars at stake
-- **The conversation the play depends on.** Most plays here come down to one call. `call-prep` builds it around an outcome that can be failed, and `hard-conversation` handles it where the play is a commercial change or a roadmap no
+- **The conversation the play depends on.** Most plays here come down to one call. `call-prep` builds it around an outcome that can be failed, and `hard-conversation` handles it where the play is a commercial change or a roadmap no. Where the read lands on contraction rather than churn, `renewal-negotiation` prepares the conversation where the number gets agreed
 - **A falsifiable checkpoint**: "if we have not met the new VP by the 14th, escalate." A checkpoint you cannot fail is not a checkpoint
 
 Be honest about the window. Before an alternative is named, fixing value realisation and re-multithreading still work. After a replacement has been procured, or budget has been reallocated in planning, or the notice date has passed, they generally do not - and saying so is more useful than a save plan nobody believes.

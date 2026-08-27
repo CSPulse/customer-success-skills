@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Twelve skills today, grouped into seven categories and built out over time. The full list is below.
+Sixteen skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -33,7 +33,7 @@ flowchart TB
     AC["<b>account-context</b><br/><i>the product, the segments, the contract shapes,<br/>the value metric, what healthy looks like here</i>"]
 
     AC --> R["<b>Read the account</b><br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
-    AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review"]
+    AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
     AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
     AC --> W["<b>Write to the customer</b><br/>email-critic"]
 
@@ -42,7 +42,7 @@ flowchart TB
     C -.->|"what to send"| W
 ```
 
-Four of the seven categories have skills today. The other three are listed further down.
+Four of the seven categories have skills today, three of them complete. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
@@ -56,6 +56,10 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | :--- | :--- |
 | [`account-context`](skills/account-context) | Captures the shared context every other skill needs, once, so they stop asking for it. Run this first. |
 | [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can name, not a checklist your team can close. Success criteria carry a baseline, and it covers the three reasons a customer refuses to commit to one. |
+| [`renewal-negotiation`](skills/renewal-negotiation) | Prepares the renewal conversation itself: what you concede, what you will not, the walk-away, and the four asks you are going to get. Built on the rule that every concession is permanent unless you deliberately make it temporary. |
+| [`expansion-case`](skills/expansion-case) | Builds the internal business case your champion carries without you in the room, in their words and on one page. Checks first that the existing deployment is demonstrably working, because an expansion ask on a broken one risks the renewal. |
+| [`escalation`](skills/escalation) | Runs the first four hours of an account on fire. What to say before you know the answer, who to pull in and when, and what the customer actually wants, which is often a forwardable answer rather than a fix. |
+| [`offboarding`](skills/offboarding) | Losing well. The data handover done faster than required, the exit conversation asked for separately so it is honest, and the door left open, because champions move and carry a memory of how it ended. |
 | [`call-prep`](skills/call-prep) | Prepares a call around the one thing it has to produce rather than what you plan to say. Names the outcome in a form that can be failed, finds the landmine before the customer raises it, and sets the ask and the fallback ask. |
 | [`call-recap`](skills/call-recap) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
 | [`hard-conversation`](skills/hard-conversation) | Scripts the conversation you are putting off: a price increase, a feature you will not build, a commitment you missed, or a failure that cost them money. Settles what you can offer and on whose authority before a word is said. |
@@ -73,12 +77,12 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Twelve skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, built out over time. Sixteen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
 | **Read the account** | `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | `account-research` |
-| **Run the set-piece** | `onboarding-plan` · `business-review` | `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` |
+| **Run the set-piece** | `onboarding-plan` · `business-review` · `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` | *Complete* |
 | **Handle the conversation** | `call-prep` · `call-recap` · `hard-conversation` · `exec-conversation` | *Complete* |
 | **Write to the customer** | `email-critic` | `customer-update` · `one-pager` |
 | **Work it internally** | | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` |
@@ -137,6 +141,9 @@ Once installed, you do not call a skill by name. You describe the job and the ri
 > **"I have to tell them we are raising their price and I have been putting it off."**
 > Runs `hard-conversation`. Works out what you can offer and on whose authority before a word is said, writes the opening two sentences, and sets the walk-away in advance so you do not improvise a concession you cannot retract.
 
+> **"They want 20% off and procurement just joined the thread."**
+> Runs `renewal-negotiation`. Works out what their real alternative is rather than the one they described, builds a concession ladder where every rung has a price, and finds the win procurement can take that is not your margin.
+
 > **"Set up account context."**
 > Runs `account-context`. Interviews you once, then writes the document the others read.
 
@@ -157,6 +164,10 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
+| `renewal-negotiation` | the account, the date and roughly what they pay | the contract, especially notice date and uplift clause |
+| `expansion-case` | what you want to expand into and who would sponsor it | outcome data from the existing deployment, a stakeholder map |
+| `escalation` | what happened and who is angry | the incident record, the contract, a stakeholder map |
+| `offboarding` | the account and the end date | the contract, the account history, the original business case |
 | `call-prep` | who you are meeting and why | the last recap, recent email history, a stakeholder map |
 | `call-recap` | a pasted transcript | a meeting recorder, a mailbox, account notes |
 | `hard-conversation` | what happened and who it affects | the commitment as it was actually made in writing, the contract |
