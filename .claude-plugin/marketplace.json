@@ -1,5 +1,5 @@
 {
-  "name": "cspulse-skills",
+  "name": "cspulse",
   "owner": {
     "name": "CS Pulse",
     "url": "https://github.com/CSPulse"
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "cs-skills",
+      "name": "customer-success-skills",
       "description": "Twelve skills for customer success work, built on a shared account-context spine: health reads, stakeholder maps, renewal risk, churn postmortems, business reviews, onboarding plans, call prep and post-call follow-up, hard conversations, executive conversations and email critique",
       "source": "./",
       "strict": false,
