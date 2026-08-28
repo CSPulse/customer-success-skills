@@ -66,6 +66,15 @@ Say why something is true, not that it is. "Ticket volume alone signals nothing 
 
 ## Before you open a pull request
 
+Run the validator first. It checks everything structural, so review can be about judgement instead.
+
+```
+python3 validate-skills.py
+```
+
+The same script runs on every pull request, so anything it catches locally is anything that would fail there. What it cannot see is below.
+
+
 - [ ] SKILL.md is under 500 lines and references are one level deep
 - [ ] The description leads with trigger phrases and is under 1,024 characters
 - [ ] The skill states the least it needs to run
