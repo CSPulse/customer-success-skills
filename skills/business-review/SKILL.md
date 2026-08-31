@@ -121,6 +121,8 @@ Bring fewer of your own people than feels natural. A vendor delegation outnumber
 
 This single step prevents most of the failures below at once.
 
+A review where the customer presents their own results is also the strongest advocacy moment you will get. `advocacy-ask` covers what to do with it, and the answer is not to ask in the room.
+
 Walk the champion through the data and the narrative before the meeting. Collect their agenda items. Ask what they want out of it. Arrange for them to present their own wins. Confirm attendees and hard stops around 48 hours ahead. Send a one-page pre-read so the meeting can be spent deciding rather than absorbing.
 
 A champion blindsided in front of their executive stops being a champion.

@@ -38,7 +38,7 @@ Where the account is already in question, read the commercial signals in `renewa
 
 **Bring the alternative or admit there is not one.** A workaround, a partner, an integration, a services engagement, or the honest statement that this product does not do this and is not going to. The last one is a legitimate answer and it is occasionally the most respected thing you can say.
 
-**Find out what the request was for.** Feature requests arrive already translated into a solution. The job underneath it is frequently servable another way, and it is also the version worth taking back to product.
+**Find out what the request was for.** Feature requests arrive already translated into a solution. The job underneath it is frequently servable another way, and it is also the version worth taking back to product, which is what `product-feedback` is for.
 
 **If they built a business case on it**, that is a commercial conversation and not a roadmap one. Find out what was promised, by whom, and in what document, before you say anything else.
 

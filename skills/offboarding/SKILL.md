@@ -88,7 +88,7 @@ The most under-valued part, because it does not pay off this quarter.
 
 ## Step 5: Hand over internally, once
 
-- **Who needs to know**, and before they hear it elsewhere. Support, product where a feature gap drove it, sales where a peer account has the same shape
+- **Who needs to know**, and before they hear it elsewhere. Support, product where a feature gap drove it, sales where a peer account has the same shape. `handoff` covers the transfer itself where the account continues in a different model rather than ending
 - **What goes in the record**, including the honest version rather than the sanitised one
 - **The correlated question**: how many other accounts have this mechanism. Thirty losses with one cause are one decision, not thirty failures. `churn-postmortem` runs this properly
 - **Close it properly in your systems.** A half-closed account distorts every forecast that touches it afterwards
