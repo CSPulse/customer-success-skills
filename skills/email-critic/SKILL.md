@@ -28,6 +28,8 @@ Two things first, and skipping them is what makes email feedback useless.
 
 **Know what the email is for.** A recap, a nudge, an escalation, an ask, a piece of bad news, a note designed to be forwarded to someone's legal team. Each has a different shape and a different failure mode. If the purpose is genuinely unclear from the draft, say so - an email whose purpose you cannot name is usually an email the customer will not act on, and that is the most useful thing you can tell the user.
 
+Where the draft goes to a list rather than a person, `customer-update` decides the segmentation and the shape before the wording is worth reviewing. Where the draft is meant to be forwarded to someone who was not in the room, `one-pager` is the format.
+
 Where the draft is bad news the customer has not yet heard, the first question is not about the writing. It is whether this should be an email at all. `hard-conversation` covers that, and the strong version is almost always a call followed by this draft as the record.
 
 **Get the source.** A draft cannot be judged against itself. Where the material exists, read it:

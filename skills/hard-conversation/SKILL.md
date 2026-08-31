@@ -131,7 +131,7 @@ Same day. Short. It exists to be forwarded.
 
 **Write the version that survives a forward.** Assume it reaches their executive and yours. That means no internal shorthand, no blame directed at a colleague or a team, and no language that concedes liability if there is money involved. Where there is a number attached to the failure, have someone with commercial authority read it before it goes.
 
-Run it through `email-critic` if you want it checked against the transcript before sending.
+Run it through `email-critic` if you want it checked against the transcript before sending. Where the same news has to reach a list of customers as well as this one, `customer-update` handles the broadcast, and the named accounts on it get the spoken version first.
 
 ---
 
