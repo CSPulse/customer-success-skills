@@ -87,7 +87,7 @@ Do not pull one in to demonstrate urgency. An unbriefed executive on an escalati
 
 **Brief whoever you pull in properly:** the facts, what is unknown, what has been committed, what must not be promised, and what the customer actually wants from Step 3.
 
-**Internally, escalate in a different register.** Your engineering and leadership teams need the business impact, the revenue at stake, what you have committed and what you need, not the emotional temperature. `hard-conversation` covers the customer-facing version of bad news; the internal ask is a separate message and usually a shorter one.
+**Internally, escalate in a different register.** Your engineering and leadership teams need the business impact, the revenue at stake, what you have committed and what you need, not the emotional temperature. `internal-escalation` shapes that ask, including who can actually say yes and why the deadline is real. `hard-conversation` covers the customer-facing version of bad news; the internal ask is a separate message and usually a shorter one.
 
 ## Step 6: Separate the fix from the repair
 

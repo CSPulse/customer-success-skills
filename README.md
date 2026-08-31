@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Nineteen skills today, grouped into seven categories and built out over time. The full list is below.
+Twenty-three skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -36,13 +36,15 @@ flowchart TB
     AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
     AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
     AC --> W["<b>Write to the customer</b><br/>email-critic<br/>customer-update<br/>one-pager"]
+    AC --> I["<b>Work it internally</b><br/>product-feedback<br/>internal-escalation<br/>handoff<br/>advocacy-ask"]
 
     R -.->|"what is true"| S
     S -.->|"what happened"| C
     C -.->|"what to send"| W
+    W -.->|"what your side owes"| I
 ```
 
-Four of the seven categories have skills today, and all four are complete. The other three are listed further down.
+Five of the seven categories have skills today, and all five are complete. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
@@ -56,6 +58,10 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | :--- | :--- |
 | [`account-context`](skills/account-context) | Captures the shared context every other skill needs, once, so they stop asking for it. Run this first. |
 | [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can name, not a checklist your team can close. Success criteria carry a baseline, and it covers the three reasons a customer refuses to commit to one. |
+| [`product-feedback`](skills/product-feedback) | Turns customer noise into something product will act on: the job to be done rather than the requested feature, how many accounts share it, and what happens if nothing changes, said honestly. Closes the loop back, including on a no. |
+| [`internal-escalation`](skills/internal-escalation) | Gets your own company to act, with the ask written as one sentence carrying a name, an action and a date. Refuses to inflate severity, because the credibility cost is permanent and your colleagues pay it too. |
+| [`handoff`](skills/handoff) | Sales to CS, CSM to CSM, CS to support. Forces out the four things that never reach a system, and lets the receiving side decide when it is complete rather than the person leaving. |
+| [`advocacy-ask`](skills/advocacy-ask) | References, case studies, reviews. Times the ask to realised value rather than to renewal, asks the person who benefited rather than the one who signed, and tracks who has already been asked by every other team. |
 | [`renewal-negotiation`](skills/renewal-negotiation) | Prepares the renewal conversation itself: what you concede, what you will not, the walk-away, and the four asks you are going to get. Built on the rule that every concession is permanent unless you deliberately make it temporary. |
 | [`expansion-case`](skills/expansion-case) | Builds the internal business case your champion carries without you in the room, in their words and on one page. Checks first that the existing deployment is demonstrably working, because an expansion ask on a broken one risks the renewal. |
 | [`escalation`](skills/escalation) | Runs the first four hours of an account on fire. What to say before you know the answer, who to pull in and when, and what the customer actually wants, which is often a forwardable answer rather than a fix. |
@@ -80,7 +86,7 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Nineteen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, built out over time. Twenty-three skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
@@ -88,7 +94,7 @@ Seven categories, built out over time. Nineteen skills exist today and the rest 
 | **Run the set-piece** | `onboarding-plan` · `business-review` · `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` | *Complete* |
 | **Handle the conversation** | `call-prep` · `call-recap` · `hard-conversation` · `exec-conversation` | *Complete* |
 | **Write to the customer** | `email-critic` · `customer-update` · `one-pager` | *Complete* |
-| **Work it internally** | | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` |
+| **Work it internally** | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` | *Complete* |
 | **Run the book** | | `book-triage` · `account-plan` · `weekly-plan` |
 | **Lead the function** | | `renewal-forecast` · `portfolio-review` · `coverage-model` · `nrr-narrative` · `coaching` · `csql-motion` |
 
@@ -168,6 +174,10 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
+| `product-feedback` | what the customer asked for and who they are | other accounts raising it, usage data, your product team's intake format |
+| `internal-escalation` | what you need and by when | the contract value, what you have already tried, your company's escalation process |
+| `handoff` | the account and both names | the account history, open commitments, thirty minutes of live overlap |
+| `advocacy-ask` | the account and what is being asked for | open escalations, and a record of what they have already been asked |
 | `renewal-negotiation` | the account, the date and roughly what they pay | the contract, especially notice date and uplift clause |
 | `expansion-case` | what you want to expand into and who would sponsor it | outcome data from the existing deployment, a stakeholder map |
 | `escalation` | what happened and who is angry | the incident record, the contract, a stakeholder map |
