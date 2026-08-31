@@ -54,7 +54,7 @@ If you cannot write that sentence, you have found the most useful thing in this 
 
 - **The outcome belongs to a different meeting.** Say so and reshape the call.
 - **The outcome needs someone who is not invited.** That is a room problem, not an agenda problem. Go to Step 2 and fix it.
-- **There is no outcome.** The call is a cadence being served. The honest options are to cancel it, shorten it, or replace it with an email, and proposing one of those to the customer usually buys credibility rather than spending it. A recurring call nobody has an outcome for is a recurring call the customer is looking for a reason to decline.
+- **There is no outcome.** The call is a cadence being served. The honest options are to cancel it, shorten it, or replace it with an email, and proposing one of those to the customer usually buys credibility rather than spending it. `weekly-plan` treats the hour freed this way as the trade that funds the protected block. A recurring call nobody has an outcome for is a recurring call the customer is looking for a reason to decline.
 
 ## Step 2: Work out who is really in the room
 
