@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Twenty-six skills today, grouped into seven categories and built out over time. The full list is below.
+Thirty-two skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -32,21 +32,28 @@ That is the difference between a library and a pile. Without it, a renewal read 
 flowchart TB
     AC["<b>account-context</b><br/><i>the product, the segments, the contract shapes,<br/>the value metric, what healthy looks like here</i>"]
 
-    AC --> R["<b>Read the account</b><br/>account-research<br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
-    AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
-    AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
-    AC --> W["<b>Write to the customer</b><br/>email-critic<br/>customer-update<br/>one-pager"]
-    AC --> I["<b>Work it internally</b><br/>product-feedback<br/>internal-escalation<br/>handoff<br/>advocacy-ask"]
-    AC --> B["<b>Run the book</b><br/>book-triage<br/>account-plan<br/>weekly-plan"]
+    AC --> ONE["<b>One account at a time</b>"]
+    AC --> OWN["<b>Your own operation</b>"]
+    AC --> FUN["<b>The whole function</b>"]
+
+    ONE --> R["<b>Read the account</b><br/>account-research<br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
+    ONE --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
+    ONE --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
+    ONE --> W["<b>Write to the customer</b><br/>email-critic<br/>customer-update<br/>one-pager"]
+
+    OWN --> I["<b>Work it internally</b><br/>product-feedback<br/>internal-escalation<br/>handoff<br/>advocacy-ask"]
+    OWN --> B["<b>Run the book</b><br/>book-triage<br/>account-plan<br/>weekly-plan"]
+
+    FUN --> L["<b>Lead the function</b><br/>renewal-forecast<br/>portfolio-review<br/>coverage-model<br/>nrr-narrative<br/>coaching<br/>csql-motion"]
 
     R -.->|"what is true"| S
     S -.->|"what happened"| C
     C -.->|"what to send"| W
-    W -.->|"what your side owes"| I
-    B -.->|"which accounts, and when"| R
+    B -.->|"which accounts"| R
+    R -.->|"reads roll up"| L
 ```
 
-Six of the seven categories have skills today, and all six are complete. The other three are listed further down.
+All seven categories are complete. The library is the full map rather than a work in progress, and what happens next is testing rather than adding. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
@@ -60,6 +67,12 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | :--- | :--- |
 | [`account-context`](skills/account-context) | Captures the shared context every other skill needs, once, so they stop asking for it. Run this first. |
 | [`onboarding-plan`](skills/onboarding-plan) | Builds a first-90-days plan aimed at a result the customer can name, not a checklist your team can close. Success criteria carry a baseline, and it covers the three reasons a customer refuses to commit to one. |
+| [`renewal-forecast`](skills/renewal-forecast) | A forecast in dollars with contraction on its own line, evidence-based entry criteria per category, and correlated risks grouped by mechanism and forecast as one bet rather than thirty. |
+| [`portfolio-review`](skills/portfolio-review) | Reviews your team's reads rather than their accounts. Samples rather than covers, always includes a random five, and asks the four questions that expose a read with no mechanism behind it. |
+| [`coverage-model`](skills/coverage-model) | Who gets a named CSM, who gets pooled, who gets digital only, and what breaks at each line. The ratio is an output of cost to serve, and the model is tested against the accounts that actually churned. |
+| [`nrr-narrative`](skills/nrr-narrative) | Decomposes retention into expansion, price, contraction and churn before narrating it, keeps gross next to net, and names what the number hides before a board asks. |
+| [`coaching`](skills/coaching) | Diagnoses skill, knowledge, will or environment before coaching anything, works one observable behaviour at a time, asks for the self-assessment first, and rehearses rather than advises. |
+| [`csql-motion`](skills/csql-motion) | Expansion signals from CS to sales without burning the relationship that produced them. One badly handled handoff ends the flow of signals within a month, so the handoff design is the programme. |
 | [`book-triage`](skills/book-triage) | Decides which accounts get your attention this week and writes down which ones deliberately do not. Sorts by what changed and what can still be influenced, not by size or health colour, and always includes one account nobody has heard from. |
 | [`account-plan`](skills/account-plan) | The durable per-account plan, written for whoever inherits it in month four. Objectives in the customer's words with a baseline, owners on both sides, and every risk carrying a trigger rather than a worry. |
 | [`weekly-plan`](skills/weekly-plan) | Shapes the week around what has to be true by Friday rather than around the calendar that filled itself. Protects one block for the work that has no deadline, because proactive work loses every collision it will ever have. |
@@ -91,7 +104,7 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Twenty-six skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, all built. Thirty-two skills. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
@@ -101,7 +114,7 @@ Seven categories, built out over time. Twenty-six skills exist today and the res
 | **Write to the customer** | `email-critic` · `customer-update` · `one-pager` | *Complete* |
 | **Work it internally** | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` | *Complete* |
 | **Run the book** | `book-triage` · `account-plan` · `weekly-plan` | *Complete* |
-| **Lead the function** | | `renewal-forecast` · `portfolio-review` · `coverage-model` · `nrr-narrative` · `coaching` · `csql-motion` |
+| **Lead the function** | `renewal-forecast` · `portfolio-review` · `coverage-model` · `nrr-narrative` · `coaching` · `csql-motion` | *Complete* |
 
 Grouped by the job in front of you rather than by lifecycle stage, because nobody thinks "I am in the adoption phase". They think "I have a call in an hour".
 
@@ -179,6 +192,12 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | `renewal-risk` | what you know about the account | usage data, mailbox history, the account plan |
 | `business-review` | the account and the date | their stated goals, outcome data, the attendee list |
 | `onboarding-plan` | what was sold and to whom | the sales handover, contract scope, stakeholder map |
+| `renewal-forecast` | the accounts up for renewal, their values and dates | a risk read per account, and last quarter's forecast against actual |
+| `portfolio-review` | your team's current reads | last contact dates, and forecast-versus-actual history per person |
+| `coverage-model` | the account list with values, and your headcount | churn history by segment, usage data, support load per account |
+| `nrr-narrative` | the retention numbers and the period | the movement split four ways, and cohort or segment data |
+| `coaching` | something you observed yourself | the recording or artefact, and a pattern across several observations |
+| `csql-motion` | what you want CS to spot and who would work it | historical expansion data, and both teams' compensation plans |
 | `book-triage` | your account list with renewal dates and rough values | usage trend, support activity, and last real contact dates |
 | `account-plan` | the account, its contract, and what you know of their goals | the original business case, outcome data, a stakeholder map |
 | `weekly-plan` | your calendar and a sense of what is urgent | a triage list, and an honest record of where last week went |

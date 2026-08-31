@@ -86,7 +86,7 @@ Name the accounts you are consciously not touching, and for each one the trigger
 
 Two things it buys. You stop carrying forty accounts in your head, which is where the low-grade dread comes from. And when one of them goes wrong, you can say what you knew and what you decided, which is a completely different conversation from being surprised.
 
-**Where the tail is permanently unservable, that is a coverage-model problem, not a triage problem.** Say so upward rather than absorbing it weekly. A book that cannot be covered at any allocation is a design fault, and quietly compensating for it hides the evidence.
+**Where the tail is permanently unservable, that is a `coverage-model` problem, not a triage problem.** Say so upward rather than absorbing it weekly. A book that cannot be covered at any allocation is a design fault, and quietly compensating for it hides the evidence.
 
 ## Step 7: Set the cadence and keep the list short
 

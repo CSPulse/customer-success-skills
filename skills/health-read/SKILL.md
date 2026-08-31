@@ -126,6 +126,12 @@ State, in order: what the score says, what it is actually measuring, which input
 
 ---
 
+## Where this feeds
+
+A score audit is worth more across a team than on one account. `portfolio-review` uses the same distinction to spot reads that match the health score exactly, which usually means the score did the thinking rather than the CSM.
+
+---
+
 ## Failure modes
 
 - **Reporting the score instead of auditing it.** The number is the input to this skill, never its output
