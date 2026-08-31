@@ -155,7 +155,7 @@ Most accounts labelled "at risk" are not at risk of leaving. They are at risk of
 
 Give a range with a number attached: full renewal, likely contraction and its size, and the downside. If you are guessing, say which parts are guesses.
 
-Also ask whether this risk is correlated. Thirty accounts with the same risk reason is one product or pricing decision, not thirty individual saves.
+Also ask whether this risk is correlated. Thirty accounts with the same risk reason is one product or pricing decision, not thirty individual saves. `renewal-forecast` groups the at-risk book by mechanism for exactly this reason, since forecasting them independently understates the variance badly.
 
 ---
 

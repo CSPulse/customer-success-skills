@@ -152,6 +152,7 @@ Then deliver whatever you promised. The second ask is decided entirely by what h
 - `stakeholder-map` for identifying who actually benefited
 - `one-pager` for the document your contact forwards to their own comms or legal team
 - `renewal-negotiation` for the case where advocacy is genuinely being traded, which should be a deliberate choice
+- `csql-motion` for the other place customer success is asked to monetise trust, with the same asymmetry and the same failure mode
 
 ---
 

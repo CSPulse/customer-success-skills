@@ -143,7 +143,7 @@ Fill `assets/postmortem-template.md`.
 
 ## Where the raw material comes from
 
-Where a product gap was the mechanism, `product-feedback` is where the finding has to land to change anything, and it needs the job rather than the feature name.
+Where a product gap was the mechanism, `product-feedback` is where the finding has to land to change anything, and it needs the job rather than the feature name. Where the losses share a segment or a touch level rather than a cause, that is a `coverage-model` finding, and it is the back-test that model should be run against.
 
 The exit conversation is the single richest input to this analysis and it has to be asked for while the account is still winding down. `offboarding` covers getting it, and getting it honestly: separately from the commercial wind-down, with nothing being sold, recorded in their words rather than summarised. Run afterwards on a departure nobody debriefed, this skill is working from memory and the stated reason, which is the version most likely to be wrong.
 
