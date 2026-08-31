@@ -152,6 +152,8 @@ Watch for the account that goes quiet and cooperative immediately after resoluti
 - `stakeholder-map` for the people an escalation surfaces, including the ones you had never met
 - `renewal-risk` afterwards, because a resolved escalation still moves the read
 - `exec-conversation` when their executive is in the room
+- `customer-update` when the incident affects a list of customers rather than one account
+- `one-pager` for the forwardable answer the contact needs to give their own boss
 - `churn-postmortem` if it did not hold
 
 ---

@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "customer-success-skills",
-      "description": "Seventeen skills for customer success work, built on a shared account-context spine: account research, health reads, stakeholder maps, renewal risk, churn postmortems, business reviews, onboarding plans, renewal negotiation, expansion cases, escalations, offboarding, call prep and recap, hard conversations, executive conversations and email critique",
+      "description": "Nineteen skills for customer success work, built on a shared account-context spine: account research, health reads, stakeholder maps, renewal risk, churn postmortems, business reviews, onboarding plans, renewal negotiation, expansion cases, escalations, offboarding, call prep and recap, hard conversations, executive conversations and customer updates, forwardable one-pagers and email critique",
       "source": "./",
       "strict": false,
       "skills": [
@@ -31,6 +31,8 @@
         "./skills/call-recap",
         "./skills/hard-conversation",
         "./skills/exec-conversation",
+        "./skills/customer-update",
+        "./skills/one-pager",
         "./skills/email-critic"
       ]
     }

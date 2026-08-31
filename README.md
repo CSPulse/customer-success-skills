@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Seventeen skills today, grouped into seven categories and built out over time. The full list is below.
+Nineteen skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -35,14 +35,14 @@ flowchart TB
     AC --> R["<b>Read the account</b><br/>account-research<br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
     AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
     AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
-    AC --> W["<b>Write to the customer</b><br/>email-critic"]
+    AC --> W["<b>Write to the customer</b><br/>email-critic<br/>customer-update<br/>one-pager"]
 
     R -.->|"what is true"| S
     S -.->|"what happened"| C
     C -.->|"what to send"| W
 ```
 
-Four of the seven categories have skills today, and three of those are complete. The other three are listed further down.
+Four of the seven categories have skills today, and all four are complete. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
@@ -64,6 +64,8 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | [`call-recap`](skills/call-recap) | Turns a call into an honest read of how it went plus every follow-up email it generated, grouped by recipient and staged as drafts. Works with any meeting recorder, or a pasted transcript. |
 | [`hard-conversation`](skills/hard-conversation) | Scripts the conversation you are putting off: a price increase, a feature you will not build, a commitment you missed, or a failure that cost them money. Settles what you can offer and on whose authority before a word is said. |
 | [`exec-conversation`](skills/exec-conversation) | Prepares fifteen minutes with someone three levels up who has no context and did not ask for the meeting. One ask, one number they recognise, and the two questions only they can answer. |
+| [`customer-update`](skills/customer-update) | Writes the proactive message nobody wants to send: an incident, a delay, a deprecation, a price change, a change of CSM. Segments by impact rather than by mailing list, and says plainly whether action is needed. |
+| [`one-pager`](skills/one-pager) | Writes the summary a sponsor forwards to their boss without editing it. Their vocabulary, no logo, conclusion in the first three lines, and the covering line written for them. |
 | [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
 | [`business-review`](skills/business-review) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
 | [`account-research`](skills/account-research) | Archaeology on an account you inherited: what was sold, by whom, on what promise, and which of it nobody has questioned since. Marks every claim as documented, reported or folklore, and ends with the questions it could not answer. |
@@ -78,14 +80,14 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Seventeen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, built out over time. Nineteen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
 | **Read the account** | `account-research` · `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | *Complete* |
 | **Run the set-piece** | `onboarding-plan` · `business-review` · `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` | *Complete* |
 | **Handle the conversation** | `call-prep` · `call-recap` · `hard-conversation` · `exec-conversation` | *Complete* |
-| **Write to the customer** | `email-critic` | `customer-update` · `one-pager` |
+| **Write to the customer** | `email-critic` · `customer-update` · `one-pager` | *Complete* |
 | **Work it internally** | | `product-feedback` · `internal-escalation` · `handoff` · `advocacy-ask` |
 | **Run the book** | | `book-triage` · `account-plan` · `weekly-plan` |
 | **Lead the function** | | `renewal-forecast` · `portfolio-review` · `coverage-model` · `nrr-narrative` · `coaching` · `csql-motion` |
@@ -174,6 +176,8 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | `call-recap` | a pasted transcript | a meeting recorder, a mailbox, account notes |
 | `hard-conversation` | what happened and who it affects | the commitment as it was actually made in writing, the contract |
 | `exec-conversation` | their title and why the meeting exists | ten minutes with the champion, outcome data in their measure |
+| `customer-update` | what is changing, when, and who it touches | the account list with contract detail, any notice obligation |
+| `one-pager` | what happened and who it is for | their goals in their words, a prior document their leadership has seen |
 | `email-critic` | the draft itself | the transcript, the thread, a voice guide |
 
 Missing context never blocks a skill. It changes what the skill can honestly claim, and each one names the checks it could not run rather than guessing around the gap.
