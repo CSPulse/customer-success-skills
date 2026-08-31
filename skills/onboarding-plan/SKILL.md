@@ -37,7 +37,7 @@ Six things must transfer from sales. Check each and name the gaps:
 
 If you are asking sales a lot of follow-up questions, that itself is a signal: incomplete handovers predict rediscovery friction and expectation mismatch later.
 
-Where there is no handover at all, or the account arrived without one because it was transferred rather than sold to you, `account-research` reconstructs what was promised from the deal record instead.
+Where there is no handover at all, or the account arrived without one because it was transferred rather than sold to you, `account-research` reconstructs what was promised from the deal record instead, and `handoff` is what should have happened. When the first ninety days end, `account-plan` is what the plan becomes.
 
 **Move fast.** The gap between signature and kickoff is idle time at the moment of peak customer enthusiasm. Five business days is a reasonable ceiling.
 

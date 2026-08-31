@@ -193,7 +193,7 @@ Keep it under a page. If it is longer than the account is worth, it will not be 
 
 - **Sandbagging.** Risk flagged with no play attached, flagged late, never changing state. The tell is an at-risk book that renews at 95%
 - **Happy ears.** The only evidence is verbal, from one person, who does not control budget
-- **Reading quiet as healthy.** The accounts with the fewest logged touches are disproportionately risky and disproportionately rated green. A CSM's avoidance is itself a signal and no health score captures it
+- **Reading quiet as healthy.** The accounts with the fewest logged touches are disproportionately risky and disproportionately rated green. A CSM's avoidance is itself a signal and no health score captures it. `book-triage` puts one silent account on the list every week for exactly this reason
 - **Anchoring on your renewal date** rather than their budget cycle and notice date
 - **Single-signal reads** - declaring risk on usage alone, or safety on a score that has never been tested against actual churn
 - **Risk theatre.** Risk logged, playbook fired, training offered, nothing touching the actual mechanism
