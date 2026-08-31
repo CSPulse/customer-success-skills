@@ -4,7 +4,7 @@
 
 Reading an account honestly. Running the set-piece moments. Handling the conversations. Writing the things customers actually read.
 
-Sixteen skills today, grouped into seven categories and built out over time. The full list is below.
+Seventeen skills today, grouped into seven categories and built out over time. The full list is below.
 
 These are working skills, not demos. Each one is built around a job that keeps repeating, states the least it needs to run, and says what it could not check rather than guessing.
 
@@ -32,7 +32,7 @@ That is the difference between a library and a pile. Without it, a renewal read 
 flowchart TB
     AC["<b>account-context</b><br/><i>the product, the segments, the contract shapes,<br/>the value metric, what healthy looks like here</i>"]
 
-    AC --> R["<b>Read the account</b><br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
+    AC --> R["<b>Read the account</b><br/>account-research<br/>health-read<br/>stakeholder-map<br/>renewal-risk<br/>churn-postmortem"]
     AC --> S["<b>Run the set-piece</b><br/>onboarding-plan<br/>business-review<br/>renewal-negotiation<br/>expansion-case<br/>escalation<br/>offboarding"]
     AC --> C["<b>Handle the conversation</b><br/>call-prep<br/>call-recap<br/>hard-conversation<br/>exec-conversation"]
     AC --> W["<b>Write to the customer</b><br/>email-critic"]
@@ -42,7 +42,7 @@ flowchart TB
     C -.->|"what to send"| W
 ```
 
-Four of the seven categories have skills today, three of them complete. The other three are listed further down.
+Four of the seven categories have skills today, and three of those are complete. The other three are listed further down.
 
 Skills read it where it exists and name the assumption where it does not. It is context, never a prerequisite.
 
@@ -66,6 +66,7 @@ Skills read it where it exists and name the assumption where it does not. It is 
 | [`exec-conversation`](skills/exec-conversation) | Prepares fifteen minutes with someone three levels up who has no context and did not ask for the meeting. One ask, one number they recognise, and the two questions only they can answer. |
 | [`email-critic`](skills/email-critic) | Stress-tests a drafted customer email against the transcript and account context, then returns a verdict and a tightened version. Checks facts before prose, because that is where the damage is. |
 | [`business-review`](skills/business-review) | Prepares a QBR or EBR that earns the next meeting: the customer's business first, value proved to a standard finance would accept, an explicit ask. Tells you when a business review is the wrong meeting to run. |
+| [`account-research`](skills/account-research) | Archaeology on an account you inherited: what was sold, by whom, on what promise, and which of it nobody has questioned since. Marks every claim as documented, reported or folklore, and ends with the questions it could not answer. |
 | [`health-read`](skills/health-read) | Audits an account health score instead of reporting it. Separates what is measured from what is inferred, finds the inputs that are proxies, and asks whether the score has ever been tested against accounts that actually left. |
 | [`stakeholder-map`](skills/stakeholder-map) | Maps who decides an account's outcome by what they can do to it rather than by job title. Flags who has never actually been met, tests for single-threading, and tracks who went quiet. |
 | [`churn-postmortem`](skills/churn-postmortem) | Works out why an account actually left, separating the reason given from the mechanism. Keeps what was detectable at the time apart from what is only obvious in hindsight, and checks whether the loss was one of a correlated set. |
@@ -77,11 +78,11 @@ Skills read it where it exists and name the assumption where it does not. It is 
 
 ## Where this is going
 
-Seven categories, built out over time. Sixteen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
+Seven categories, built out over time. Seventeen skills exist today and the rest are planned. If one you need is missing, [say so](../../issues/new/choose).
 
 | Category | Built | Planned |
 | :--- | :--- | :--- |
-| **Read the account** | `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | `account-research` |
+| **Read the account** | `account-research` · `health-read` · `stakeholder-map` · `renewal-risk` · `churn-postmortem` | *Complete* |
 | **Run the set-piece** | `onboarding-plan` · `business-review` · `renewal-negotiation` · `expansion-case` · `escalation` · `offboarding` | *Complete* |
 | **Handle the conversation** | `call-prep` · `call-recap` · `hard-conversation` · `exec-conversation` | *Complete* |
 | **Write to the customer** | `email-critic` | `customer-update` · `one-pager` |
@@ -158,6 +159,7 @@ You do not need a workspace, connectors or file access. Every skill opens with a
 | Skill | Works with nothing but | Gets better with |
 | :--- | :--- | :--- |
 | `account-context` | five minutes and what you already know | the pricing page, a sample contract, an original business case |
+| `account-research` | the account name and whatever you were handed | the original deal notes, the mailbox, twenty minutes with whoever had it before |
 | `health-read` | the score and roughly what goes into it | the input values, the trend, and what churned accounts scored |
 | `stakeholder-map` | the names you know | email and meeting history, the original deal notes |
 | `churn-postmortem` | what you remember | the account history, the support record, the original business case |

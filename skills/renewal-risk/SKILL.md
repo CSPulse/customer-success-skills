@@ -16,7 +16,7 @@ The failure this exists to prevent: "at risk, low usage." That sentence states a
 
 **Shared context.** If an `account-context` document exists, read it first: it carries the product, the segments, the contract shapes, the value metric and what healthy usage looks like in this business. Where it is absent, carry on and name the assumption you are making instead. It is context, never a prerequisite.
 
-**Minimum: what you know.** Tell it about the account and it will produce the read, marking every gap as a gap. A read with three unknowns that names them is more useful than a confident one that hides them.
+**Minimum: what you know.** Tell it about the account and it will produce the read, marking every gap as a gap. On an account you have just inherited, run `account-research` first: a risk read without the original promise is a read against a standard nobody has established. A read with three unknowns that names them is more useful than a confident one that hides them.
 
 **Better with** access to usage data, the mailbox or CRM for relationship history, and support ticket history. Each one converts a "cannot verify" into evidence.
 

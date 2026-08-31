@@ -22,7 +22,7 @@ The failure this exists to prevent: **a beautifully complete contact list on an 
 
 **Better with** the last few months of email and meeting history, so "who used to respond and stopped" can be answered rather than guessed.
 
-**Best with** the original deal notes, which usually name the economic buyer and almost always name the sceptic that nobody has thought about since.
+**Best with** the original deal notes, which usually name the economic buyer and almost always name the sceptic that nobody has thought about since. On an inherited account, `account-research` is what finds those notes and establishes which of the names in them are still there.
 
 ---
 
