@@ -1,39 +1,80 @@
 # offboarding
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
+**Lose well. The decision is made - the only thing left to protect is what happens next.**
 
-Runs a departure once the decision is genuinely final - the single most damaging thing this skill guards against is still trying to save an account that has already been lost, which converts whatever goodwill remains into irritation. It exists to prevent the account that goes cold the moment it is marked closed-lost: the data export drags, the exit conversation never gets asked for, and a customer who left for a fixable reason becomes one who tells people you were fine right up until you stopped caring.
+The account is marked closed lost, and the damage that follows is usually what happens by default: the last two weeks get no attention, the data export drags, the exit conversation never gets asked for, and a customer who left for a solvable reason tells people you were fine until you stopped caring - a story that travels further than the product problem that caused the churn.
 
-Three jobs, run in order. First, the contractual work - notice, data handover, deletion obligations, access shutoff, final invoice - done faster than required, because slow data export is the detail people describe afterwards more than whatever product problem drove them out. Second, the exit conversation, asked for and held *separately* from the commercial wind-down so it doesn't read as a last sales pitch, using questions built to get past the polite answer: "When did you first start thinking about this?", "Was there a moment we could have changed it?", "What did you tell your own leadership about why?" - asked without defending, correcting, or explaining the roadmap, because one correction ends the honest version of the conversation. Third, treating the departing champion as a future pipeline event rather than a closed record, because champions move, and a clean exit with no pitch attached is what they remember when they land somewhere with budget again.
+This skill assumes the decision is final and treats trying to reverse it as actively harmful, since every further save attempt converts the goodwill you have left into irritation. It runs three jobs in order: get the data out cleanly and fast, ask for the honest exit conversation separately from the commercial wind-down so it doesn't read as one more sales attempt, and leave the door open deliberately, since champions move and carry a memory of how this ended. The exit conversation uses sharp, specific questions - not "what went wrong" but "when did you first start thinking about this," almost always far earlier than your systems show.
 
-Part of the **Run the set-piece** group in this library.
+The failure this exists to prevent: **the account that goes cold the moment it is marked closed lost** - the last two weeks get no attention, the data export is slow, the final conversation never happens, and a customer who left for a solvable reason becomes a customer who tells people you were fine until you stopped caring.
 
-## Who this is for
-
-For CSMs running the big, mostly one-shot moments in an account's lifecycle, the ones with no redo if they go wrong.
-
-## What this needs
-
-Works with nothing but the account and the end date. Gets better with the contract, the account history, the original business case.
-
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it names the checks it could not run rather than guessing around the gap.
-
-## Install just this skill
-
-**In the Claude app, no terminal needed.** Paste this into Claude:
-
-```
-Download the offboarding skill from
-https://github.com/CSPulse/customer-success-skills/tree/main/skills/offboarding,
-zip the offboarding folder on its own, then upload it as a skill in Claude.
-```
-
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/offboarding`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
-
-## Want the whole library?
-
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
+Part of the **Run the set-piece** group in [customer-success-skills](../../#readme).
 
 ---
 
-MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills), maintained by [CS Pulse](https://cspulse.com?ref=github).
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Step 0: confirm it's actually over | A check on whether the decision was really made by the decider (versus one person in one meeting), and whether the mechanism can still be changed - because running this on a live account costs you the save |
+| Step 1: the contractual work, fast | Notice and dates, data handover, deletion obligations confirmed in writing, access wind-down with warning, and a final invoice with no surprises in it |
+| Step 2: the exit conversation, asked for separately | A held-apart, no-selling fifteen minutes with pointed questions - when they first started thinking about it, what they didn't get, whether there was a moment it could have changed |
+| Step 3: reason versus mechanism | The stated reason and the apparent cause kept clearly separate in the record, captured verbatim and handed to `churn-postmortem` rather than smoothed over |
+| Step 4: leave the door open | What would have to change for them to reconsider, said honestly with no pitch attached, and a plan to stay in touch as a person rather than a lapsed CRM record |
+| Step 5: hand over internally, once | Who needs to know before they hear it elsewhere, the honest version of the record rather than the sanitized one, and the correlated-loss question - how many other accounts share this mechanism |
+| Step 6: the last message | Short, specific thanks, what's done and what's left, a door left open in one line, and nothing that reads as a win-back attempt |
+
+---
+
+## Who this is for
+
+CSMs and account managers running the wind-down on a lost account - a non-renewal, a cancellation, a churn that's already decided. It's built specifically for the period after the decision is final, and it deliberately does not help with a save attempt; `renewal-risk` is the skill for while the outcome is still open.
+
+---
+
+## What this needs
+
+**Minimum:** the account and the end date. Enough for the wind-down plan, the exit questions, and the internal handover.
+
+**Better with:** the contract, for notice, data retention and deletion obligations, the final invoice position, and any wind-down period already owed.
+
+**Best with:** the account history and the original business case, because the exit conversation is much sharper when you can ask about the specific thing they bought the product to do.
+
+Missing context never blocks this skill - where an `account-context` document doesn't exist, it carries on and names the assumption instead.
+
+---
+
+## Install
+
+**The easy way: one paste**
+
+```
+I want to install the offboarding skill from
+https://github.com/CSPulse/customer-success-skills. Download or clone the
+repository, then copy the skills/offboarding folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
+```
+
+**In the Claude app (no terminal needed)**
+
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/offboarding` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
+
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add CSPulse/customer-success-skills
+/plugin install customer-success-skills@cspulse
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 32 skills at once.
+
+**Or just read it.** `SKILL.md` is the method, and `assets/offboarding-checklist.md` carries the wind-down, the exit questions, and the handover on one page.
+
+---
+
+MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills).

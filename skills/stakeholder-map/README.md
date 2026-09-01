@@ -1,41 +1,95 @@
 # stakeholder map
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
+**Maps who decides an account's outcome by what they can do to it, not by their job title.**
 
-Maps the people who decide an account's outcome by what they can do to it, not by their job title. An org chart tells you what people are called; this tells you what happens to the renewal if a given person says no, and what happens if they leave - and those are not the same document.
+You've seen the contact list - fifteen names, titles, departments, all current - and nobody on it can say who signs the renewal, or whether anyone's ever spoken to them. An org chart tells you what people are called, not what happens to the account if one of them says no, leaves, or stops replying for three weeks. Those are different documents, and the confusion holds until the renewal goes sideways and nobody can explain why.
 
-It sorts every person into one of six positions defined by function rather than seniority - economic buyer, champion, sceptic, user, coach, gatekeeper - because the same title maps differently at every company, and a person can hold more than one position at once. Getting the sceptic onto the list is treated as the actual point of the exercise: every account has one, and a map with no sceptic on it is incomplete, not exceptional. For each person it adds the column most maps skip entirely - met, aware of, or assumed - and if the economic buyer is anything less than met, that's named as the account's largest risk before anything else in the read, ahead of every usage signal. It then runs a concrete single-threading test (one relationship means no recovery path; two people on the same team is single-threading in disguise; three or more across functions is real coverage) and asks the harder version of the question: if the champion left this month, is there anyone left inside the account who could explain why they bought this in the first place. Movement gets tracked deliberately - who's new (a new executive reviews everything their predecessor bought, and that isn't negotiable), who's gone quiet after previously responding fast, whose remit changed without anyone logging it - and every identified gap gets a named route to closing it and a date, because a map that stops at "we don't know the economic buyer" has only described the problem.
+This skill sorts people by six positions defined by what they can do to the outcome - economic buyer, champion, sceptic, user, coach, gatekeeper - rather than seniority, and insists the sceptic goes on the map, since every account has one. It adds the column most relationship lists skip: have you actually met this person, only heard of them, or merely assumed the role exists. It turns single-threading into a count - how many people would need replacing if one left tomorrow - and tracks movement, since who's gone quiet tells you more than who's still there.
 
 The failure this exists to prevent: **a beautifully complete contact list on an account nobody can name a decider for.**
 
-Part of the **Read the account** group in this library.
-
-## Who this is for
-
-For CSMs and account managers who need an honest read on an account, whether it is one they have run for years or one they just inherited.
-
-## What this needs
-
-Works with nothing but the names you know. Gets better with email and meeting history, the original deal notes.
-
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it names the checks it could not run rather than guessing around the gap.
-
-## Install just this skill
-
-**In the Claude app, no terminal needed.** Paste this into Claude:
-
-```
-Download the stakeholder-map skill from
-https://github.com/CSPulse/customer-success-skills/tree/main/skills/stakeholder-map,
-zip the stakeholder-map folder on its own, then upload it as a skill in Claude.
-```
-
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/stakeholder-map`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
-
-## Want the whole library?
-
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
+Part of the **Read the account** group in [customer-success-skills](../../#readme).
 
 ---
 
-MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills), maintained by [CS Pulse](https://cspulse.com?ref=github).
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Sort by what they can do, not what they're called | Every name assigned to one of six positions - economic buyer, champion, sceptic, user, coach, gatekeeper - with the sceptic deliberately sought out, since it's the role most often left off |
+| Add the column everybody skips | A "have you actually spoken to them" rating of Met, Aware-of, or Assumed for each person - with an Aware-of or Assumed economic buyer flagged as the account's single largest risk |
+| Test for single-threading | A number, not an impression: how many people, across how many functions, would have to be replaced if one left tomorrow |
+| Track movement, not just position | Who's new, who's left, who's gone quiet after previously responding, and whose remit changed without anyone logging it |
+| Name the gaps and what closes them | Each missing relationship paired with a realistic route to close it and a date - an introduction, a business review invite, an exec-to-exec ask - rather than left as an observation |
+| Write it down | The completed map, led with the answer to "who decides, and have we met them," using `assets/map-template.md` |
+
+---
+
+## Who this is for
+
+CSMs and account managers walking into an account that's gone quiet, inheriting one they didn't build the relationships on, prepping for a first meeting on an unfamiliar account, or noticing a new executive has shown up on the customer side and needing to know fast what that changes.
+
+---
+
+## What this needs
+
+**Minimum:** the names you know and roughly what they do. Gaps are the output here, not a blocker.
+
+**Better with:** the last few months of email and meeting history, so "who used to respond and stopped" can be answered rather than guessed.
+
+**Best with:** the original deal notes, which usually name the economic buyer and almost always name the sceptic nobody has thought about since. On an inherited account, `account-research` is what finds those notes.
+
+Missing context never blocks this skill - where an `account-context` document exists, it uses who signs in this business (and whether CS ever meets them) to set the bar for the whole map; where it's absent, the skill carries on and names the assumption it's making.
+
+---
+
+## Install
+
+**The easy way: one paste**
+
+```
+I want to install the stakeholder-map skill from
+https://github.com/CSPulse/customer-success-skills. Download or clone the
+repository, then copy the skills/stakeholder-map folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
+```
+
+**In the Claude app (no terminal needed)**
+
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/stakeholder-map` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
+
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add CSPulse/customer-success-skills
+/plugin install customer-success-skills@cspulse
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 32 skills at once.
+
+**Or just read it.** `SKILL.md` is the method, and `assets/map-template.md` is the map to fill in by hand, no assistant required.
+
+---
+
+## Where this comes from
+
+The buyer-role taxonomy - economic buyer, user, coach, gatekeeper - descends from the buyer roles in Miller Heiman's Strategic Selling methodology, long used in enterprise sales to separate who funds a decision from who uses it from who can block it. This skill carries those roles past the sale into the ongoing account relationship, and adds the sceptic and the single-threading test as its own layer on top.
+
+---
+
+## What good looks like
+
+- The first line names the decider and says whether you have met them
+- The sceptic is on the map
+- Single-threading has a number, not an impression
+- Every gap has a named route and a date
+- Someone picking up this account could tell who to call first, and why
+
+---
+
+MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills).

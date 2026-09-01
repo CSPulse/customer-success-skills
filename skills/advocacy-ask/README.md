@@ -1,39 +1,88 @@
 # advocacy ask
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
+**Ask for advocacy like it's a favour, because it is one.**
 
-Advocacy is the one place in customer success where the customer does the work and your company gets the benefit, and this skill treats that asymmetry as the whole problem rather than pretending it away. It runs a four-point disqualifier check before anyone is asked - an open escalation, no realized value the customer would state themselves, a renewal inside the next quarter, or reference fatigue nobody tracked - and it picks the person who benefited rather than the person who signed, because the signer hands back vendor-management language that convinces nobody. The ask itself is sized to the smallest rung that does the job (a G2 review before a reference call before a named case study before a speaking slot), and it surfaces the approval path - marketing, legal, comms sign-off - before a single draft exists, because that discovery, made late, is what actually kills most case studies.
+Advocacy is the one place in customer success where the customer does the work and your company gets the benefit. Ask at renewal and that asymmetry turns into a trade: even a yes teaches the customer that agreeing to be a reference is worth something at the negotiating table, at your own expense, permanently.
 
-The failure this exists to prevent: **asking at renewal**, which converts a favor into a trade - even a "yes" teaches the customer that agreeing to be a reference is worth something at the negotiating table, at your own expense. Underneath that sits the failure nobody notices happening: the same three cooperative accounts get asked by sales, marketing, product and support independently, none of whom can see the others, so the customer experiences one company asking eleven times. The skill's register treats every "yes" as a per-use consent, not standing permission, and never lets a quote outlive the person who left the company two years ago.
+It's also easy to over-ask without noticing - the same three cooperative accounts get asked for a reference by sales, a testimonial by marketing, and a case study by support, none of them able to see what the others already asked for. This skill times the ask to a moment the customer already said something worked, picks the person who actually benefited rather than the one who signed, keeps the ask small enough to say yes to, and surfaces the approval path before anyone spends hours on a draft that legal or comms will kill anyway.
 
-Part of the **Work it internally** group in this library.
+The failure this exists to prevent: **asking at renewal. The timing converts a favour into a trade. Even when the customer says yes, they now know that agreeing to be a reference is worth something at the negotiating table, and you have taught them that at your own expense.**
 
-## Who this is for
-
-For CSMs who need their own company to act, not just the customer.
-
-## What this needs
-
-Works with nothing but the account and what is being asked for. Gets better with open escalations, and a record of what they have already been asked.
-
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it names the checks it could not run rather than guessing around the gap.
-
-## Install just this skill
-
-**In the Claude app, no terminal needed.** Paste this into Claude:
-
-```
-Download the advocacy-ask skill from
-https://github.com/CSPulse/customer-success-skills/tree/main/skills/advocacy-ask,
-zip the advocacy-ask folder on its own, then upload it as a skill in Claude.
-```
-
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/advocacy-ask`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
-
-## Want the whole library?
-
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
+Part of the **Work it internally** group in [customer-success-skills](../../#readme).
 
 ---
 
-MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills), maintained by [CS Pulse](https://cspulse.com?ref=github).
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Step 1: Decide whether to ask at all | A check against four disqualifiers - open escalation, no stated value, renewal proximity, reference fatigue |
+| Step 2: Time it to realised value | The specific moment to log and return to: right after the customer said, in their own words, that something worked |
+| Step 3: Pick the right person | The person who benefited, not the one who signed, matched to the prospect and checked for whether they can even speak publicly |
+| Step 4: Make the ask specific and small | A bounded request sized to the smallest rung of the advocacy ladder that does the job |
+| Step 5: Surface the approval path first | The legal/marketing/comms sign-off question asked before a draft exists, not after |
+| Step 6: Say what they get back | A real, delivered return - peer access, their own visibility, influence - never a discount |
+| Step 7: Track it and treat consent as per-use | A shared register across teams, an expiry on every quote, and a no logged as data rather than dropped |
+
+---
+
+## Who this is for
+
+Anyone fielding a request to produce a customer willing to vouch for the company - sales asking for a reference call, marketing wanting a case study or a G2 review, or a CSM deciding on their own whether a happy account is ready to be asked. It's equally useful as a check before saying yes to someone else's request: is this account actually in a place to be asked right now, and has anyone else already asked them this quarter.
+
+---
+
+## What this needs
+
+**Minimum:** the account and what's being asked for - enough to judge whether to ask, who to ask, and how to shape it.
+
+**Better with:** the account's recent history, any open escalations, and a record of what they've already been asked for by other teams - the single thing that prevents the most common damage.
+
+**Best with:** an outcome the customer has stated themselves, in their own words. An ask that starts from something they already said is a different conversation from one that starts from your need.
+
+Missing context never blocks this skill - where a check can't be made (whether they've been asked elsewhere, whether they can speak publicly), the skill names it explicitly rather than assuming it's clear to ask.
+
+---
+
+## Install
+
+**The easy way: one paste**
+
+```
+I want to install the advocacy-ask skill from
+https://github.com/CSPulse/customer-success-skills. Download or clone the
+repository, then copy the skills/advocacy-ask folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
+```
+
+**In the Claude app (no terminal needed)**
+
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/advocacy-ask` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
+
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add CSPulse/customer-success-skills
+/plugin install customer-success-skills@cspulse
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 32 skills at once.
+
+**Or just read it.** `SKILL.md` is the whole method - there's no separate template here, deliberately: the output is a decision, an ask, and a register line, and a template would be longer than all three.
+
+---
+
+## What this does not do
+
+- It carries no supporting files or templates. The output is a decision, an ask, and one register entry - anything more elaborate would outweigh what it's actually producing.
+- It does not treat a past yes as standing permission. Every reuse of someone as a reference needs asking again, or the relationship stops being one.
+- It never recommends a discount as payment for advocacy. That prices the relationship and turns every future ask into a negotiation.
+
+---
+
+MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills).

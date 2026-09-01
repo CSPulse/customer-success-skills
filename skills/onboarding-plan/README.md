@@ -1,39 +1,82 @@
 # onboarding plan
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
+**Build the plan the customer can point to, not the plan your team can close.**
 
-Builds a first-90-days plan aimed at a result the customer can point to, not a checklist your team can close. Completion is internal; value is external - the test of whether onboarding is actually done is not whether your tasks are checked off, it's whether the customer can walk you through a specific result. The failure this exists to prevent: a fully completed onboarding checklist attached to a customer who cannot say what changed.
+Go-live is a vendor event. Adoption is a customer state. Most onboardings confuse them: the implementation record turns green, everyone moves on, and eleven months later the renewal conversation has nothing to point to, because nobody ever checked whether anything actually changed for the customer.
 
-It reads the sales handover for what's missing rather than what's there, and treats the sceptics on the stakeholder map as the element most often omitted and most often fatal. It gets success criteria that carry a real baseline by asking, in order, what the business problem is, why now, what success looks like in six months, and - the highest-yield question - how leadership will decide whether the investment was worthwhile, because that forces the room to name the person who actually controls the renewal. When a sponsor won't commit to a number, it diagnoses which of three different problems that actually is - they can't articulate it because no baseline exists, they lack the authority to own a business metric, or they're hedging because they doubt it'll work - since each needs a completely different response, and it falls back through a ladder (business outcome, then leading operational metric, then a named workflow live by a date, then a named person willing to say it worked) rather than closing the plan with nothing measurable at all. It separates first value from full value and protects the path to the former from every other piece of configuration, however easy that configuration would be to do now. And it watches for the signal that health scores miss entirely: a customer can be green on every metric and still be at risk, because perceived momentum - not historical usage - is what they carry into the renewal conversation.
+This skill forces success criteria to carry an actual baseline instead of an aspiration, names an owner on both sides for every milestone, and watches for the signals - a shrinking meeting, a sponsor who stops joining, a widening gap between seats bought and seats used - that predict a bad year long before the health score notices. It also treats the sales handover as evidence to check, not a briefing to trust, since the six things that have to transfer from sales are exactly the six most often lost.
 
-Part of the **Run the set-piece** group in this library.
+The failure this exists to prevent: **a fully completed onboarding checklist attached to a customer who cannot say what changed.**
 
-## Who this is for
-
-For CSMs running the big, mostly one-shot moments in an account's lifecycle, the ones with no redo if they go wrong.
-
-## What this needs
-
-Works with nothing but what was sold and to whom. Gets better with the sales handover, contract scope, stakeholder map.
-
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it names the checks it could not run rather than guessing around the gap.
-
-## Install just this skill
-
-**In the Claude app, no terminal needed.** Paste this into Claude:
-
-```
-Download the onboarding-plan skill from
-https://github.com/CSPulse/customer-success-skills/tree/main/skills/onboarding-plan,
-zip the onboarding-plan folder on its own, then upload it as a skill in Claude.
-```
-
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/onboarding-plan`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
-
-## Want the whole library?
-
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
+Part of the **Run the set-piece** group in [customer-success-skills](../../#readme).
 
 ---
 
-MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills), maintained by [CS Pulse](https://cspulse.com?ref=github).
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Read the handover | The six things that should have transferred from sales - objective, deal context, the relationship map including sceptics, open risks, every commitment made, and 30-day priorities - checked one by one, with the gaps named rather than assumed away |
+| Validate, don't re-interrogate | A "here's what we understand, what would you change" opener instead of re-asking discovery, plus the operational questions sales never captures (how change actually gets approved, how the champion has changed) |
+| Success criteria with a baseline | A target that can be falsified, converted from vague language ("complete the integration") into a number with a baseline ("cut manual reporting from 12 hours a week by half"), plus a diagnosis of *why* a sponsor won't commit - can't articulate it, lacks authority, or is hedging - because each needs a different response |
+| The plan itself | First value separated from full value, a specific go-live date, named people with hours per week on the customer side, an agreed cadence, and one early win achievable in week one or two |
+| The 90-day shape | Foundation and first value by day 30, expanded usage by 60, a measured result and review by 90 |
+| The signal watchlist | Process signals (no named admin, security review discovered late), relationship signals (seniority quietly dropping, sponsor going quiet), and usage signals (flat growth, disconnected integrations) tracked from kickoff, not from the first QBR |
+| The handover onward | A properly documented transfer to whoever owns the account after go-live - risk log, stakeholder map, success metrics, health baseline - so the account doesn't go quiet the moment the project plan closes |
+
+---
+
+## Who this is for
+
+CSMs and implementation leads running a kickoff, especially in the window right after a deal closes when a handover from sales is supposed to happen and often doesn't. It's also for anyone inheriting a stalled onboarding and trying to work out whether the account is actually live or just has a closed task list, and for anyone about to walk into a renewal wondering whether the original success criteria were ever written down anywhere.
+
+You don't need the full sales record to start. The skill is built to work from what was sold and flag, explicitly, everything it couldn't confirm.
+
+---
+
+## What this needs
+
+**Minimum:** what was sold, and to whom. The skill builds the plan, the validation questions, and the risk list from that alone, and marks what it couldn't confirm.
+
+**Better with:** the sales handover notes, the contract scope, and a stakeholder map - together these catch the gap between what was sold and what was actually bought.
+
+**Best with:** the original business case and access to product usage data, so success criteria can be instrumented rather than left aspirational.
+
+Missing context never blocks this skill - it builds the plan from whatever transferred and states plainly, in the output, what it could not confirm, which itself becomes one of the risks to close.
+
+---
+
+## Install
+
+**The easy way: one paste**
+
+```
+I want to install the onboarding-plan skill from
+https://github.com/CSPulse/customer-success-skills. Download or clone the
+repository, then copy the skills/onboarding-plan folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
+```
+
+**In the Claude app (no terminal needed)**
+
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/onboarding-plan` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
+
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add CSPulse/customer-success-skills
+/plugin install customer-success-skills@cspulse
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 32 skills at once.
+
+**Or just read it.** `SKILL.md` is the method - plain markdown, no dependencies.
+
+---
+
+MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills).

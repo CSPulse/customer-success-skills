@@ -1,39 +1,80 @@
 # health read
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
+**Audit the health score. Don't just report it.**
 
-Audits a health score instead of reporting it. Most scores were set once, in a room, by intuition, and never back-tested against the accounts that actually left - which is how "the score was green" ends up offered as an explanation for a churn, when a green score at the moment of churn is the thing that actually needs explaining.
+A health score is a hypothesis almost nowhere treated as one. Most are designed once, in a room, with weights set by intuition, and never back-tested against the accounts that actually churned - so when one leaves anyway, "the score was green" gets offered as the explanation, when the score being green is what actually needed explaining.
 
-It sorts every input into measured, proxy, or absent: logins counted are evidence, login frequency standing in for value received is an untested hypothesis, and whether the champion still has budget authority is usually absent from the score entirely and usually decides the renewal anyway. It breaks the composite back apart - module by module, team by team, admin activity against end-user activity - because a growing product line averaged against a dying one produces a healthy-looking middle, and an account carried by one power user is one resignation from zero. Then it asks the question almost nobody runs: of the accounts that churned last year, what did their scores say three months out, and has the score ever been changed as a result of the answer.
+This skill interrogates the number instead of relaying it. It sorts every input into measured, proxy, or absent - because most health scores are three or four proxies wearing the clothes of evidence, while the genuinely decisive stuff (a sponsor change, a budget reallocation, a competitor being evaluated) sits entirely outside what usage data can see. It breaks the composite apart by module, team, and user, since an average hides a dying signal behind a growing one, and asks what almost nobody asks: of the accounts that churned last year, what did their scores say three months out, and has the score ever been changed as a result? The output is a confidence level with a reason attached - "green" alone doesn't stand.
 
-Part of the **Read the account** group in this library.
+The failure this exists to prevent: **"the score was green" offered as an explanation for a churn, when the score being green is the thing that needs explaining.**
 
-## Who this is for
-
-For CSMs and account managers who need an honest read on an account, whether it is one they have run for years or one they just inherited.
-
-## What this needs
-
-Works with nothing but the score and roughly what goes into it. Gets better with the input values, the trend, and what churned accounts scored.
-
-Missing context never blocks this skill. It changes what the skill can honestly claim, and it names the checks it could not run rather than guessing around the gap.
-
-## Install just this skill
-
-**In the Claude app, no terminal needed.** Paste this into Claude:
-
-```
-Download the health-read skill from
-https://github.com/CSPulse/customer-success-skills/tree/main/skills/health-read,
-zip the health-read folder on its own, then upload it as a skill in Claude.
-```
-
-Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/health-read`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
-
-## Want the whole library?
-
-The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
+Part of the **Read the account** group in [customer-success-skills](../../#readme).
 
 ---
 
-MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills), maintained by [CS Pulse](https://cspulse.com?ref=github).
+## What it actually does
+
+| Step | What you get |
+| :--- | :--- |
+| Establish what the score measures | Every input on the table - what it is, its weight, who set that weight and when, whether it's ever changed |
+| Sort inputs into measured, proxy, or absent | A labelled list showing exactly how much weight the number can carry, with the absent column - sponsor authority, budget change, a competitor in play - flagged as the gap that decides most churns |
+| Break the composite apart | The single number split by module, team or site, admin activity against end-user activity, and a check for one power user propping up the whole aggregate |
+| Read trajectory, not level | A comparison against the account's own history rather than a portfolio average, and an alert on drops that stay inside the "healthy" band |
+| Check who the score is about | A direct answer to whether anything in the score reflects the actual buyer, as opposed to just the user population |
+| Test whether the score has ever been right | The churned-accounts-three-months-out check, and the plain finding when - as is most common - that check has never been run |
+| The written read | A completed audit stating what the score says, what it actually measures, what it's blind to, and a justified confidence level |
+
+---
+
+## Who this is for
+
+CSMs, team leads, and anyone in RevOps who owns a health scoring model and has never had it questioned - especially useful right after a green account churns, or when someone is about to act on a score (an escalation, a save play, a portfolio triage) and needs to know how much weight it can bear.
+
+---
+
+## What this needs
+
+**Minimum:** the score, and roughly what goes into it. If the user doesn't know the inputs, that itself is the first finding.
+
+**Better with:** the input values for this account, the trend over the last two or three periods, and how the account compares to its own history.
+
+**Best with:** the list of accounts that churned in the last year and what their scores were three months before they left - that single list settles most of what follows.
+
+Missing context never blocks this skill - where an `account-context` document (what healthy usage looks like in this business) doesn't exist, it carries on and names the assumption.
+
+---
+
+## Install
+
+**The easy way: one paste**
+
+```
+I want to install the health-read skill from
+https://github.com/CSPulse/customer-success-skills. Download or clone the
+repository, then copy the skills/health-read folder into
+~/.claude/skills/ (or .claude/skills/ if this is for one project only),
+keeping its own folder name. Tell me the exact folder path it landed in
+when you are done.
+```
+
+**In the Claude app (no terminal needed)**
+
+1. Download this repository as a ZIP, or clone it
+2. Zip the `skills/health-read` folder on its own
+3. In Claude, go to Customize, then Skills, then Create skill, then Upload skill
+4. Upload the ZIP
+
+**As a plugin, in Claude Code or Cowork**
+
+```
+/plugin marketplace add CSPulse/customer-success-skills
+/plugin install customer-success-skills@cspulse
+```
+
+**Want the whole set?** The [main README's install section](../../#readme) installs all 32 skills at once.
+
+**Or just read it.** `SKILL.md` is the method, and `assets/score-audit.md` is the fill-in audit document itself.
+
+---
+
+MIT licensed. Part of [customer-success-skills](https://github.com/CSPulse/customer-success-skills).
