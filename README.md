@@ -166,47 +166,23 @@ Every skill is plain markdown. `skills/<name>/SKILL.md` is the method, and anyth
 
 Once installed, you do not call a skill by name. You describe the job and the right one triggers.
 
-```
-**"Will Northwind renew? Their date is in eleven weeks."**
-```
-```
-Runs renewal-risk. Comes back with the call, the decider, the mechanism, a dollar range, what would make the read wrong, and what it could not check.
-```
+> **"Will Northwind renew? Their date is in eleven weeks."**
+> Runs `renewal-risk`. Comes back with the call, the decider, the mechanism, a dollar range, what would make the read wrong, and what it could not check.
 
-```
-**"I have a QBR with the Contoso team on Thursday, help me build it."**
-```
-```
-Runs business-review. Starts by asking what the customer needs to walk away believing, and tells you if a business review is the wrong meeting to run.
-```
+> **"I have a QBR with the Contoso team on Thursday, help me build it."**
+> Runs `business-review`. Starts by asking what the customer needs to walk away believing, and tells you if a business review is the wrong meeting to run.
 
-```
-**"Here's the transcript from my call this morning."**
-```
-```
-Runs call-recap. Returns the honest read plus every follow-up email the call generated, grouped by who receives it.
-```
+> **"Here's the transcript from my call this morning."**
+> Runs `call-recap`. Returns the honest read plus every follow-up email the call generated, grouped by who receives it.
 
-```
-**"I have to tell them we are raising their price and I have been putting it off."**
-```
-```
-Runs hard-conversation. Works out what you can offer and on whose authority before a word is said, writes the opening two sentences, and sets the walk-away in advance so you do not improvise a concession you cannot retract.
-```
+> **"I have to tell them we are raising their price and I have been putting it off."**
+> Runs `hard-conversation`. Works out what you can offer and on whose authority before a word is said, writes the opening two sentences, and sets the walk-away in advance so you do not improvise a concession you cannot retract.
 
-```
-**"They want 20% off and procurement just joined the thread."**
-```
-```
-Runs renewal-negotiation. Works out what their real alternative is rather than the one they described, builds a concession ladder where every rung has a price, and finds the win procurement can take that is not your margin.
-```
+> **"They want 20% off and procurement just joined the thread."**
+> Runs `renewal-negotiation`. Works out what their real alternative is rather than the one they described, builds a concession ladder where every rung has a price, and finds the win procurement can take that is not your margin.
 
-```
-**"Set up account context."**
-```
-```
-Runs account-context. Interviews you once, then writes the document the others read.
-```
+> **"Set up account context."**
+> Runs `account-context`. Interviews you once, then writes the document the others read.
 
 You can also name one directly if you prefer: *"use renewal-risk on this account"*.
 
