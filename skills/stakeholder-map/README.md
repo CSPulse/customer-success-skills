@@ -20,7 +20,9 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
-> Download the `stakeholder-map` skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/stakeholder-map, zip the `stakeholder-map` folder on its own, then upload it as a skill in Claude.
+```
+Download the stakeholder-map skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/stakeholder-map, zip the stakeholder-map folder on its own, then upload it as a skill in Claude.
+```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/stakeholder-map`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 

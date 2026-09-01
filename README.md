@@ -126,7 +126,9 @@ Grouped by the job in front of you rather than by lifecycle stage, because nobod
 
 If your AI tool can read and write files on your computer (Claude Cowork, Claude Code, or similar), paste this in and let it do the rest:
 
-> I want to install skills from https://github.com/CSPulse/customer-success-skills. Download or clone the repository, then copy the skill folders I want into `~/.claude/skills/` (or `.claude/skills/` if this is for one project only), one folder per skill, keeping each folder's own name. Ask me which skills I want if I have not said, and tell me the exact folder path each one landed in when you are done.
+```
+I want to install skills from https://github.com/CSPulse/customer-success-skills. Download or clone the repository, then copy the skill folders I want into ~/.claude/skills/ (or .claude/skills/ if this is for one project only), one folder per skill, keeping each folder's own name. Ask me which skills I want if I have not said, and tell me the exact folder path each one landed in when you are done.
+```
 
 If you only want one or two skills, name them. If your AI tool cannot read or write files on its own, which is most web chat, use one of the manual methods below instead.
 
