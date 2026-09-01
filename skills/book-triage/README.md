@@ -1,8 +1,10 @@
 # book triage
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of 32 AI skills for the work customer success actually does.**
+**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
 
-Decides which accounts get your attention this week and writes down which ones deliberately do not. Sorts by what changed and what can still be influenced, not by size or health colour, and always includes one account nobody has heard from.
+Starts from the position that even coverage is not the goal, it's the failure: forty accounts touched equally is forty accounts touched too lightly to move anything, while the CSM doing it feels busy. This skill sorts by what changed in the last two to four weeks - usage composition, a person arriving or going quiet, a commercial event - rather than by health color or account size, both of which are largely static and surface the same accounts every week for no reason. It layers in the dates that actually bind (notice date and budget lock, not the renewal date itself), asks a harder question than "is this account okay" - if I spend four hours here this week, does anything actually move, or is the decision already made - and it deliberately hunts for the silent accounts at the bottom of the last-real-contact list, because the accounts with the fewest logged touches are disproportionately risky and disproportionately rated healthy simply because nobody has spoken to them recently enough to know otherwise.
+
+The failure this exists to prevent: **the week spent on the accounts that asked** - attention allocated by who emailed loudest, which correlates with neither risk nor value, and which systematically starves the quiet accounts where the actual danger sits. The skill also forces the part everyone skips: an explicit not-this-week list, naming the accounts being consciously left alone along with the trigger that would change that, so a bad surprise later is a decision that was made in writing, not neglect nobody admitted to.
 
 Part of the **Run the book** group in this library.
 
@@ -21,14 +23,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the book-triage skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/book-triage, zip the book-triage folder on its own, then upload it as a skill in Claude.
+Download the book-triage skill from
+https://github.com/CSPulse/customer-success-skills/tree/main/skills/book-triage,
+zip the book-triage folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/book-triage`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole library?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all 32 skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
 
 ---
 

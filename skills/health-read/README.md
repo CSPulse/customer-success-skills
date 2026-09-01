@@ -1,8 +1,10 @@
 # health read
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of 32 AI skills for the work customer success actually does.**
+**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
 
-Audits an account health score instead of reporting it. Separates what is measured from what is inferred, finds the inputs that are proxies, and asks whether the score has ever been tested against accounts that actually left.
+Audits a health score instead of reporting it. Most scores were set once, in a room, by intuition, and never back-tested against the accounts that actually left - which is how "the score was green" ends up offered as an explanation for a churn, when a green score at the moment of churn is the thing that actually needs explaining.
+
+It sorts every input into measured, proxy, or absent: logins counted are evidence, login frequency standing in for value received is an untested hypothesis, and whether the champion still has budget authority is usually absent from the score entirely and usually decides the renewal anyway. It breaks the composite back apart - module by module, team by team, admin activity against end-user activity - because a growing product line averaged against a dying one produces a healthy-looking middle, and an account carried by one power user is one resignation from zero. Then it asks the question almost nobody runs: of the accounts that churned last year, what did their scores say three months out, and has the score ever been changed as a result of the answer.
 
 Part of the **Read the account** group in this library.
 
@@ -21,14 +23,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the health-read skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/health-read, zip the health-read folder on its own, then upload it as a skill in Claude.
+Download the health-read skill from
+https://github.com/CSPulse/customer-success-skills/tree/main/skills/health-read,
+zip the health-read folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/health-read`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole library?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all 32 skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
 
 ---
 

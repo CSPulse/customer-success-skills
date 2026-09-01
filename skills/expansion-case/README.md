@@ -1,14 +1,16 @@
 # expansion case
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of 32 AI skills for the work customer success actually does.**
+**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
 
-Builds the internal business case your champion carries without you in the room, in their words and on one page. Checks first that the existing deployment is demonstrably working, because an expansion ask on a broken one risks the renewal.
+Builds the internal business case a champion has to carry into a room the CSM will never be in, against three other requests asking for the same money. Before writing anything, it runs one disqualifying check: is the existing deployment demonstrably working, in a way a named person on the customer's side would say out loud? If not, it stops - an expansion ask on an underperforming deployment doesn't just fail, it puts the renewal at risk to chase money that was never available. It then anchors the ask to a problem the customer's own leadership has already named, traces which of four places the budget actually comes from (an existing line, a new planning cycle, someone else's department, or something the ask would displace), and sizes the request so one person can approve it without a committee.
+
+The failure this exists to prevent: **the beautiful deck that dies in someone's inbox**, because the champion couldn't defend slide four when their own CFO pushed on it. So every number in the case is marked as real or estimated with its basis shown, all six objections a finance team will raise are answered inside the document itself before anyone asks, and the output carries no logo and no vendor language - because the moment it reads as a vendor document, it stops informing and starts arguing.
 
 Part of the **Run the set-piece** group in this library.
 
 ## Who this is for
 
-For CSMs running the big, mostly one-shot moments in an account's lifecycle, the ones with no redo if they go wrong.
+For CSMs building the case for more seats, more scope, or more budget on an account - a one-shot moment with no redo if the champion can't defend it.
 
 ## What this needs
 
@@ -21,14 +23,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the expansion-case skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/expansion-case, zip the expansion-case folder on its own, then upload it as a skill in Claude.
+Download the expansion-case skill from
+https://github.com/CSPulse/customer-success-skills/tree/main/skills/expansion-case,
+zip the expansion-case folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/expansion-case`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole library?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all 32 skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
 
 ---
 

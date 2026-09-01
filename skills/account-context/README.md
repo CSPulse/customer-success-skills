@@ -1,8 +1,10 @@
 # account context
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of 32 AI skills for the work customer success actually does.**
+**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
 
-Captures the shared context every other skill needs, once, so they stop asking for it. Run this first.
+Runs once, interviewing the team for the handful of facts every other skill in this library needs before it can say anything useful: what the product actually does in the customer's own words, how segments really differ (not where they merely sound different), what the contract shapes mean for renewal, and - the highest-yield question, deliberately asked three separate ways because the first two tend to surface internal proxies instead - the number the customer actually bought. If nobody can answer that, the skill records the emptiness as a finding rather than skipping past it, because no-agreed-value-metric is the quiet mechanism behind most healthy-usage-still-churned accounts.
+
+The failure this exists to prevent: **a renewal risk read that says "usage is down, this may indicate risk" with no idea that in this business, low usage is what a healthy compliance or audit deployment looks like.** Every gap it can't fill gets marked `NOT ESTABLISHED` rather than guessed at or left blank, so the finished document tells the next skill - or the next person - where to go looking instead of quietly pretending to be complete.
 
 ## Who this is for
 
@@ -19,14 +21,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the account-context skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/account-context, zip the account-context folder on its own, then upload it as a skill in Claude.
+Download the account-context skill from
+https://github.com/CSPulse/customer-success-skills/tree/main/skills/account-context,
+zip the account-context folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/account-context`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole library?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all 32 skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
 
 ---
 

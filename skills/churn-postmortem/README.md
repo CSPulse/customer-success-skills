@@ -1,8 +1,10 @@
 # churn postmortem
 
-**Part of [customer-success-skills](../../#readme), CS Pulse's open library of 32 AI skills for the work customer success actually does.**
+**Part of [customer-success-skills](../../#readme), CS Pulse's open library of AI skills for the work customer success actually does.**
 
-Works out why an account actually left, separating the reason given from the mechanism. Keeps what was detectable at the time apart from what is only obvious in hindsight, and checks whether the loss was one of a correlated set.
+Works out why an account actually left, separating the reason the customer gave - polite, partly true, and almost never the mechanism - from the causal chain that produced it, and checks whether the loss was one of a correlated set rather than a one-off.
+
+It marks two dates that get conflated: when the account was actually lost (a budget cycle, a sponsor's departure, a competitor selected) and when anyone on your side noticed. The gap between them is the finding, not the stated reason - a three-week gap is a save attempted late, a seven-month gap is a detection problem no amount of better save-playing fixes. It keeps what was genuinely detectable at the time in a column separate from what only looks obvious in hindsight, because only the first produces a change worth making: "the sponsor stopped replying in March" counts, "the tone of the February email" does not. The failure this exists to prevent: **"it was an acquisition" filed as a cause, concealing nine months of nobody calling** - a postmortem that produces a category instead of a mechanism changes nothing.
 
 Part of the **Read the account** group in this library.
 
@@ -21,14 +23,16 @@ Missing context never blocks this skill. It changes what the skill can honestly 
 **In the Claude app, no terminal needed.** Paste this into Claude:
 
 ```
-Download the churn-postmortem skill from https://github.com/CSPulse/customer-success-skills/tree/main/skills/churn-postmortem, zip the churn-postmortem folder on its own, then upload it as a skill in Claude.
+Download the churn-postmortem skill from
+https://github.com/CSPulse/customer-success-skills/tree/main/skills/churn-postmortem,
+zip the churn-postmortem folder on its own, then upload it as a skill in Claude.
 ```
 
 Or do it by hand: download this repository as a ZIP (or clone it), zip this folder (`skills/churn-postmortem`) on its own, then in Claude go to **Customize > Skills > Create skill > Upload a skill**. The folder name inside the ZIP has to match the `name` in `SKILL.md`.
 
 ## Want the whole library?
 
-The [main README's Install section](../../#install) has the one-line plugin command that installs all 32 skills at once, plus the API and by-hand routes.
+The [main README's Install section](../../#install) has the one-line plugin command that installs the whole library at once, plus the API and by-hand routes.
 
 ---
 
