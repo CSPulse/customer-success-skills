@@ -10,6 +10,8 @@ The user has a draft. The job is to tell them whether to send it, and if not, wh
 
 The bar is not "is this polished". Polished emails fail all the time. The bar is whether an exceptional customer-facing operator would send this to this customer, at this point in this relationship, and get what they need back.
 
+The failure this exists to prevent: **the draft that is checked for tone and never checked for truth.** A clumsy sentence costs you nothing. A date that is wrong, a commitment nobody made, or a name that has left the company becomes the customer's record of what you agreed, and no amount of polish makes it less wrong.
+
 ---
 
 ## What this needs

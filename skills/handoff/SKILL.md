@@ -1,7 +1,7 @@
 ---
 name: handoff
 description: >
-  Runs a handover so the receiving side can actually take it: sales to customer success, customer success to support, or one CSM to another. Trigger whenever the user says "handoff", "handover", "taking over the account", "handing over my accounts", "sales to CS handover", "transition the account", "I am leaving and need to hand over", "onboarding a new CSM", "what do I need to pass on", or names an account changing owner. It defines completeness from the receiving side rather than the leaving side, forces out the things that never make it into a system, sets an acceptance step with a date, and separates the internal transfer from what the customer is told. Use customer-update for the message to the customer, and account-research when the handover never happened and the history has to be reconstructed.
+  Runs a handover so the receiving side can actually take it: sales to customer success, customer success to support, or one CSM to another. Trigger whenever the user says "handoff", "handover", "handing over my accounts", "sales to CS handover", "transition the account", "I am leaving and need to hand over", "onboarding a new CSM", "what do I need to pass on", or names an account changing owner. It defines completeness from the receiving side rather than the leaving side, forces out the things that never make it into a system, sets an acceptance step with a date, and separates the internal transfer from what the customer is told. Use customer-update for the message to the customer, and account-research when the handover never happened and the history has to be reconstructed.
 ---
 
 # Handoff

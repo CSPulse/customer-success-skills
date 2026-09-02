@@ -1,7 +1,7 @@
 ---
 name: account-plan
 description: >
-  Writes the durable per-account plan you get measured against later, aimed at someone picking the account up in month four who needs to know what was promised and by whom. Trigger whenever the user says "account plan", "success plan", "strategic account plan", "plan for this account", "what is our plan for", "write up the account strategy", "twelve month plan", "growth plan for the account", or is asked to produce a plan for a named account. It writes the objective in the customer's words with a measure attached, names owners on both sides, attaches triggers to the risks, and refuses to plan more activity than anyone will do. Use onboarding-plan for the first ninety days, account-context for the business-wide substrate every skill reads, and book-triage for which accounts earn a plan at all.
+  Writes the durable per-account plan you get measured against later, aimed at someone picking the account up in month four who needs to know what was promised and by whom. Trigger whenever the user says "account plan", "strategic account plan", "plan for this account", "what is our plan for", "write up the account strategy", "twelve month plan", "growth plan for the account", or is asked to produce a plan for a named account. It writes the objective in the customer's words with a measure attached, names owners on both sides, attaches triggers to the risks, and refuses to plan more activity than anyone will do. Use onboarding-plan for the first ninety days, account-context for the business-wide substrate every skill reads, and book-triage for which accounts earn a plan at all.
 ---
 
 # Account Plan

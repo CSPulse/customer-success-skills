@@ -1,7 +1,7 @@
 ---
 name: offboarding
 description: >
-  Runs a departure well: the data handover, the honest exit conversation, and the door left open. Trigger whenever the user says "offboarding", "they are leaving", "we lost the account", "they gave notice", "churn process", "wind down", "transition them off", "they are not renewing", "how do I hand this back", "exit conversation", or names an account and a termination in the same breath. It separates what you owe them contractually from what you owe them professionally, gets the exit interview that nobody asks for, and treats the departing champion as a future pipeline event rather than a closed record. Use renewal-risk while the decision is still open and a save is possible, and churn-postmortem afterwards for the internal analysis of why it happened.
+  Runs a departure well: the data handover, the honest exit conversation, and the door left open. Trigger whenever the user says "offboarding", "they are leaving", "they gave notice", "churn process", "wind down", "transition them off", "they are not renewing", "how do I hand this back", "exit conversation", or names an account and a termination in the same breath. It separates what you owe them contractually from what you owe them professionally, gets the exit interview that nobody asks for, and treats the departing champion as a future pipeline event rather than a closed record. Use renewal-risk while the decision is still open and a save is possible, and churn-postmortem afterwards for the internal analysis of why it happened.
 ---
 
 # Offboarding
