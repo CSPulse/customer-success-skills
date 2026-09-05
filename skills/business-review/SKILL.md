@@ -6,7 +6,7 @@ description: >
 
 # Business Review
 
-Buyers do not think business reviews are worthless. They think suppliers waste them. In published buyer research the same population that says most reviews are checkbox exercises, too operational, and short on evidence of value also calls the review the single most critical moment for a supplier to prove itself - and a large majority say they have cancelled a contract over insufficient value demonstration.
+A business review is the one recurring meeting where the people who can end the contract are in the room and have already agreed to hear you justify the spend. That access is scarce, it does not carry over, and it is spent once whether or not you use it. Most reviews spend it on a usage readout. That is why the format has the reputation it has, and it is a reputation suppliers earned rather than one the meeting deserves.
 
 So the bar is not "did we present". It is whether the customer leaves more confident, having made a decision, in a meeting where they spoke more than you did.
 

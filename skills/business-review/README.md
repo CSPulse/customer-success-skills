@@ -2,7 +2,7 @@
 
 **Build the review that earns the next meeting, not the one that fills the calendar slot.**
 
-Buyers don't think business reviews are worthless - the same people who call most reviews checkbox exercises, too light on evidence of value, also call the review the single most critical moment for a supplier to prove itself, and a majority say they've walked away from a contract over exactly that. The bar isn't "did we present" - it's whether the customer leaves more confident, having made a decision, in a meeting where they talked more than you did.
+A business review is the one recurring meeting where the people who can end the contract are in the room and have already agreed to hear you justify the spend. That access is scarce and it's spent once, whether or not you use it. Most reviews spend it on a usage readout. The bar isn't "did we present" - it's whether the customer leaves more confident, having made a decision, in a meeting where they talked more than you did.
 
 This skill starts by checking whether the review should even happen - a live escalation, an absent decision-maker, or nothing changed since last time are all reasons to reschedule instead. Where it should, it forces the value case up a ladder from activity to outcome to business impact, built to survive being forwarded to the customer's own CFO, and pre-briefs the champion so nobody is surprised in front of their own executive.
 
@@ -81,7 +81,7 @@ when you are done.
 
 ## Where this comes from
 
-The opening claim - that buyers rate business reviews the single most critical proof point a supplier gets, while also saying most of them are checkbox exercises light on evidence, and that a large share have walked away from a contract over exactly that - is drawn from published buyer-experience research on how customers actually experience these meetings, not from internal opinion. The value case's activity-outcome-business impact ladder reflects standard value-engineering practice: evidence that something ran, converted into the customer's own operational units, converted again into money or risk - because a number a customer can't rebuild themselves dies the moment they try to forward it.
+This skill argues from mechanism, not from buyer-survey statistics. Most published research on business reviews is produced by companies selling business-review software, gated, and thin on methodology, and this library's position is that a claim the reader cannot check does not get to do the persuading. What the skill rests on instead is structural and checkable without anyone's permission: a review is scarce, pre-agreed access to the people who can end the contract, and it is spent once. The value case's activity-outcome-business impact ladder reflects standard value-engineering practice: evidence that something ran, converted into the customer's own operational units, converted again into money or risk - because a number a customer can't rebuild themselves dies the moment they try to forward it.
 
 ---
 
