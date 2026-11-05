@@ -11,12 +11,13 @@ One job, one fast path to something useful, one filled example of the output. An
 ```
 skills/<name>/
   SKILL.md             the method, 70 to 150 lines, under 6KB
+  README.md            generated landing page for the skill (see below)
   examples/sample.md   a COMPLETE filled output for an invented company (required)
   references/<x>.md    depth loaded only when a step needs it (optional, one level)
   assets/<x>.md        a blank template the user can fill by hand (optional)
 ```
 
-No per-skill README. The root README is the catalog.
+`README.md` in each skill folder is generated from `SKILL.md` by `python3 tools/build_readmes.py`. Never edit it by hand. The one hand-written line, why the skill exists, goes in `tools/readme_why.tsv`.
 
 ## SKILL.md shape
 
@@ -56,4 +57,4 @@ Do NOT include: "Failure modes", "What good looks like", philosophy intros, or r
 
 ## Checks run on every pull request
 
-`tools/check.py`: line and size limits, frontmatter, description length, trigger phrase collisions, banned punctuation, example present, manifest and README in sync.
+`tools/check.py`: line and size limits, frontmatter, description length, trigger phrase collisions, banned punctuation, example present, each skill README up to date, manifest and README in sync.

@@ -1,0 +1,54 @@
+account-context	A renewal read that calls an account at risk for low usage, when quiet usage is what a healthy compliance deployment looks like in that business.
+account-plan	A plan full of activity with no measure, no owner on the customer side and no way to be wrong. A plan that cannot fail never gets achieved.
+account-review	A monthly review that looks different every time, so nobody can see what changed. The sections skipped first, proof of value and open promises, are the ones that matter most.
+adoption-plan	Offering training to every account with unused seats, whatever the cause. A stalled rollout, a broken integration and the wrong people holding licenses each need a different fix.
+advocacy-ask	Asking for a reference at renewal. The timing turns a favor into a trade, and the customer learns that agreeing has a price.
+book-review	A report on the whole book that ends without a decision. A few accounts or one renewal month carry the risk, and nobody sees it until it becomes a cliff.
+book-triage	A week spent on the accounts that asked. Whoever emails loudest is rarely the biggest risk or the biggest value, and the quiet accounts where the danger sits get nothing.
+business-review	A deck of usage charts for a customer who wanted to know whether the product is worth keeping. The meeting replays dashboards and decides nothing.
+call-prep	A call that goes well, produces a recap and moves nothing. Everyone leaves satisfied, and the next call has the same agenda.
+call-recap	A tidy recap sent to the main contact while the emails that actually move the account stay unwritten.
+champion-loss	Finding out your sponsor left when the renewal arrives. The new owner forms a view of your product from someone else's story before you have spoken to them.
+churn-postmortem	"It was an acquisition" filed as the cause, hiding months of no contact. A postmortem that ends in a category changes nothing.
+coaching	A list of six things to improve after a call. It is fair and accurate, and nobody can act on it.
+commitments	A promise made on a call that nobody writes down. Both sides forget it until the customer remembers it at renewal.
+coverage-model	Starting from headcount. Divide the accounts by the CSMs, call the result a ratio and describe it as a strategy.
+cs-scorecard	A dashboard full of metrics with no definitions. Two people read the same number differently, and a strong net figure hides a leaking base.
+cs-start	Installing a library of skills and not knowing which one fits the situation in front of you.
+csm-hiring	Hiring on rapport alone, then finding out in month three that the new CSM cannot read an account or write a clear update.
+csm-ramp	Handing a new CSM the hardest accounts on day one, with no context and no time to listen first.
+csql-motion	The lead dropped into a queue. A CSM passes a real expansion signal, someone with no context works it, the customer gets a cold sales approach, and the CSM never passes another one.
+customer-update	An update written from your side of the glass. The change that affects the customer sits in the middle of a paragraph about your roadmap.
+day-plan	A day planned around the calendar that filled itself. Recaps happen at midnight, prep gets skipped and the one hard task slides to tomorrow.
+email-critic	A customer email checked for tone while its facts go unchecked, so a wrong date or an upgraded maybe reaches the customer.
+escalation	Going quiet until you have the answer. Silence reads as chaos or concealment, and both are worse than an update with nothing new in it.
+exec-conversation	The product tour. Fifteen minutes explaining the platform to someone who does not care how it works, ending in a handshake and nothing else.
+expansion-case	The deck that dies in an inbox because the champion could not defend slide four when their CFO pushed back.
+expansion-scan	Chasing the biggest account for an upsell while a smaller one that already asked for more goes unnoticed, or expanding a deployment that is not working.
+handoff	The account that arrives as a folder, with everything documented and nothing that matters, or the account that leaves with its owner and the promises with it.
+hard-conversation	Three paragraphs of context and thanks before the news. The customer knew by the second sentence, waited for the rest and trusts the delivery less than the news.
+health-score	A score that was green the quarter before a churn, offered as the explanation when the green score is the thing that needs explaining.
+internal-ask	"Can someone please look at this." It names no decision, no deadline and no owner, so it sinks to the bottom of a queue. Or a customer email forwarded into a channel with the information stripped out.
+invoice-chase	A chase email sent to the champion, who cannot pay it, while the real cause stays unexamined: a missing PO, a dispute or a delay in accounts payable.
+mutual-action-plan	A shared plan where only the vendor owns tasks. It is a to-do list the customer never signed up for, and it gives no warning when their side slips.
+nrr-narrative	Presenting the retention number without its parts. It survives one question from anyone who has seen this before and loses the room after that.
+offboarding	The account that goes cold the moment it is marked lost. The data export is slow, the last conversation never happens, and a solvable loss becomes a customer who tells people how it ended.
+onboarding-plan	A finished onboarding checklist attached to a customer who cannot say what changed.
+one-pager	The document the sponsor rewrites before forwarding it. Once they edit it, it stops sounding like them and you lose control of what their leadership reads.
+playbook-builder	A save that depends on which CSM owns the account. The same situation gets a different response every time because the play lives in one person's head.
+portfolio-review	The review that turns into a working session on the first account raised. Everyone leaves feeling it was useful, and most of the reads go unexamined.
+price-increase	A blanket increase sent to every account. It lands hardest on the accounts with a fragile sponsor or unproven value, and those are the ones that leave.
+renewal-forecast	A forecast counted in logos. It reports a healthy quarter while the dollars come in short because accounts renewed smaller.
+renewal-negotiation	Negotiating price before value is agreed. With nothing on the other side of the scale, you argue about a number and lose.
+renewal-risk	"At risk, low usage." It names a category, states no mechanism and implies no action, which makes it the most common line in a risk review and the least useful.
+renewal-runway	Starting the renewal plan from your own renewal date. The customer's notice date and budget cycle come first, and the decision may be made before you begin.
+sales-handoff	The promises made during the sale that never reached a system, found by the customer in the first month.
+save-plan	A save plan launched after the customer already chose a replacement, or one that opens with a discount before anyone has offered a fix.
+stakeholder-map	A complete contact list for an account where nobody can name the decider.
+status-update	A weekly update that lists activity. The manager learns nothing about outcomes and hears the bad news for the first time at the forecast call.
+survey-follow-up	A survey score that sits in a spreadsheet. The detractor hears nothing back, and the promoter gets asked for a reference too often.
+team-rollup	A summary that hides a risk until it is too big to hide. Leadership first hears about it when the renewal is lost.
+usage-email	A usage report that scolds. It lists unused seats as a failing, embarrasses a user in front of their boss and gets ignored.
+value-ledger	Reaching renewal with a happy champion and no proof. When finance asks what the product delivered, nobody has the number.
+voice-of-customer	Letting the loudest account become the theme. One customer's request gets reported as what customers want.
+what-do-i-owe	Answering whatever arrived last. The email from the signer who has waited since Monday sits under newer, smaller requests.

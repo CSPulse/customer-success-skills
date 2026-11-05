@@ -20,6 +20,7 @@ The two rules everything holds:
 Before you open the pull request:
 
 ```
+python3 tools/build_readmes.py
 python3 tools/check.py
 ```
 
@@ -30,6 +31,7 @@ Then check the things a script cannot see:
 - [ ] No statistic without a named source (defaults are labeled as defaults)
 - [ ] No real customer, employer or person names
 - [ ] The trigger phrases belong to this skill and not a sibling's
+- [ ] Added a line for your skill in `tools/readme_why.tsv`, then regenerated the skill READMEs
 - [ ] README table, role bundles in `.claude-plugin/marketplace.json` and `docs/TRIGGERS.md` updated
 
 Pull requests are read as a diff. Expect questions on any claim about how customer success works that does not say where it came from.

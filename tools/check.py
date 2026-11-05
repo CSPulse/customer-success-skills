@@ -72,7 +72,18 @@ def check_text_files():
                 problems.append(f'{rel(p)}: "Open" directly before "AI"')
 
 
+def load_builder():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('build_readmes', os.path.join(ROOT, 'tools', 'build_readmes.py'))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def main():
+    global br, why, bundles
+    br = load_builder()
+    why, bundles = br.load_why(), br.load_bundles()
     folders = sorted(d for d in os.listdir(SKILLS) if os.path.isdir(os.path.join(SKILLS, d)))
     phrases = {}
     for folder in folders:
@@ -126,8 +137,11 @@ def main():
                 warnings.append(f'{rel(sample)}: {n} lines; keep samples short')
             if 'nvented' not in read(sample) and 'fictional' not in read(sample):
                 problems.append(f'{rel(sample)}: must say the company is invented')
-        if os.path.exists(os.path.join(sd, 'README.md')):
-            problems.append(f'skills/{folder}: remove per-skill README.md (root README is the catalog)')
+        rp = os.path.join(sd, 'README.md')
+        if not os.path.exists(rp):
+            problems.append(f'skills/{folder}: missing README.md (run python3 tools/build_readmes.py)')
+        elif read(rp) != br.render(folder, why, bundles):
+            problems.append(f'skills/{folder}: README.md is out of date (run python3 tools/build_readmes.py)')
         for sub in ('references', 'assets', 'examples'):
             b = os.path.join(sd, sub)
             if os.path.isdir(b):
