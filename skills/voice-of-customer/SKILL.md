@@ -4,7 +4,7 @@ description: >
   Use when the user says "voice of the customer", "VoC report", "what are customers asking for", "themes across my accounts", "product feedback report", "what are customers saying about the product". Produces a ranked theme report from pasted call notes, emails and tickets: accounts and ARR per theme, bug versus gap versus misunderstanding, the need behind each ask, quotes with source, and who to tell back. Not for escalating one customer's urgent issue (use internal-ask).
 ---
 
-# Voice of the Customer
+# Voice Of Customer
 
 Paste what customers said across accounts. Get the monthly product report: themes ranked by accounts and ARR, the need under each request, the customers' own words, and the loop to close.
 
