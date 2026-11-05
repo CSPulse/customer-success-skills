@@ -1,70 +1,56 @@
 ---
 name: skill-name
 description: >
-  One paragraph covering what the skill does and, more importantly, when to
-  fire it. List the exact phrases a user says when they want this. Claude
-  matches on this text, so vague descriptions produce a skill that never
-  triggers. Name any sibling skill it should defer to.
+  Use when the user says "literal phrase one", "literal phrase two", "literal phrase three", or describes [the situation in plain words]. [One sentence on what it produces.] Not for [adjacent job] (use sibling-skill).
 ---
 
 # Skill Name
 
-One or two sentences on what this skill is for and what it produces.
+One sentence: what the user walks away with.
 
----
+## Start here
 
-## What this needs
+If the user has already given [the minimum input], go straight to "Do this".
 
-State the floor first: the least a user can have and still get value. Then what
-improves it, and what each missing piece costs.
+Otherwise ask for these in ONE message, then proceed with whatever comes back. Never wait for a complete answer:
 
-Write this section even when the answer is "nothing". A reader deciding whether
-to install should not have to infer their setup from Step 3.
+1. [Input 1, the one that changes the answer most]
+2. [Input 2]
+3. [Input 3]
 
-The rule underneath it: nothing in a published skill may be a prerequisite.
-Workspace files, connectors and file access are all upgrades. A skill that
-errors because a `CLAUDE.md` is missing gets uninstalled.
+Anything missing becomes a line under "What I could not check", not a reason to stop.
 
----
+## Do this
 
-## When this runs
+1. [Imperative step, one to three lines.]
+2. [Imperative step.]
+3. [Imperative step.]
 
-The trigger conditions in plain language. Include the cases where it should
-*not* run, and which skill handles those instead.
-
----
-
-## Step 1: [Action]
-
-Instructions written as directives to Claude, not as description. "Read the
-transcript in full" beats "this skill reads transcripts."
-
-Where the skill depends on something in the user's workspace - a style guide,
-an accounts folder, a naming convention - say so as an optional input and
-degrade gracefully when it isn't there.
-
-## Step 2: [Action]
-
-Keep steps short enough to follow under load. If a step needs more than a
-screen of explanation, move the detail into `references/` and link to it.
-
----
+Six steps at most. If a step needs more than a screen of explanation, move the detail to `references/` and say when to load it.
 
 ## Output
 
-State exactly what the skill produces and where it lands: a file, a set of
-drafts, a table in chat. Ambiguity here is what makes a skill feel unreliable.
+Lead with the verdict or the thing the user will send. Use this skeleton exactly:
 
----
+```
+[Headline: the call, the draft, or the one-line answer]
 
-## Failure modes
+[Block 1]
+[Block 2]
 
-The things that go wrong with this specific job, and what to do instead. This
-section is what separates a skill from a prompt.
+What I could not check
+- [gap 1]
+- [gap 2]
+```
 
----
+A filled example is in `examples/sample.md`. Match its shape and length.
 
-## Supporting files
+## Rules
 
-- `references/<topic>.md` - detail loaded only when the step needs it
-- `assets/<template>.md` - templates the skill writes from
+Five to eight judgement rules, each with the mechanism behind it. This is where the skill earns its place over a plain prompt.
+
+- **[Rule].** [Why it is true.]
+
+## Related (only if installed)
+
+One line: which sibling skill to suggest next, and when. Suggest, never require.

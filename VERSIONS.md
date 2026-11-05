@@ -1,27 +1,20 @@
 # Versions
 
-What changed, and when. Sixteen skills across seven planned categories, four of them complete.
+## 2.0.0
 
-## 1.4.0
+A rebuild, based on an audit of the 1.x library and research into how customer success work is done and how other skill libraries are used.
 
-**Added the validator and continuous integration.** `validate-skills.py` checks the structural rules on every skill: line limit, frontmatter name against folder, description length, heading against folder, manifest and README consistency, reference depth, punctuation. A GitHub Actions workflow runs it on every pull request and every push to main.
+**What was wrong.** Strong ideas, hard to adopt. Skills were 9 to 15KB of essay prose; only one had a filled example; several quietly depended on the author's own setup (`CLAUDE.md`, a voice guide, an accounts folder) despite the "nothing is a prerequisite" rule; there was no front door; triggers collided; the README opened with philosophy rather than output.
 
-Until now those rules were enforced only by a hook on the maintainer's own machine, which never travels with a clone. Contributors arrive by fork, so they had nothing to run. The nine mechanical checkboxes in `CONTRIBUTING.md` are now one command, and the manual list is reduced to what a script cannot see.
+**What changed.**
+- Every skill rewritten to a short, executable format (70 to 150 lines): fast intake that never blocks, a fixed output skeleton that leads with the verdict, rules with their mechanism, and a mandatory filled `examples/sample.md`.
+- Added `cs-start` (routing, a 60 second demo, anonymize-for-sharing), `renewal-runway`, `champion-loss`, `health-score`, `internal-ask` and `playbook-builder`.
+- Merged `weekly-plan` into `book-triage`, `account-research` into `handoff`, `health-read` into `health-score`, and `product-feedback` plus `internal-escalation` into `internal-ask`.
+- Role bundles: `csm-toolkit`, `cs-team-lead-toolkit`, `cs-leader-toolkit`. The `customer-success-skills` plugin still installs everything.
+- Removed invented statistics and author-specific style rules.
+- New `tools/check.py` replaces `validate-skills.py` and enforces the spec, including trigger phrase collisions.
+- Removed per-skill READMEs. The root README is the catalog.
 
-Identity checking is deliberately not in the published script. A denylist inside a public repository publishes the names it exists to protect.
+## 1.4.0 and earlier
 
-## 1.3.0
-
-**Wave 1 complete: `renewal-negotiation`, `expansion-case`, `escalation`, `offboarding`.** Sixteen skills, four categories complete.
-
-## 1.2.0
-
-**Names aligned.** Marketplace is `cspulse`, plugin is `customer-success-skills`, matching the repository. Previously `cspulse-skills` and `cs-skills`, so the library answered to four names and the install command shared no words with the repository a reader had just added. Breaking for existing installs, done early because the cost only grows.
-
-## 1.1.0
-
-**Renamed from `cs-skills` to `customer-success-skills`,** and cut to customer success only. `renewal-risk-read` to `renewal-risk`, `business-review-prep` to `business-review`, `call-recap-follow-up` to `call-recap`. `chat-context` and `optimize-tokens` removed as general workflow skills that live in the personal library.
-
-## 1.0.0
-
-First release. Seven skills.
+Initial library of 32 skills and a structural validator. See git history.

@@ -1,155 +1,71 @@
 ---
 name: renewal-forecast
 description: >
-  Produces a renewal and expansion forecast in dollars with a stated confidence, with contraction sized separately and correlated risks named as one bet rather than thirty. Trigger whenever the user says "renewal forecast", "forecast the quarter", "what will we renew", "gross retention forecast", "commit number", "roll up my team's renewals", "forecast call", "what is the risk to the number", or is preparing a retention number for finance or a board. It sets evidence-based entry criteria for each category, separates timing slip from loss, pulls auto-renewals out of the judgement pool, and tracks per-forecaster accuracy so the number stops being a personality test. Use renewal-risk for the read on any single account, and portfolio-review for the meeting where the reads get challenged.
+  Use when the user says "renewal forecast", "forecast the quarter", "what will we renew", "commit number", "GRR forecast", "roll up my team's renewals". Turns a list of renewing accounts into a dollar forecast with low, expected and high cases for gross and net retention, contraction on its own line, and at-risk accounts grouped by shared mechanism. Not for one account's read (use renewal-risk) or explaining past retention to a board (use nrr-narrative).
 ---
 
 # Renewal Forecast
 
-A forecast is not a sum of opinions. It is a commitment with a confidence attached, and the two most common ways it goes wrong are structural rather than analytical: **contraction is not counted, and correlated risks are added up as though they were independent.**
+A dollar forecast for a renewal period, as a range the user can defend to finance: gross retention, net retention, contraction, and the one or two bets that move it.
 
-The failure this exists to prevent: **the logo forecast.** Ninety-four per cent of accounts renewing, reported as a healthy quarter, while the dollars come in eleven per cent light because a third of them renewed smaller.
+## Start here
 
----
+If the user has pasted or attached a list of renewing accounts, go straight to "Do this". A CSV and a plain pasted list both work.
 
-## What this needs
+Otherwise ask for these in ONE message, then proceed with whatever comes back:
 
-**Shared context.** If an `account-context` document exists, read it first: contract shapes, pricing model and segments. On consumption or hybrid pricing the whole shape of this changes. Where it is absent, carry on and name the assumption.
+1. The list, one row per account: account, ARR, renewal date, auto-renew (y/n), notice date, category (commit, likely, at risk, unknown, lost), reason. Any subset works.
+2. The period, and any expansion already signed or verbally expected.
+3. Last period's forecast against what landed, if the user has it.
 
-**Minimum: the accounts up for renewal, their values and their dates.** Enough for a dollar forecast with honest confidence bands.
+Missing columns are inferred and tagged `(assumed, confirm)`. If an "Account context" block exists in the conversation, use it for pricing model and contract shapes.
 
-**Better with** a current risk read per account, the auto-renewal and notice terms, and last quarter's forecast against what actually landed.
+## Do this
 
-**Best with** two or more quarters of forecast-versus-actual by forecaster, which is what turns this from arithmetic into calibration.
-
----
-
-## Step 1: Forecast dollars, and size contraction separately
-
-Three numbers, not one:
-
-- **Gross renewal dollars**, the value at risk that renews at all
-- **Contraction**, the dollars lost from accounts that renew smaller
-- **Expansion**, kept apart from renewal so a good expansion quarter cannot conceal a bad retention one
-
-**Contraction is where most misses live.** An account labelled at risk of churn is usually at risk of renewing thirty per cent smaller, and a binary renew-or-not model cannot represent that at all. Every account in the forecast needs a value range, not a flag.
-
-Report gross retention and net retention separately, always. A single blended number lets an expansion quarter hide a retention problem for two quarters, which is exactly long enough for it to become structural.
-
-## Step 2: Give every category an entry criterion made of evidence
-
-Categories without written entry criteria become a mood ring. Each one needs a test somebody else could apply.
-
-- **Commit.** The decision is made by the person who makes it, or the term auto-renews and the notice window has passed. Evidence: written confirmation, an executed order, or an expired notice date
-- **Likely.** The decider is known and engaged, no Tier 1 risk signal is live, and the value is agreed. Evidence: a named decider you have spoken to this quarter
-- **At risk.** A named mechanism, not a feeling. If nobody can state the mechanism it is not at risk, it is unknown, which is its own category and usually a bigger problem
-- **Lost.** A decision communicated, or a notice served
-
-**"Unknown" must be a permitted category.** Without it, unknowns get filed as likely, because likely is the comfortable default, and that single behaviour accounts for a large share of forecast misses.
-
-## Step 3: Pull the auto-renewals out
-
-Accounts that renew on silence are in the number whether anyone touched them or not. Mixing them with accounts requiring an active decision inflates apparent accuracy and hides where the judgement actually is.
-
-Split the book into: auto-renewing with the notice window passed, auto-renewing with the window still open, and actively decided. The middle group is the one people forget, and it is the group where a customer's inaction is doing your forecasting for you until the day it does not.
-
-## Step 4: Find the correlated risk and forecast it as one bet
-
-**The most important step and the one almost universally skipped.**
-
-Thirty accounts flagged at risk for the same reason are not thirty independent events. They are one event that has not happened yet, and treating them as independent understates the variance enormously. A portfolio that looks like a manageable spread of small risks can be a single unhedged bet on one pricing decision, one deprecation, or one segment's budget cycle.
-
-Group the at-risk book by mechanism, not by account:
-
-- The same product gap
-- The same price change
-- The same segment or industry under pressure
-- The same acquiring parent standardising vendors
-- The same integration partner going away
-
-Then forecast the group. **If the mechanism resolves, most of them renew; if it does not, most of them do not.** That is a different number and a different conversation from thirty separate probabilities, and it is the conversation a board actually needs.
-
-## Step 5: Separate slipping from losing
-
-A renewal that moves a quarter is not a loss, but it destroys the quarter it left, and it is frequently reported as at-risk when the real issue is timing.
-
-Track them apart: at risk of not renewing, and at risk of not renewing *this period*. The plays are different. Slip is usually procurement, a signature chain or a budget cycle, and it is often fixable with attention to their process rather than to their satisfaction.
-
-## Step 6: Calibrate the forecasters, not just the forecast
-
-Without this, a roll-up is an average of personalities. The two failure shapes are well known and they cancel out only by accident:
-
-- **Sandbagging.** An at-risk book that renews at ninety-five per cent. The tell is risk flagged without a play attached and never changing state
-- **Happy ears.** Everything likely, evidence verbal and single-sourced, usually from a champion who does not control budget
-
-Track forecast against actual per person over time. Two quarters is enough to see it. Then adjust the roll-up explicitly and say that you are doing it, rather than silently discounting one person's numbers, which is how a forecast process loses the trust it needs.
-
-**Where a model and a human disagree, do not average them.** One of them is wrong, and splitting the difference destroys the information that the disagreement contained. Find out which.
-
-## Step 7: State what would make this wrong
-
-Three lines that make a forecast a forecast rather than a report:
-
-- **The confidence**, as a range with the assumptions named
-- **The single biggest thing that would move it**, which after Step 4 is usually one correlated mechanism
-- **What you need**, and by when, to change the number rather than merely observe it
-
-Then record the number, so Step 6 has something to calibrate against next quarter.
-
----
+1. **Fix the pool.** Keep accounts renewing in the period. Starting ARR is their sum. Say that the denominator is this period's renewing ARR, not the whole base.
+2. **Split by how each renews.** Auto-renew with the notice date passed is Commit. Auto-renew with the window still open stays in the judgement pool on its own line, because the customer can still serve notice. Opt-out date = renewal date minus notice period; flag any inside 30 days.
+3. **Categorize on evidence.** Load `references/entry-criteria.md` for the tests and default ranges. No test passed means Unknown, never Likely. An account inside 90 days with no documented risk status is Unknown, because risk found late usually existed earlier.
+4. **Group at-risk by mechanism.** One group per cause: a sunset, a price change, a segment, an acquirer. Price each group as two outcomes, resolves or does not. Low = every group fails, high = every group resolves, expected = the odds you state. Single-account risks stay ungrouped.
+5. **Split every loss into churn and contraction.** Contraction gets its own line in all three cases. Expansion stays separate and is never netted against a loss.
+6. **Compute.** GRR = retained / starting ARR. NRR = (retained + expansion) / starting ARR. Each as low, expected, high.
+7. **Say what moves it.** Name the largest bet, its swing in GRR points, what resolves it and by when. Keep accounts that may slip a period apart from accounts that may leave.
 
 ## Output
 
-1. **Three numbers**: gross renewal dollars, contraction, expansion, each as a range
-2. **Category breakdown** with the entry criterion each account met
-3. **The auto-renewal split**, including the window-still-open group
-4. **The correlated risks**, grouped by mechanism and forecast as single bets
-5. **Slip against loss**, separated
-6. **Forecaster calibration**, and any explicit adjustment made to the roll-up
-7. **What would make this wrong**, and what you need to change it
-8. **What you could not check**
+Lead with the call. Use this skeleton exactly, with the numbers table in $k:
 
-`assets/forecast-sheet.md` carries the categories, the criteria and the correlation grouping.
+```
+RENEWAL FORECAST: [period] | [n] renewals | $[x] starting ARR
 
----
+Call: Plan to $[expected retained] ([GRR]% GRR, [NRR]% NRR). Range [low]% to [high]% GRR.
+Biggest bet: [mechanism], $[x], swings GRR [n] points.
 
-## Failure modes
+Numbers: churn | contraction | retained | expansion | GRR | NRR  x  low / expected / high
+Pool: category | accounts | ARR | entry test met
+Auto-renew split: passed | window open (names, notice dates) | actively decided
+Bets: [mechanism] | accounts | $ | resolves: ... | fails: ... | odds | owner and date
+Slip, not loss: [accounts, why, dollars]
+Calibration: [adjustment applied, or none and why]
+What would make me wrong: [one line, with the number it moves]
+Checkpoint: "If [thing] has not happened by [date], [action]."
 
-- **Forecasting logos.** Ninety-four per cent renewing and the dollars eleven per cent light
-- **No contraction line.** The place most misses actually live
-- **A blended retention number** that lets expansion hide a retention problem for two quarters
-- **Categories with no written entry criteria**, which makes them a mood ring
-- **No "unknown" category**, so unknowns get filed as likely
-- **Auto-renewals mixed into the judgement pool**, inflating apparent accuracy
-- **Correlated risks added up as independent**, understating variance badly and hiding a single unhedged bet
-- **Slip reported as risk**, so the play is satisfaction when the problem is a signature chain
-- **Never calibrating the forecasters**, leaving a roll-up that is an average of personalities
-- **Averaging a model and a human who disagree**, which destroys the information in the disagreement
+What I could not check
+- [gap]
+```
 
----
+A filled example is in `examples/sample.md`. Match its shape and length.
 
-## What good looks like
+## Rules
 
-- The number is dollars, with contraction on its own line and a range around it
-- Every account's category has an evidence test someone else could apply
-- Unknowns are counted as unknown
-- The at-risk book is grouped by mechanism, and the largest group is named as one bet
-- Slip and loss are separate numbers
-- The roll-up carries a stated adjustment where a forecaster's calibration warrants it
-- Last quarter's forecast was compared against what landed, by person
+- **Contraction is a line, not a footnote.** A renew-or-churn flag cannot represent an account that renews smaller, and those accounts often carry much of a shortfall.
+- **Correlated risk is one bet.** Accounts at risk for the same reason resolve together, so adding their probabilities as if independent understates the spread. Low and high are therefore wide on purpose.
+- **Unknown is a category.** Without it unknowns drift into Likely, the comfortable bucket, and the forecast inherits the optimism.
+- **Silence is not Commit until the notice date passes.** An open-window auto-renewal depends on the customer doing nothing, and one reminder email can end that.
+- **Show GRR beside NRR, GRR first.** A few large expansions can hold NRR flat while the base shrinks. The gap between the two is the story.
+- **Slip is not loss.** A renewal that moves a period breaks this period's number, not the year's retention, and the cause is usually their procurement, signatures or budget cycle, not their satisfaction.
+- **Adjust forecasters out loud.** If last period shows one person's Likely landing short, apply a stated adjustment. Silent discounting costs trust and teaches nothing.
+- **Defaults are placeholders.** Every percentage in the references is a common default, set your own. After two periods, replace them with what landed.
 
----
+## Related (only if installed)
 
-## Related skills
-
-- `renewal-risk` for the read on any single account this forecast is built from
-- `portfolio-review` for the meeting where those reads get challenged before they enter the number
-- `renewal-negotiation` for the accounts where contraction is being decided
-- `nrr-narrative` for turning the resulting numbers into something a board follows
-- `churn-postmortem` for whether last quarter's misses shared a mechanism
-
----
-
-## Supporting files
-
-- `assets/forecast-sheet.md` - categories, criteria and correlation grouping, usable without an assistant
+`renewal-risk` for any single account in the pool. `portfolio-review` to challenge the reads before they enter the number. `nrr-narrative` to turn the result into the board story.

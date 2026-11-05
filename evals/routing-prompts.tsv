@@ -1,0 +1,62 @@
+I have a call with their CFO in 40 minutes, what should I do	exec-conversation
+call with the customer in an hour, help me prep	call-prep
+just got off a call, here's the transcript, what do I owe them	call-recap
+will Northwind renew? Their date is in eleven weeks	renewal-risk
+should I be worried about Contoso, usage is flat and the sponsor went quiet	renewal-risk
+build me a plan working back from their notice date	renewal-runway
+my champion just left the company	champion-loss
+Priya was our sponsor and her LinkedIn says she moved on	champion-loss
+the customer's VP is furious and copied our CEO	escalation
+account on fire, outage cost them two days of invoicing	escalation
+I have to tell them we missed the date	hard-conversation
+how do I tell a customer we are not building the feature	hard-conversation
+we are raising prices for everyone next quarter, draft the notice	customer-update
+incident announcement to all affected customers	customer-update
+here's my draft email to a customer, check it before I send	email-critic
+write something my sponsor can forward to her boss	one-pager
+QBR with the Contoso team on Thursday, help me build it	business-review
+they want 20% off and procurement just joined the thread	renewal-negotiation
+what can I concede at renewal and what is my walk-away	renewal-negotiation
+help me make the case to expand to their second business unit	expansion-case
+new customer just signed, plan the first 90 days	onboarding-plan
+customer is cancelling, how do we exit well	offboarding
+why did Fabrikam actually leave	churn-postmortem
+who actually decides at this account and who have I never met	stakeholder-map
+I took over 40 accounts and have no idea where to start	handoff
+I am leaving the team, help me hand over my accounts	handoff
+I have 60 accounts, which ones need me this week	book-triage
+plan my week	book-triage
+write the account plan for Globex	account-plan
+I want a case study from my happiest customer	advocacy-ask
+I need product to build this for three of my customers	internal-ask
+I need my VP to approve a discount before Friday	internal-ask
+is our health score any good	health-score
+help me design a health score for my team	health-score
+forecast next quarter's renewals from this list	renewal-forecast
+review my team's account reads before the forecast call	portfolio-review
+coach my CSM on how she handled this call	coaching
+turn what we do when adoption stalls into a team playbook	playbook-builder
+who should get a named CSM and who should be pooled	coverage-model
+write the retention narrative for the board	nrr-narrative
+how do we hand expansion signals from CS to sales	csql-motion
+I do not know where to start with these skills	cs-start
+run the demo	cs-start
+make this shareable, remove the customer names	cs-start
+set up my business context so the outputs stop being generic	account-context
+my renewal is in 70 days and the notice period is 60	renewal-runway
+their exec sponsor changed and I have never met the new one	champion-loss
+they asked for our utilization numbers and the contract notice date	renewal-risk
+the customer wants a shorter term and mentions a competitor	renewal-negotiation
+tell them about the sunset of the old API	customer-update
+three of my customers hit the same bug, how do I get engineering to fix it	internal-ask
+I need to say no to their request for a custom integration	hard-conversation
+what should I say to their new VP of operations in 15 minutes	exec-conversation
+the call went well but I think I missed something, here is the recording notes	call-recap
+how many accounts per CSM should we run	coverage-model
+our NRR is 108 but GRR is 84, how do I explain it	nrr-narrative
+sales keeps ignoring the expansion leads we send	csql-motion
+which of my accounts is at risk this quarter, I have the list	book-triage
+we lost a big account and I need to know if it was predictable	churn-postmortem
+get me a one page summary of results for the sponsor's leadership	one-pager
+polish this email, it feels too long	email-critic
+my team's risk reads all say low usage, are they any good	portfolio-review
