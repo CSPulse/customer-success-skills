@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "AI skills for customer success work, by role",
-    "version": "2.0.0"
+    "version": "2.1.0"
   },
   "plugins": [
     {
@@ -47,7 +47,28 @@
         "./skills/renewal-negotiation",
         "./skills/renewal-risk",
         "./skills/renewal-runway",
-        "./skills/stakeholder-map"
+        "./skills/stakeholder-map",
+        "./skills/account-review",
+        "./skills/adoption-plan",
+        "./skills/book-review",
+        "./skills/commitments",
+        "./skills/cs-scorecard",
+        "./skills/csm-hiring",
+        "./skills/csm-ramp",
+        "./skills/day-plan",
+        "./skills/expansion-scan",
+        "./skills/invoice-chase",
+        "./skills/mutual-action-plan",
+        "./skills/price-increase",
+        "./skills/sales-handoff",
+        "./skills/save-plan",
+        "./skills/status-update",
+        "./skills/survey-follow-up",
+        "./skills/team-rollup",
+        "./skills/usage-email",
+        "./skills/value-ledger",
+        "./skills/voice-of-customer",
+        "./skills/what-do-i-owe"
       ]
     },
     {
@@ -80,7 +101,23 @@
         "./skills/offboarding",
         "./skills/churn-postmortem",
         "./skills/advocacy-ask",
-        "./skills/internal-ask"
+        "./skills/internal-ask",
+        "./skills/what-do-i-owe",
+        "./skills/day-plan",
+        "./skills/status-update",
+        "./skills/commitments",
+        "./skills/value-ledger",
+        "./skills/adoption-plan",
+        "./skills/save-plan",
+        "./skills/mutual-action-plan",
+        "./skills/usage-email",
+        "./skills/invoice-chase",
+        "./skills/survey-follow-up",
+        "./skills/account-review",
+        "./skills/expansion-scan",
+        "./skills/sales-handoff",
+        "./skills/price-increase",
+        "./skills/voice-of-customer"
       ]
     },
     {
@@ -102,7 +139,20 @@
         "./skills/stakeholder-map",
         "./skills/churn-postmortem",
         "./skills/call-recap",
-        "./skills/business-review"
+        "./skills/business-review",
+        "./skills/status-update",
+        "./skills/team-rollup",
+        "./skills/cs-scorecard",
+        "./skills/csm-ramp",
+        "./skills/csm-hiring",
+        "./skills/book-review",
+        "./skills/voice-of-customer",
+        "./skills/save-plan",
+        "./skills/account-review",
+        "./skills/adoption-plan",
+        "./skills/price-increase",
+        "./skills/sales-handoff",
+        "./skills/commitments"
       ]
     },
     {
@@ -121,7 +171,17 @@
         "./skills/playbook-builder",
         "./skills/portfolio-review",
         "./skills/churn-postmortem",
-        "./skills/coaching"
+        "./skills/coaching",
+        "./skills/cs-scorecard",
+        "./skills/book-review",
+        "./skills/csm-hiring",
+        "./skills/csm-ramp",
+        "./skills/price-increase",
+        "./skills/voice-of-customer",
+        "./skills/team-rollup",
+        "./skills/save-plan",
+        "./skills/expansion-scan",
+        "./skills/sales-handoff"
       ]
     }
   ]
