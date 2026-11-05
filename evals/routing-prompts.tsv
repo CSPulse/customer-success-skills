@@ -55,7 +55,7 @@ the call went well but I think I missed something, here is the recording notes	c
 how many accounts per CSM should we run	coverage-model
 our NRR is 108 but GRR is 84, how do I explain it	nrr-narrative
 sales keeps ignoring the expansion leads we send	csql-motion
-which of my accounts is at risk this quarter, I have the list	book-triage
+which accounts on my list should I look at first this week	book-triage
 we lost a big account and I need to know if it was predictable	churn-postmortem
 get me a one page summary of results for the sponsor's leadership	one-pager
 polish this email, it feels too long	email-critic

@@ -1,7 +1,7 @@
 ---
 name: renewal-risk
 description: >
-  Use when the user asks "will they renew", "is this account at risk", "renewal risk", "churn risk", "should I be worried about [account]", "what's the read on [account]", or names an account with a renewal date inside two quarters. Produces a one-page call (renew, contract or churn) with the dollar range, the decider, the mechanism and the next move. Not for scoring a health model (use health-score), planning the timeline (use renewal-runway) or a champion who just left (use champion-loss).
+  Use when the user asks "will they renew", "is this account at risk", "renewal risk", "churn risk", "should I be worried about [account]", "what's the read on [account]", "they asked for our utilization numbers or the notice date", or names an account with a renewal date inside two quarters. Produces a one-page call (renew, contract or churn) with the dollar range, the decider, the mechanism and the next move. Not for scoring a health model (use health-score), planning the timeline (use renewal-runway) or a champion who just left (use champion-loss).
 ---
 
 # Renewal Risk
