@@ -1,157 +1,71 @@
 ---
 name: portfolio-review
 description: >
-  Runs the meeting where you review your team's account reads rather than their accounts, to find out which reads are wrong before they reach a forecast. Trigger whenever the user says "portfolio review", "account review with my team", "review my team's accounts", "pipeline review for renewals", "how do I run a forecast call", "my team's reads are unreliable", "someone is sandbagging", "everything is green and I do not believe it", or is preparing a recurring review of a team's book. It samples rather than covers, asks the four questions that expose a thin read, catches sandbagging and happy ears by their tells, and keeps the meeting from turning into account problem-solving. Use renewal-forecast for the number itself, and coaching for the individual development conversation this meeting will surface.
+  Use when the user says "portfolio review", "review my team's reads", "everything is green and I do not believe it", "someone is sandbagging", "calibrate my team", "how do I run the forecast call". Reviews the team's reads, not their accounts: draws a sample, tests each read against four questions, spots the tells, and returns a run of show plus the changes to leave with. Not for the forecast number itself (use renewal-forecast) or one-to-one development (use coaching).
 ---
 
 # Portfolio Review
 
-You are not reviewing accounts. You are reviewing reads, and the two meetings look identical for the first ten minutes and then diverge completely.
+A review plan that finds which of a team's account reads are not supported by evidence, before they reach a forecast.
 
-Reviewing accounts means solving problems, one at a time, until the hour is gone and four accounts have been discussed. Reviewing reads means finding out which of the thirty assessments in front of you are not supported by evidence, which is the only version that scales and the only one that improves a forecast.
+## Start here
 
-The failure this exists to prevent: **the review that becomes a working session on the first account raised.** Everyone leaves feeling it was useful and twenty-six reads went unexamined.
+If the user has pasted the team's reads (account, ARR, call, reason, last contact date), go straight to "Do this".
 
----
+Otherwise ask for these in ONE message, then proceed with whatever comes back:
 
-## What this needs
+1. The reads: account, ARR, the CSM's call (green, likely, at risk) and their reason, ideally with last logged touch.
+2. Meeting length and team size.
+3. What the user suspects: sandbagging, happy ears, or just "I do not believe it".
 
-**Shared context.** If an `account-context` document exists, read it first, particularly what healthy looks like per segment, which is what lets you tell a wrong read from an unusual account. Where it is absent, carry on and name the assumption.
+If an "Account context" block exists in the conversation, use it to tell a wrong read from an unusual account. Missing last-contact dates go under "What I could not check".
 
-**Minimum: the team's current reads on their accounts.** Enough to sample, question and find the thin ones.
+## Do this
 
-**Better with** last contact dates, health scores you know the composition of, and the previous review's notes, so movement in the reads is visible.
-
-**Best with** forecast-versus-actual history per person, which turns "I do not believe this read" into a calibrated statement rather than an opinion.
-
----
-
-## Step 0: Say which meeting this is
-
-Three different meetings get called portfolio review and mixing them is why they run long and change nothing:
-
-- **Calibrating the reads**, to produce a forecast you can stand behind
-- **Coaching**, to develop the person
-- **Problem-solving**, to fix a specific account
-
-Pick one. **Coaching in front of peers is not coaching**, it is a performance, and it teaches everyone else to bring safe reads. Problem-solving belongs in a separate, shorter, invited meeting.
-
----
-
-## Step 1: Sample rather than cover
-
-You cannot review two hundred accounts, and attempting it produces thirty seconds each, which is worse than not reviewing them.
-
-Review three groups:
-
-- **By exception.** Anything that changed category, anything at risk, anything above a value threshold
-- **A random sample**, five or six accounts nobody chose. **This is the group that catches systematic bias**, and it is the one always dropped for time. Exceptions show you what the team already knows; the random sample shows you what they do not
-- **The quiet ones.** The lowest last-contact dates in the book, which correlate with risk and with green ratings simultaneously
-
-Announce that the random sample exists and is random. That alone changes how reads are written, which is most of the value before the meeting even runs.
-
-## Step 2: Ask the four questions that expose a thin read
-
-Consistently, on every account, so it is a standard rather than an interrogation of whoever is unlucky.
-
-1. **What is the mechanism?** Not the category. "At risk, low usage" states a category and names no mechanism. A read without a causal chain is a status update
-2. **Who decides, and when did you last speak to them?** The single highest-yield question in the meeting. An unmet economic buyer outranks every usage signal on the page
-3. **Which of this is what someone said, and which is your inference?** Both are legitimate. Confusing them is not, and most over-confident reads collapse here
-4. **What would make you wrong?** A read with no falsifier has not been thought about. This one also does the most to make the meeting feel collaborative rather than adversarial
-
-Ask them in that order. It moves from the account to the evidence to the person's own reasoning, which is a gentler slope than starting at four.
-
-## Step 3: Know the tells
-
-**Sandbagging.** Risk flagged with no play attached. Risk flagged late. Reads that never change state. The signature: an at-risk book that renews at ninety-five per cent, quarter after quarter. It is rational behaviour under a system that punishes misses more than it rewards accuracy, so treat it as a system problem before treating it as a person problem.
-
-**Happy ears.** Everything green. Evidence verbal, single-sourced, and from a champion who does not control budget. No sceptic named on any account. The tell is that the read contains no bad news at all, which is not how books work.
-
-**The green account with no logged touch.** The most reliable defect in any portfolio, and it appears in both patterns. Nobody is worried because nobody has spoken to them. Pull these deliberately every time.
-
-**Reads that match the health score exactly.** Either the score is doing the thinking, or the read was written from it. Ask what they know that the score does not; a good CSM always has something.
-
-## Step 4: Protect the person who brings bad news
-
-A review that punishes a red flag gets no more red flags, and your forecast dies quietly about six weeks later.
-
-- **Reward the surfacing, separately from the situation.** "Good that this is on the table" costs nothing and buys the next one
-- **Never let a downgraded read be the reason someone is criticised in front of peers.** Once is enough to teach the whole team
-- **Take at least one action off someone's plate in the meeting.** It converts the review from an examination into a resource, which is what makes people bring the hard accounts
-
-The system, not the individual, decides whether reads are honest. If everything is green in a team where a miss is punished, the reads are behaving exactly as designed.
-
-## Step 5: Look across the book, not just down it
-
-The one thing a manager can see that no individual CSM can: **the same mechanism appearing on multiple accounts.**
-
-Five reads mentioning the same product gap, the same price change, the same segment under pressure, or the same departed integration partner are not five accounts. They are one problem, and it needs `internal-escalation` or `product-feedback` rather than five separate save plays.
-
-This is the highest-value output of the meeting and it is invisible unless someone deliberately looks for it.
-
-## Step 6: End with changes, not with notes
-
-- **Which reads changed** in the meeting, and to what
-- **What each changed read needs**, with an owner and a date
-- **What you took on** as the manager, which should not be zero
-- **What the pattern was**, if Step 5 found one, and who owns it
-
-Then check the previous review's changes actually happened. A review that never audits its own output becomes a reporting ritual within a quarter.
-
----
+1. **Name the meeting.** This one is calibration of reads. Coaching goes to a one-to-one, and fixing a single account goes to a separate, shorter, invited meeting. Say so in the first minute.
+2. **Draw the sample by rule.** Exceptions (changed category, at risk, above a value threshold), a random five picked by a stated rule and not by eye (for example alphabetical, every nth from the first), and the quiet ones (longest since a logged touch). Announce that the random five exist.
+3. **Test every sampled read on paper.** Four questions in this order: What is the mechanism? Who decides, and when did you last speak to them? Which part is said and which is your inference? What would make you wrong? Mark each read HOLDS, THIN (answers missing) or FAILS (no mechanism or no decider). The gaps become the live questions.
+4. **Scan all reads for tells,** not just the sample: share green with no skeptic named, risk with no play, risk that never changes state, reads identical to the health score, green with no logged touch. Then ask whether the system rewards them: what a miss costs versus a wrong green.
+5. **Look across the book.** The same mechanism on several reads is one problem. Add the dollars, name an owner, route it to the product or internal-ask path.
+6. **Write the run of show** in minutes for the user's meeting length: framing, about three minutes per sampled read, the cross-book pattern, the changes, an audit of last review.
+7. **Close on changes.** For each read that moved: from, to, what it needs, owner, date. Add one thing the manager takes on. Check last review's changes happened.
 
 ## Output
 
-1. **Which meeting this was**: calibration, coaching or problem-solving
-2. **The sample**: exceptions, the random five, and the quiet ones
-3. **The four questions applied**, with the reads that did not survive them
-4. **Tells observed**, and whether they look like a system problem or a person problem
-5. **The cross-book pattern**, if any, and who owns it
-6. **Changed reads**, with owners and dates
-7. **What the manager took on**
-8. **Last review's changes**, audited
+Lead with how many sampled reads survive. Use this skeleton exactly:
 
-`assets/review-agenda.md` is the meeting on one page.
+```
+PORTFOLIO REVIEW: [team] | [n] reads | $[x] | [minutes] minutes
 
----
+Verdict: [n] of [m] sampled reads hold on paper ($[x] of $[y] sampled do not).
+Meeting: calibration. [One line on where coaching and account fixes go.]
 
-## Failure modes
+Sample: [rule for the random five]
+Account | ARR | Why sampled | Read as written | Result | Ask in the room
 
-- **Reviewing accounts instead of reads.** The first account eats the hour
-- **Trying to cover the whole book**, which gives thirty seconds each
-- **Dropping the random sample for time**, which is dropping the only part that catches systematic bias
-- **Coaching in front of peers**, which teaches everyone to bring safe reads
-- **Accepting a category as a mechanism.** "At risk, low usage" is not a read
-- **Not separating what was said from what was inferred**
-- **Punishing bad news**, which ends bad news and then ends the forecast
-- **Treating sandbagging as a character flaw** when it is a rational response to how misses are treated
-- **Missing the cross-book pattern**, the one thing only the manager can see
-- **No audit of last review's changes**, which turns it into a reporting ritual
+Tells: [what was seen, and system or person]
+Across the book: [mechanism] | accounts | $ | owner | route
+Run of show: [minutes per block]
+Changes to leave with: read | from | to | needs | owner | date
+Manager takes on: [action]
 
----
+What I could not check
+- [gap]
+```
 
-## What good looks like
+A filled example is in `examples/sample.md`. Match its shape and length.
 
-- The random sample was reviewed, and it was genuinely random
-- Every account got the same four questions
-- At least one read changed in the meeting
-- Somebody surfaced something bad and was visibly better off for it
-- A pattern across accounts was found and given an owner
-- The manager left with actions
-- Last review's changes were checked, and some of them had not happened, and that was said
+## Rules
 
----
+- **Review reads, not accounts.** One account worked in depth eats the hour, and the other reads go unexamined. Problem-solving moves to its own meeting.
+- **Draw the random five by rule.** Exceptions show what the team already knows. A random draw shows what it does not. A hand-picked "random" group is neither.
+- **Ask the same four questions in the same order.** A standard feels fair. An interrogation of whoever drew the short straw teaches everyone to write safer reads.
+- **Pull green accounts with no logged touch, every time.** They are rated safe because nobody has spoken to them, which is the reverse of evidence.
+- **Check the system before the person.** Sandbagging is rational when a miss is punished harder than an inaccurate green, so changing the person changes nothing.
+- **Never downgrade a read in front of peers as criticism.** Bad news dries up quickly, and the forecast goes quiet with it. Thank the surfacing separately from the situation.
+- **Coaching in front of peers is a performance.** It teaches the room to bring safe reads, so take it to a one-to-one.
+- **Take an action off someone's plate.** A review that only examines becomes an exam. The manager's own action should not be zero.
 
-## Related skills
+## Related (only if installed)
 
-- `renewal-forecast` for the number these reads roll into
-- `renewal-risk` for the read itself, which is what is being reviewed
-- `coaching` for the individual development conversation this meeting will surface and should not host
-- `internal-escalation` and `product-feedback` for the cross-book pattern once it is found
-- `book-triage` for what the CSM does with the accounts the review flags
-
----
-
-## Supporting files
-
-- `assets/review-agenda.md` - the meeting on one page, usable without an assistant
+`renewal-forecast` for the number these reads roll into. `renewal-risk` for the read itself. `coaching` for what the review surfaces about an individual. `book-triage` for what a CSM does with the accounts flagged.

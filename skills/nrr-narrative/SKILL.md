@@ -1,154 +1,70 @@
 ---
 name: nrr-narrative
 description: >
-  Turns net and gross revenue retention into a story a board will follow, including what the headline number hides. Trigger whenever the user says "NRR", "net revenue retention", "GRR", "gross retention", "retention narrative", "board update on retention", "explain our retention numbers", "why did NRR drop", "retention story", "prepare the retention slide", or is presenting a retention number to a board, an investor or an executive team. It decomposes the ratio into expansion, price, contraction and churn, insists gross retention appears alongside net, distinguishes cohort from blended, and answers the only question a board is actually asking, which is whether the number is repeatable. Use renewal-forecast for the forward number and portfolio-review for the account reads underneath it.
+  Use when the user says "NRR", "net revenue retention", "why did NRR drop", "retention slide for the board", "explain our retention numbers", "what is our NRR hiding". Produces a one-page, board-ready retention narrative: the bridge from starting to ending ARR, gross retention beside net, cohort or blended, concentration, what recurs, what the number hides, and three sentences for the slide. Not for the forward number (use renewal-forecast) or the account reads underneath it (use portfolio-review).
 ---
 
 # NRR Narrative
 
-Net revenue retention is a ratio, and every ratio hides its composition. One hundred and ten per cent built on a price increase, one hundred and ten per cent built on seat growth in existing teams, and one hundred and ten per cent built on two enormous expansions covering broad contraction are three different companies with the same slide.
+A one-page retention story a board can follow and a CFO cannot poke a hole in, built by taking the number apart before explaining it.
 
-The failure this exists to prevent: **presenting the number without its composition**, which survives exactly one question from anyone who has seen this before, and which loses you the room for the rest of the meeting.
+## Start here
 
----
+If the user gave a period and the ARR movements (or starting and ending ARR for the same customers), go straight to "Do this".
 
-## What this needs
+Otherwise ask for these in ONE message, then proceed with whatever comes back:
 
-**Shared context.** If an `account-context` document exists, read it first: pricing model, contract shapes and segments. On consumption pricing, retention arithmetic behaves differently and the narrative has to say so. Where it is absent, carry on and name the assumption.
+1. The period, starting ARR from existing customers, and any of: expansion, price uplift, contraction, churn.
+2. Cohort cuts if they exist, the three largest expansions, and where churn sat (segment, channel, cohort).
+3. The audience, and the decision the number feeds.
 
-**Minimum: the retention numbers and the period.** Enough for a decomposition attempt and an honest list of what cannot be separated yet.
+Missing movements are estimated and tagged `(assumed, confirm)`; a movement that cannot be split goes under "What I could not check". If an "Account context" block exists in the conversation, use it for pricing model (consumption pricing changes the arithmetic).
 
-**Better with** the movement broken into expansion, price, contraction and churn, and the same numbers for prior periods.
+## Do this
 
-**Best with** cohort data and segment-level retention, which is where the actual story almost always is.
-
----
-
-## Step 1: Decompose before you narrate
-
-Four movements. The number means nothing until they are separated:
-
-- **Expansion.** More seats, more products, more usage, at existing prices
-- **Price.** Uplift, list change, discount roll-off. **Revenue that arrived without the customer choosing to buy more**
-- **Contraction.** Accounts that stayed and shrank
-- **Churn.** Accounts that left
-
-**Price and expansion are the pair that must never be merged.** Expansion is evidence customers want more. Price is evidence you charged more. Both are legitimate revenue and only one is a demand signal, and a board that discovers the difference after being shown a blended number treats every subsequent number as suspect.
-
-Contraction is the movement most often left out entirely, and it is usually the largest of the two negatives.
-
-## Step 2: Show gross retention next to net, always
-
-**Gross retention is the honest number.** It cannot be rescued by expansion, so it says whether you keep what you have. Net retention says whether you grow inside the base. They answer different questions and only the pair is informative.
-
-The specific thing this prevents: a business with strong expansion in a handful of accounts and a deteriorating base can hold net retention flat for several quarters while gross retention falls steadily. By the time net moves, the problem is two years old and structural.
-
-If you present one number, present gross.
-
-## Step 3: Say whether it is cohort or blended, and why that matters
-
-Blended retention across the whole base flatters a company that is growing fast, because recently landed customers have not had time to churn yet. The faster new business grows, the more flattering it gets, which means the number improves for a reason unrelated to retention.
-
-Cohort retention, tracking a group of customers landed in the same period over time, is what tells you whether the product actually holds people.
-
-Say which you are showing. If you only have blended, say that, and say what it might be concealing. A board will forgive a gap you name and will not forgive one they find.
-
-## Step 4: Find the concentration
-
-The two questions that break most retention slides, and both are cheap to answer in advance:
-
-- **How much of the expansion came from how few accounts?** If half of it came from three, the number is not a business property, it is three renewals, and it does not repeat by itself
-- **Where is the churn concentrated?** By segment, by cohort, by product, by acquisition channel, by industry. Churn spread evenly is a product or pricing problem. Churn concentrated in one segment is a much more actionable finding and usually a much less alarming one
-
-**A number that depends on a handful of accounts should be presented that way**, before someone else notices.
-
-## Step 5: Answer the question they are actually asking
-
-A board asks about NRR to work out one thing: **is this repeatable, and what would change it.**
-
-So the narrative has to answer:
-
-- **What drove it**, from the decomposition
-- **How much of that recurs on its own.** A price uplift does not repeat next year unless you do it again, and doing it again has a cost
-- **What is the leading indicator**, since retention is deeply lagging. Something you can show moving now that predicts the number two quarters out
-- **What would you change it with**, and what that costs
-
-Retention reported without a forward mechanism is a history lesson. The reason it is on the agenda is that somebody is deciding where to put money.
-
-## Step 6: Name what the number hides, before anyone asks
-
-Say it yourself. It costs one slide and it is the difference between a narrative and a defence.
-
-Common concealments worth checking for:
-
-- One large expansion covering broad contraction
-- A price increase presented as growth
-- Churn deferred rather than avoided, because accounts on multi-year terms cannot churn this year
-- A definitional change mid-period, which is the one that ends credibility permanently if found rather than disclosed
-- Improvement caused by losing the segment that was churning, which is a real improvement and a completely different story
-
-**If a definition changed, lead with it.** Everything else in the deck depends on the audience believing the numbers are constructed honestly.
-
-## Step 7: Write it as three sentences first
-
-Before any slide: what happened, why, and what you are doing about it. Three sentences.
-
-If it cannot be said in three, the analysis is not finished, and building a deck on unfinished analysis is how a retention review becomes forty minutes of questions about the axis labels.
-
----
+1. **Decompose before narrating.** Starting ARR + expansion + price - contraction - churn = ending ARR for the same customers. Check it adds. Keep price and expansion apart: one is demand, the other is a charge.
+2. **Compute the pair.** GRR = (start - contraction - churn) / start. NRR = (start + expansion + price - contraction - churn) / start. Add NRR without price. Put GRR first, and put the prior period beside it.
+3. **Say the basis.** Cohort or blended, and any definition change this period. If blended, say what it flatters: customers landed recently have not reached a renewal yet.
+4. **Find the concentration.** Share of expansion from the top three accounts. Where contraction and churn sit. Concentrated loss is a segment problem. Even loss is a product or pricing problem.
+5. **Separate what recurs.** A one-time price uplift does not repeat. Multi-year terms defer churn, so also compute GRR on the base that was free to leave this period.
+6. **Name what the number hides,** in your own words before anyone asks. Add one leading indicator that moves ahead of the number, with its mechanism, and the decision or spend the narrative supports.
+7. **Write three sentences first:** what happened, why, what we are doing. Then the page. If it cannot be said in three, the analysis is not done.
 
 ## Output
 
-1. **The decomposition**: expansion, price, contraction, churn, separated
-2. **Gross and net together**, with gross leading
-3. **Cohort or blended**, stated, with what blended may be concealing
-4. **The concentration**: expansion in how few accounts, churn in which segment
-5. **What recurs on its own**, and what does not
-6. **The leading indicator**
-7. **What the number hides**, disclosed rather than defended
-8. **The three sentences**
-9. **What you could not check**
+Lead with the headline. Use this skeleton exactly:
 
----
+```
+[Headline: GRR x%, NRR y% for the period, and the one-line story]
 
-## Failure modes
+Bridge ($k): start | + expansion | + price | - contraction | - churn | = end
+  GRR | NRR | NRR without price   (this period beside prior period)
+Basis: cohort or blended. Definition changes: [none, or what changed and the restated figures]
+Concentration: [expansion from top three; where loss sits; cohort cut]
+What recurs and what does not: [price, multi-year deferral, GRR on the base free to leave]
+What the number hides: [bullets, disclosed not defended]
+Leading indicator: [metric, mechanism, current reading, cadence]
+Ask or decision: [what the board is being asked to back, and the target]
+Three sentences for the slide
 
-- **The headline with no composition.** Survives one question
-- **Merging price and expansion.** One is a demand signal, one is not, and mixing them makes every later number suspect
-- **Omitting contraction**, usually the larger negative
-- **Net without gross.** Lets a deteriorating base hide behind a few large expansions for years
-- **Blended presented as if it were cohort**, which flatters exactly in proportion to how fast you are growing
-- **Not naming the concentration**, so somebody else does
-- **No leading indicator**, leaving a lagging number with no forward handle
-- **A definitional change not disclosed**, which is the one that ends credibility for good
-- **Retention as a history lesson**, when the reason it is on the agenda is a spending decision
-- **A deck built before the three sentences exist**
+What I could not check
+- [gap]
+```
 
----
+A filled example is in `examples/sample.md`. Match its shape and length.
 
-## What good looks like
+## Rules
 
-- Gross and net are both on the page, and gross comes first
-- Price is a separate line from expansion
-- Contraction has its own number
-- Whether it is cohort or blended is stated without being asked
-- The concentration is disclosed by you
-- There is one leading indicator with a mechanism behind it
-- What the number hides was said before anyone had to ask
-- The whole thing survives being reduced to three sentences
+- **GRR before NRR, always together.** Expansion in a few accounts can hold NRR flat while the base shrinks, and the gap between the two is the story.
+- **Price is not expansion.** Expansion shows customers want more. Price shows you charged more. A board that finds the merge later distrusts every other number.
+- **Contraction gets its own number.** Accounts that stayed and shrank are easy to leave out and are often the larger negative.
+- **Blended flatters a fast-growing base.** The faster new business lands, the more young customers sit in the denominator before their first renewal. Show a cohort cut.
+- **Deferred churn is not avoided churn.** Customers on multi-year terms cannot leave this year, so show retention on the exposed base too.
+- **A changed definition goes first.** If the audience finds it themselves, the rest of the deck stops being believed.
+- **Disclose concentration yourself.** If three accounts supplied most of the expansion, the number is three renewals, and it will not repeat on its own.
+- **Show dollars beside percents.** A drop of four points means little to a board until it sees the dollars behind it.
+- **Report lagging and leading together.** Retention is lagging by quarters. A board deciding where to spend needs the indicator it can watch now.
 
----
+## Related (only if installed)
 
-## Related skills
-
-- `renewal-forecast` for the forward number this narrative is the backward half of
-- `portfolio-review` for the account reads underneath the aggregate
-- `churn-postmortem` for whether the churn shares a mechanism, which is what makes it a story rather than a rate
-- `coverage-model` when the retention pattern is a coverage decision showing up in the numbers
-- `one-pager` for the version the board member forwards afterwards
-
----
-
-## Supporting files
-
-None. The output is a decomposition and three sentences, both specific to the business, and a template would invite filling in boxes rather than doing the decomposition.
+`renewal-forecast` for the forward half. `portfolio-review` for the reads underneath. `coverage-model` when the pattern is a coverage decision showing up in the numbers.

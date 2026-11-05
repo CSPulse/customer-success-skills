@@ -1,164 +1,70 @@
 ---
 name: csql-motion
 description: >
-  Designs how customer success generates and hands off qualified expansion leads without damaging the relationship that produced them. Trigger whenever the user says "CSQL", "customer success qualified lead", "CS sourced pipeline", "should CS sell", "hand leads to sales", "expansion motion", "CS to sales handoff", "how do we count CS influence", "attribution between CS and sales", or is designing or fixing how expansion signals move from customer success to a sales team. It defines what actually qualifies as a signal rather than a hunch, shapes the handoff as a warm introduction rather than a queued lead, settles attribution before the first one is passed, and names the kill criteria. Use expansion-case for the individual business case, and coverage-model for whether the team has capacity for this at all.
+  Use when the user says "CSQL", "CS sourced pipeline", "should CS sell", "hand expansion leads to sales", "CS to sales handoff for expansion", "how do we credit CS for expansion". Produces a filled design for passing expansion signals from customer success to sellers: the position, two or three written signals, a warm handoff with a context note, attribution, two measures and kill criteria. Not for the business case on one deal (use expansion-case) or the team's capacity (use coverage-model).
 ---
 
 # CSQL Motion
 
-Almost every one of these programmes fails the same way, and it is not a design problem. **The first badly handled handoff teaches the customer success team that flagging an opportunity gets a customer called by someone who has not read anything, and the flow of signals stops within a month.** After that the programme exists on a slide.
+A design for how CSMs surface expansion signals and hand them to sellers without spending the trust that produced them.
 
-So this is mostly a design problem about trust, and only secondarily about lead definitions.
+## Start here
 
-The failure this exists to prevent: **the lead dropped into a queue.** A CSM passes a real signal, it is worked by someone with no context, the customer experiences a cold sales approach from a company that is supposed to know them, and the CSM never passes another one.
+If the user said who spots, who works the lead, and how each side is paid, go straight to "Do this".
 
----
+Otherwise ask for these in ONE message, then proceed with whatever comes back:
 
-## What this needs
+1. Who works expansion today (AE, account manager, expansion team) and what CS owns commercially.
+2. Three to five recent expansions that happened, and what was visible beforehand.
+3. How CSMs and sellers are paid on expansion and retention.
 
-**Shared context.** If an `account-context` document exists, read it first: the motion, the segments, and what customer success owns commercially here. That last one decides whether this programme is even the right shape. Where it is absent, carry on and name the assumption.
+Missing items are assumed and listed under "What I could not check". If an "Account context" block exists in the conversation, use it for motion and segments.
 
-**Minimum: what you want CS to spot and who would work it.** Enough for a qualification definition, a handoff shape and an attribution rule.
+## Do this
 
-**Better with** the historical expansion data, so qualification can be built from what actually converted rather than from what feels promising.
-
-**Best with** the compensation plans of both teams, because those decide behaviour far more than any process document.
-
----
-
-## Step 0: Decide whether CS should be selling at all
-
-Ask before designing. Three honest positions exist:
-
-- **CS spots and hands off.** The most common and usually the right one. CSMs are not compensated or trained to sell, and asking them to do it informally gets you neither
-- **CS owns expansion end to end.** Legitimate, and it means the job description, the training and the compensation all change. If those have not changed, this position is not actually being taken, it is being assumed
-- **CS does neither**, because the trust position is the asset and monetising it costs more than it earns. A real answer, particularly where the product is regulated, technical, or bought once
-
-**A hybrid where CSMs are expected to sell but are neither trained nor paid for it is the worst of the three**, and it is the default when nobody makes this decision explicitly.
-
----
-
-## Step 1: Define what actually qualifies
-
-Without a written definition, every CSM invents their own, and the aggregate is noise that sales learns to ignore.
-
-A qualifying signal is **behavioural or stated, not felt**:
-
-- A stated need with a named owner. Someone said they need to do X, and X requires more than they have
-- A usage boundary being hit. Seats near a limit, volume near a commitment, a team using something not in scope
-- An organisational trigger. A new team, a new region, a merger, a mandate that extends the use case
-- A repeated workaround that a paid capability solves
-- An explicit ask. "Can we do this for the other division too"
-
-**"They seem happy" does not qualify.** Nor does a high health score. Satisfaction and buying intent correlate weakly, and building a programme on satisfaction produces volume with no conversion, which is how these get cancelled.
-
-Write it down. Two or three criteria, and require that the CSM name which one fired.
-
-## Step 2: Design the handoff as an introduction, not a transfer
-
-The single highest-leverage decision in the whole motion.
-
-- **The CSM stays in the room.** Not as an observer, as the person who holds the relationship. A CSM who disappears at handoff has confirmed the customer's worst reading of what just happened
-- **The context travels**, and it is read before contact. What has been said, what has already been discussed, what to avoid, who the sceptic is
-- **No cold outreach to a warm account, ever.** The introduction comes from the person the customer already knows
-- **Agree a response window.** A signal that sits for three weeks decays, and the CSM who raised it looks foolish to their own customer
-
-Where sales cannot commit to reading context before contact, the programme should not start. That constraint is the programme.
-
-## Step 3: Protect what the customer experiences
-
-The whole asset here is that the CSM is the person who is not selling them anything. Spend that carelessly and it does not come back.
-
-- **Never let the value conversation become the sales conversation in the same meeting.** Customers do not punish the upsell; they punish the disguise. `business-review` says the same and it holds here
-- **The CSM can raise a possibility and should not negotiate.** Those are different roles and the customer can feel the switch
-- **A no must be genuinely free.** If declining an expansion changes the service they get, they will notice, and everything the CSM says afterwards is discounted
-
-## Step 4: Settle attribution before the first lead moves
-
-**Attribution arguments kill these programmes**, and they always start after the first meaningful deal rather than before.
-
-Decide, in writing, in advance:
-
-- **What counts as CS-sourced** against CS-influenced, and the test that separates them
-- **Whether both teams can claim the same deal.** Usually they should. Double-counting for recognition while counting once for revenue is a workable answer, and pretending the question will not arise is not
-- **What the CSM actually gets.** Recognition, a spiff, quota relief, or a line in their review. **If the honest answer is nothing, say so**, and expect the volume that nothing buys
-- **Who owns the number** when it is missed
-
-Compensation shapes behaviour more than any process document. A motion where sales is paid and CS is not produces exactly the effort that ratio implies.
-
-## Step 5: Measure the two things that matter
-
-Volume is a vanity metric here and it is usually the one reported.
-
-- **Conversion rate of CSQLs**, against sales' other sources. If CS-sourced leads convert better, which they usually should, that is the argument for the programme and for what CS gets from it
-- **Relationship cost.** Harder and more important. Track whether accounts that went through the motion show any change in engagement, satisfaction or renewal behaviour afterwards. **If nobody measures this, the programme's main risk is invisible by design**
-
-Also track how many CSMs are contributing. If it is three people out of twenty, the programme is three people, and the design has not worked.
-
-## Step 6: Write the kill criteria
-
-Programmes like this rarely get stopped, they get quietly ignored, which is worse because the slide stays.
-
-Decide up front what would end it: a conversion rate below a threshold, a measured relationship cost, contribution concentrated in a handful of people after two quarters, or a single serious incident where a customer relationship was damaged by a handoff.
-
-Then review against those, honestly, on a date set now.
-
----
+1. **Choose the position.** Spot and hand off, CS owns expansion end to end, or deliberately neither. Check it against pay and training. CSMs expected to sell who are neither trained nor paid for it is the worst option, and it is the default when nobody decides.
+2. **Write two or three qualifying signals,** built from the recent wins. Behavioral or stated only: a named owner with a stated need, a usage boundary being hit, an organizational trigger (new team, region, merger, mandate), a repeated workaround, an explicit ask. The CSM names which one fired and quotes the evidence. Thresholds are a common default, set your own.
+3. **Design the handoff as an introduction.** The CSM introduces, stays on the first call, and leaves only once the need is confirmed. A five-line context note travels first: signal, who said it, what was discussed, what to avoid, who the skeptic is. Set a response window, for example one business day to acknowledge and five to first contact (a common default, set your own).
+4. **Protect the customer.** Value conversation and sales conversation never share a meeting. The CSM raises a possibility and does not negotiate. A "no" changes nothing about service.
+5. **Settle attribution before the first lead moves.** Sourced versus influenced, with a test. Whether both teams can claim the deal. What the CSM gets, stated even if it is nothing. Who owns the number.
+6. **Pick two measures.** Conversion of CSQLs against the sellers' other sources, and relationship cost: renewal behavior, engagement and satisfaction of passed accounts against comparable accounts not passed. Track how many CSMs contribute.
+7. **Write kill criteria and a review date,** so the program is stopped on evidence instead of quietly ignored.
 
 ## Output
 
-1. **The position**: spot and hand off, own it end to end, or deliberately neither
-2. **The qualification criteria**, two or three, written, with the CSM naming which fired
-3. **The handoff design**: who introduces, what context travels, the response window
-4. **What protects the customer's experience**, including that a no is free
-5. **The attribution rule**, and what the CSM actually gets, stated even when it is nothing
-6. **The two measures**: conversion against other sources, and relationship cost
-7. **Contribution spread** across the team
-8. **The kill criteria**, and the review date
-9. **What you could not check**
+Lead with the position. Use this skeleton exactly:
 
----
+```
+CSQL MOTION: [company] | [n] CSMs | [n] sellers working expansion
 
-## Failure modes
+Call: [the position, and the one precondition that must hold]
 
-- **The lead dropped into a queue.** One bad handoff ends the flow of signals within a month
-- **No written qualification**, so every CSM invents their own and sales learns to ignore the aggregate
-- **Building on satisfaction.** "They seem happy" produces volume and no conversion
-- **The CSM disappearing at handoff**, which confirms the customer's worst reading
-- **Cold outreach to a warm account**
-- **Expecting CSMs to sell without changing the job, the training or the pay.** The worst of the three positions and the default when nobody decides
-- **Attribution settled after the first big deal** rather than before
-- **Measuring volume**, which is the vanity metric here
-- **Never measuring relationship cost**, which makes the programme's main risk invisible by design
-- **Three contributors out of twenty**, reported as a team motion
-- **No kill criteria**, so it is quietly ignored rather than stopped, and the slide remains
+Position: [spot and hand off / CS owns / neither] and why, given pay and training
+Signals (CSM names which fired, quotes evidence): 1. ... 2. ... 3. ...
+Handoff: [who introduces, who stays, response window]
+Context note (five lines, filled for one example account)
+Customer protection: [separation of conversations, "no" is free]
+Attribution: [sourced vs influenced test, double count, what the CSM gets, who owns the number]
+Measures: [conversion vs other sources, relationship cost, contribution spread]
+Kill criteria and review date
 
----
+What I could not check
+- [gap]
+```
 
-## What good looks like
+A filled example is in `examples/sample.md`. Match its shape and length.
 
-- The position was decided explicitly, and the compensation matches it
-- Qualification is written, behavioural, and the CSM names which criterion fired
-- The introduction comes from the person the customer already knows, and they stay in the room
-- Context is read before contact, every time
-- Declining costs the customer nothing they would notice
-- Attribution was agreed before the first lead moved
-- Conversion is compared against sales' other sources, and relationship cost is actually tracked
-- More than a handful of the team contributes
-- There is a written condition under which this stops
+## Rules
 
----
+- **One bad handoff ends the flow of signals.** A CSM whose flagged customer gets a cold call stops flagging, so reading the note before contact is a precondition, not a courtesy. If sellers cannot commit to it, do not start.
+- **Qualify on behavior or a stated need, never satisfaction.** A happy customer has not said they need more, and a program built on happiness produces volume that does not convert.
+- **The CSM stays in the room.** Disappearing at handoff confirms the customer's worst reading of what just happened.
+- **No cold outreach to a warm account.** The introduction comes from someone the customer already trusts.
+- **A "no" must be free.** If declining changes service, the customer notices, and everything the CSM says afterward is discounted.
+- **Attribution disputes start after the first large deal.** Settle them while nothing is at stake. If the honest answer for CSMs is "nothing", say so and expect the volume that buys.
+- **Measure relationship cost, not just conversion.** Unmeasured, the main risk is invisible by design.
+- **A program with no end condition is never ended.** It is ignored while the slide remains, so write the thresholds and the date now.
 
-## Related skills
+## Related (only if installed)
 
-- `expansion-case` for the individual business case once a signal is qualified
-- `business-review` for keeping the value conversation and the sales conversation apart
-- `coverage-model` for whether the team has the capacity for this at all
-- `advocacy-ask` for the other place CS is asked to monetise trust, with the same asymmetry
-- `internal-escalation` when the handoff process itself is the thing that needs fixing
-
----
-
-## Supporting files
-
-None. The output is a position, a definition, an attribution rule and a kill condition, all of which are company-specific decisions rather than documents.
+`expansion-case` for the business case once a signal qualifies. `business-review` for keeping value and sales conversations apart. `coverage-model` for whether the team has capacity at all.

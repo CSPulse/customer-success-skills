@@ -45,7 +45,7 @@ Check specifically:
 - Does it lead with their impact or our explanation? Theirs comes first.
 - Is the ownership real, or hedged into passive voice? "The report was delayed" hides who owns it.
 - Is there a date attached to the resolution? Bad news without a date reads as bad news with no end.
-- Is it apologising more than once? One clean apology lands. Three read as anxious and shift the customer into reassuring us.
+- Is it apologizing more than once? One clean apology lands. Three read as anxious and shift the customer into reassuring us.
 
 ---
 

@@ -1,139 +1,70 @@
 ---
 name: stakeholder-map
 description: >
-  Maps the people who decide an account's outcome by what they can do to it, not by their job titles. Trigger whenever the user says "stakeholder map", "who are the stakeholders", "relationship map", "who do I need to know", "who actually decides", "who signs", "map the account", "we are single-threaded", "my champion left", or asks who to call about a renewal. Also trigger when an account has gone quiet, when a new executive has arrived on the customer side, or before any first meeting with an inherited account. It sorts people by influence on the outcome rather than seniority, flags who has never actually been met, tests for single-threading, and tracks who is new, who has gone, and who used to respond and stopped. Runs on whatever the user knows and marks every gap as a gap.
+  Use when the user says "stakeholder map", "who actually decides", "who signs this", "map the account", "we are single-threaded", "who do I need to know". Produces a map sorted by what each person can do to the outcome, not title, with a met / not met column, a single-threading count and a dated route to close each gap. Not for a champion who just left (use champion-loss) or for the renewal call itself (use renewal-risk).
 ---
 
 # Stakeholder Map
 
-An org chart tells you what people are called. A stakeholder map tells you what they can do to this renewal. They are not the same document and the first one is easy to mistake for the second.
+An org chart says what people are called. This says what each person can do to the account, who the user has really met, and what to do about the gaps.
 
-The useful question is never "what is their title". It is **"what happens to this account if this person says no, and what happens if they leave".**
+## Start here
 
-The failure this exists to prevent: **a beautifully complete contact list on an account nobody can name a decider for.**
+If the user gave names and roughly what they do, go straight to "Do this". If an "Account context" block exists in the conversation, use it for who signs in this business.
 
----
+Otherwise ask for these in ONE message, then proceed with whatever comes back (do not wait for all three):
 
-## What this needs
+1. The people the user knows on the account, with role and last contact date
+2. Who the user thinks signs, and whether they have ever spoken to them
+3. Anything that changed lately: new executive, someone gone quiet, someone left
 
-**Shared context.** If an `account-context` document exists, read it first. It says who signs in this business, by role, and whether customer success ever meets them. That answer sets the bar for everything below. Where it is absent, carry on and name the assumption.
+Gaps are the output here, not a blocker.
 
-**Minimum: the names you know and roughly what they do.** Gaps are the output here, not a blocker.
+## Do this
 
-**Better with** the last few months of email and meeting history, so "who used to respond and stopped" can be answered rather than guessed.
 
-**Best with** the original deal notes, which usually name the economic buyer and almost always name the sceptic that nobody has thought about since. On an inherited account, `account-research` is what finds those notes and establishes which of the names in them are still there.
-
----
-
-## Step 1: Sort by what they can do, not what they are called
-
-Six positions. A person can hold more than one, and the same title maps differently in different companies.
-
-| Position | What defines them | Why they matter |
-| :--- | :--- | :--- |
-| **Economic buyer** | Controls the budget line. Can say yes alone | The renewal is theirs. Everything else is influence |
-| **Champion** | Wants this to succeed and will spend their own credibility on it | Carries you internally in rooms you are not in |
-| **Sceptic** | Argued against it, or would if asked | The most frequently omitted and most often fatal |
-| **User** | Uses the product. Usually has no budget authority | Generates the evidence, decides nothing |
-| **Coach** | Tells you how the organisation actually works | Not the same as a champion. A coach may not even like the product |
-| **Gatekeeper** | Procurement, security, legal, IT. Can block without deciding | Cannot say yes. Can absolutely say no |
-
-**Getting the sceptic on the list is the point of the exercise.** Every account has one. If the map has no sceptic, it is incomplete rather than exceptional.
-
----
-
-## Step 2: Add the column everybody skips
-
-For each person: **have you actually spoken to them?**
-
-Three honest values, and the difference between them matters:
-
-- **Met.** A real conversation, not a group call they attended
-- **Aware of.** You know they exist and what they do. You have never spoken
-- **Assumed.** You believe this role exists and someone fills it, but you cannot name them
-
-**If the economic buyer is Aware-of or Assumed, that is the account's largest risk and it outranks every usage signal on the page.** Say it first, before anything else in the read, and do not bury it under relationship detail.
-
----
-
-## Step 3: Test for single-threading
-
-Count the people who would have to be replaced if one person left tomorrow.
-
-- **One relationship** means no recovery path. Champion departure ends the account's institutional memory of why it was bought
-- **Two, both in the same team,** is single-threading wearing a disguise
-- **Three or more, across functions,** is genuine coverage
-
-Then ask the harder version: **if your champion left this month, who inside the customer could explain why they bought this?** If the answer is nobody, the value story lives in one person's head and leaves with them.
-
----
-
-## Step 4: Track movement, not just position
-
-A map is a snapshot, and the changes carry more signal than the state.
-
-- **Who is new.** A new executive reviews everything their predecessor bought. This is not personal and it is not negotiable
-- **Who has left**, and whether anyone inherited what they were doing
-- **Who has gone quiet.** Someone who used to reply within a day and now takes a week has told you something. Non-response from a previously responsive person is the signal; a low survey score is not
-- **Whose remit changed.** Same person, same title, different budget, is a change nobody logs
-
-Sponsor-specific silence deserves its own flag. The working team still engaged while the sponsor has gone quiet usually means the decision has moved above your line of sight.
-
----
-
-## Step 5: Name the gaps and what closes them
-
-For each gap, one line on how it gets closed and by when. A map that identifies a missing economic-buyer relationship and stops there has described the problem.
-
-Realistic routes: an introduction from the champion, a business review with the sponsor invited, an executive-to-executive introduction from your own side, or a specific piece of value worth their fifteen minutes.
-
-When the route opens and the meeting is granted, `exec-conversation` prepares it. The fifteen minutes you spent a quarter earning is the wrong place to improvise.
-
-**Be honest about the ones that will not close.** Some economic buyers will not meet a vendor. That is a real constraint and it changes the play rather than the effort.
-
----
-
-## Step 6: Write it down
-
-Fill `assets/map-template.md` and hand over the completed map.
-
-Lead with the answer to "who decides and have we met them". Everything else is supporting detail.
-
----
+1. **Sort by position, not title.** Economic buyer (controls the budget), champion (spends their own credibility for you), sceptic (argued against it or would), user, coach (explains how the org works, may not like the product), gatekeeper (procurement, security, legal; can block, cannot approve). One person can hold two.
+2. **Add the met column.** Met means a real conversation, not a group call they attended. Aware of means known, never spoken to. Assumed means the role exists but cannot be named.
+3. **Say who decides first.** If the economic buyer is aware-of or assumed, that is the account's largest risk and goes at the top of the output.
+4. **Count the threads.** One relationship is no recovery path. Two in the same team is single-threading in disguise. Three or more across functions is coverage. Then ask: if the champion left this month, who inside the customer could explain why they bought?
+5. **Track movement.** New arrivals, departures, remit changes, and anyone who used to reply in a day and now takes a week.
+6. **Give each gap a route and a date:** an introduction from the champion, a review with the sponsor invited, an exec-to-exec ask, or a piece of value worth their fifteen minutes. Say honestly which gaps may not close.
 
 ## Output
 
-1. **The decider**, named, and whether you have met them
-2. **The map**, by position rather than title, with the met column filled
-3. **Single-threading verdict**, with the count
-4. **What has changed** since the last look: arrivals, departures, silences
-5. **The gaps**, each with a route to close it and a date
-6. **What you could not establish**
 
----
+```
+WHO DECIDES: [Name, role] | Met: yes / no / only through [person]
+Threads: [n] relationships, [single / disguised single / multi] threaded
+Sceptic: [name or "not identified, map incomplete"]
 
-## Failure modes
+Map
+| Person | Position | Met | Last contact | Stance (said/seen/inferred) |
 
-- **Reproducing the org chart.** Seniority is not influence, and the person who signs is often not the most senior person on the list
-- **No sceptic.** Every account has one. An absent sceptic means the map is incomplete
-- **Counting group calls as relationships.** Someone who has been on a call with you is not someone you have met
-- **Mistaking the champion's enthusiasm for the buyer's decision.** A champion's optimism is evidence about the champion
-- **Treating the map as static.** The version that is a quarter old is describing an organisation that has moved
-- **Listing a gap without a route.** The gap was already obvious. The route is the work
+Changed since last look
+- [arrival / departure / quiet / remit change, with date]
 
----
+Gaps and routes
+- [gap] | Route: [how] | Owner: [who] | By: [date]
 
-## What good looks like
+What I could not check
+- [gap]
+```
 
-- The first line names the decider and says whether you have met them
-- The sceptic is on the map
-- Single-threading has a number, not an impression
-- Every gap has a named route and a date
-- Someone picking up this account could tell who to call first, and why
+A filled example is in `examples/sample.md`.
+Match its length and specificity: real dates, real counts, no placeholders in the final output.
 
----
+## Rules
 
-## Reference files
+- **Every account has a sceptic.** A map without one is incomplete, not lucky, because the person nobody thought about is the one who surfaces at signature.
+- **Seniority is not influence.** The signer is often not the most senior name, so ask what happens to the renewal if this person says no.
+- **A group call is not a relationship.** Someone who sat on a webinar-style call has not been met, and counting them hides the real gap.
+- **A champion's optimism is evidence about the champion.** Tag it `said` and name whose mouth it came from.
+- **Sponsor silence while the working team stays engaged** usually means the decision moved above the user's line of sight.
+- **A gap without a route is only a description.** The gap was already obvious; the route and date are the work.
+- **The map goes stale.** An organization that reorganized last quarter is not the one on the page, so date the map and re-check it at every renewal checkpoint.
 
-- `assets/map-template.md` - the map to fill
+## Related (only if installed)
+
+
+`champion-loss` when the sponsor left. `exec-conversation` to prepare the meeting once it is granted. `renewal-risk` to turn the map into a call.
