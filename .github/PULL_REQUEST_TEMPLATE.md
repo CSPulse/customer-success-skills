@@ -12,22 +12,13 @@
 
 ## Checks
 
-- [ ] SKILL.md is under 500 lines, references one level deep only
-- [ ] Description leads with literal trigger phrases and is under 1,024 characters
-- [ ] The skill states the least it needs to run, and nothing is a prerequisite
-- [ ] The failure it prevents is named
-- [ ] It ships an asset, or there is a reason it does not
-- [ ] Worked examples use an invented company
-- [ ] No em dashes
+- [ ] `python3 tools/check.py` passes
+- [ ] `examples/sample.md` shows a realistic input and a complete output for an invented company, and a CSM would forward it without editing
+- [ ] Nothing is a prerequisite (no connector, file, workspace, voice guide or other skill)
+- [ ] Each rule says why it is true
+- [ ] No unsourced statistic; defaults are labeled as defaults
 - [ ] No real customer, employer or personal names
-- [ ] Folder name, frontmatter `name` and the `marketplace.json` entry all match
-- [ ] **README updated in all five places**, if this adds or removes a skill:
-  - [ ] the skills table
-  - [ ] the category table (built against planned)
-  - [ ] the "works with nothing but" table
-  - [ ] **the diagram** under "How these work together"
-  - [ ] **the opening paragraph**, if the shape of the library changed
+- [ ] Trigger phrases are this skill's own (see `docs/TRIGGERS.md`)
+- [ ] If a skill was added or removed: README tables, role bundles in `.claude-plugin/marketplace.json`, `docs/TRIGGERS.md` and `evals/routing-prompts.tsv` updated
 
 ## Anything a reviewer should look at closely
-
-
