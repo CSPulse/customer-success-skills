@@ -1,177 +1,71 @@
 ---
 name: churn-postmortem
 description: >
-  Works out why an account actually left, separating the reason the customer gave from the mechanism that caused it, and checks whether the loss was one of a correlated set. Trigger whenever the user says "churn postmortem", "why did we lose them", "post mortem", "churn analysis", "they did not renew", "we lost the account", "what went wrong with", "lessons learned", or names an account in the past tense. Also trigger when several accounts have been lost for the same stated reason, or before a churn review. It reconstructs the timeline, separates the date the account was lost from the date anyone noticed, identifies the earliest signal that was genuinely detectable at the time rather than obvious in hindsight, and asks whether the loss was winnable and when it stopped being so. Runs on whatever record survives and marks what could not be reconstructed.
+  Use when the user says "churn postmortem", "why did we lose them", "they did not renew", "post mortem on [account]", "what went wrong with [account]", "lessons learned from the loss". Produces a short written postmortem: the reason given versus the mechanism, the date it was lost versus the date anyone noticed, what was truly detectable then, and one change worth making. Not for an account still alive (use renewal-risk) or for running the exit conversation (use offboarding).
 ---
 
 # Churn Postmortem
 
-The reason a customer gives for leaving is the reason they are willing to say out loud to someone they are leaving. It is polite, it is usually partly true, and it is almost never the mechanism.
+A one-page postmortem that separates what the customer said from what actually caused the loss, and ends in one owned change.
 
-"Budget cuts" is what you are told. Whether the budget was cut because the value was never proved is the thing you needed to know.
+## Start here
 
-The failure this exists to prevent: **"it was an acquisition" filed as a cause, concealing nine months of nobody calling.** A postmortem that produces a category rather than a mechanism produces no change.
+If the user gave the account, what the customer said, and roughly what happened, go straight to "Do this". If an "Account context" block exists in the conversation, use its value metric and what healthy usage looks like.
 
----
+Otherwise ask for these in ONE message, then proceed on memory. A postmortem from memory that says so beats none:
 
-## What this needs
+1. Account, ARR lost, date the notice or non-renewal arrived
+2. The reason the customer gave, who they gave it to, and when
+3. What the user remembers of the last six months: contacts, changes, silences
 
-**Shared context.** If an `account-context` document exists, read it first, particularly the value metric and what healthy usage looks like. A postmortem without those reaches for usage numbers and misreads them. Where it is absent, carry on and say so.
+## Do this
 
-**Minimum: what the user remembers.** Memory is biased but it is not worthless, and a postmortem written from memory that says so beats one that never happens.
-
-**Better with** the account's email and meeting history, the support record, and whatever the renewal conversation produced in writing.
-
-**Best with** the original business case and the health-score history, which together show whether the account was ever delivering what it was bought for.
-
----
-
-## Step 1: Record the stated reason, then set it aside
-
-Write down what the customer actually said, in their words, and date it. Note who said it and to whom, because a reason given to a CSM and a reason given to an executive are frequently different reasons.
-
-Then set it aside. It is evidence about the conversation, not yet evidence about the cause. You will come back to it in Step 5 and check whether it survives.
-
----
-
-## Step 2: Reconstruct the timeline, with two separate dates
-
-Build the sequence of what happened. Then mark two dates that get conflated and should not be:
-
-- **The date the account was actually lost.** When the decision became effectively irreversible. Often a budget planning cycle, a sponsor's departure, or a competitor being selected
-- **The date anyone on your side noticed**
-
-**The gap between them is the finding.** A three-week gap is a save that was attempted late. A seven-month gap is a detection problem, and no amount of better save-playing fixes it.
-
-Anchor the timeline on the customer's calendar rather than yours. Their budget cycle, their fiscal year, their reorganisation.
-
----
-
-## Step 3: Find the earliest genuinely detectable signal
-
-This is where postmortems go wrong, and the discipline matters more than the answer.
-
-Hindsight makes everything look obvious. The question is not "what can we now see was a sign". It is: **what was visible at the time, to someone who was looking, without knowing how it ended?**
-
-Two columns, kept honestly apart:
-
-| Was actually detectable | Only obvious in hindsight |
-| :--- | :--- |
-| The sponsor stopped replying in March | The tone of the February email |
-| A second vendor appeared in a meeting invite | They seemed less enthusiastic |
-| Seat count was not renewed at the true-up | Usage was slightly down |
-
-**Only the left column produces a change worth making.** The right column produces vigilance, which is not a system and does not survive a busy quarter.
-
-If nothing was detectable, say so. Some accounts are lost for reasons that never reach you, and recording that honestly is more useful than inventing a signal to feel in control.
-
----
-
-## Step 4: Write the mechanism as a causal chain
-
-Not a category. A chain, in three or four sentences, from what happened to non-renewal.
-
-Not this: *they churned due to low adoption.*
-
-This: *the ops team that drove most of the usage was cut in January. The remaining team used only the reporting module, which the analytics tool they bought in March already covered. The incoming operations lead had a stated consolidation mandate and we never met her.*
-
-The first is a label. The second tells you which of four different things to fix.
-
-**If the chain cannot be constructed, say the mechanism is unknown.** An unknown mechanism is a legitimate finding. A fabricated one is worse than nothing, because it produces confident changes to the wrong thing.
-
----
-
-## Step 5: Test the stated reason against the mechanism
-
-Bring back Step 1. Three possibilities:
-
-**They match.** The stated reason was the mechanism. Record it and move on, and note it, because it is less common than it should be.
-
-**The stated reason is downstream.** "Budget cuts" where the budget was cut because no value metric was ever agreed. The stated reason is true and it is not the cause.
-
-**The stated reason is a courtesy.** They did not want the conversation. Common with a sponsor who has moved on, or where the real answer would be personal.
-
-Ask the diagnostic question: **would this account have been cut if the value had been provable?** If no, the mechanism is value realisation regardless of what the exit conversation said.
-
----
-
-## Step 6: Ask when it stopped being winnable
-
-Not whether. When.
-
-Most churns pass through a point after which no amount of good work would have changed the outcome: a competitor selected, budget reallocated in planning, the notice date passed, the sponsor gone. Name it and date it.
-
-Then the useful question, which is not "could we have saved it" but **"what would have had to be true three months before that date"**. That is where a change lives.
-
----
-
-## Step 7: Check whether this was one of many
-
-The highest-leverage step, and the one that gets skipped because it takes a portfolio view rather than an account view.
-
-- **How many accounts have been lost with this mechanism in the last year?**
-- Do they share a segment, a pricing model, an onboarding cohort, an industry, or a CSM?
-
-Thirty accounts lost for the same mechanism are **one product or pricing decision**, not thirty individual failures. Treating a systemic loss as a series of individual ones produces thirty coaching conversations and no fix.
-
-If this is the first, say so, and note what would make it a pattern worth watching.
-
----
-
-## Step 8: Write the two lists
-
-Fill `assets/postmortem-template.md`.
-
-**What changes.** Specific, owned, dated. A detection change if the gap in Step 2 was long. A process change if the mechanism recurs. A product or pricing input if Step 7 found correlation.
-
-**What does not change.** Equally important and almost never written. Some losses are correctly accepted: a customer who went out of business, a genuine strategic shift, an account that was never a fit. Writing this down stops a postmortem culture turning every loss into a process change nobody follows.
-
----
+1. **Quote the stated reason, date it, name who heard it, then set it aside.** A reason given to a CSM and one given to an executive are often different reasons.
+2. **Build the timeline on the customer's calendar** (their budget cycle, reorganization, fiscal year). Mark two dates: when the loss became effectively irreversible, and when anyone on the user's side noticed. The gap is the finding.
+3. **Split signals into two columns:** detectable then (visible to someone looking, not knowing the ending) and obvious only in hindsight. Only the first column produces a change worth making. If nothing was detectable, say so.
+4. **Write the mechanism as a causal chain** in three or four sentences, from what happened to non-renewal. If it cannot be built, write "mechanism unknown" and say what would settle it.
+5. **Test the stated reason against the mechanism:** match, downstream (true but not the cause), or courtesy. Ask: would they have cut it if the value had been provable?
+6. **Name when it stopped being winnable** and what would have had to be true three months before.
+7. **Check for a pattern.** How many accounts left with this mechanism in the last year, and do they share a segment, pricing model, cohort or CSM? Then write what changes (owned, dated) and what deliberately does not.
 
 ## Output
 
-1. **The stated reason**, quoted and dated
-2. **The timeline**, with both dates and the gap between them
-3. **The mechanism**, as a causal chain, or the honest statement that it is unknown
-4. **Detectable against hindsight**, kept apart
-5. **When it stopped being winnable**
-6. **Correlation**: one of how many
-7. **What changes**, owned and dated, and **what does not**
-8. **What could not be reconstructed**
+```
+POSTMORTEM: [Account] | [ARR] | lost [date]
 
----
+Verdict: [one sentence: mechanism, and whether it was preventable]
+Stated reason: "[quote]" - [who], [date]
+Lost on [date]. Noticed on [date]. Gap: [n weeks].
+Mechanism: [3 to 4 sentences, or "unknown"]
 
-## Where the raw material comes from
+Detectable then | Hindsight only
+- [signal, date]   | - [observation]
 
-Where a product gap was the mechanism, `product-feedback` is where the finding has to land to change anything, and it needs the job rather than the feature name. Where the losses share a segment or a touch level rather than a cause, that is a `coverage-model` finding, and it is the back-test that model should be run against.
+Stated reason versus mechanism: match / downstream / courtesy
+Stopped being winnable: [date, event]
+Pattern: one of [n] with this mechanism; shared: [segment/etc.]
 
-The exit conversation is the single richest input to this analysis and it has to be asked for while the account is still winding down. `offboarding` covers getting it, and getting it honestly: separately from the commercial wind-down, with nothing being sold, recorded in their words rather than summarised. Run afterwards on a departure nobody debriefed, this skill is working from memory and the stated reason, which is the version most likely to be wrong.
+Changes: [change] | Owner | By
+Not changing: [loss accepted, and why]
 
----
+What I could not check
+- [gap]
+```
 
-## Failure modes
+A filled example is in `examples/sample.md`.
+Match its length and specificity: real dates, real counts, no placeholders in the final output.
 
-- **Producing a category.** "Low adoption" is where the analysis should start, not where it ends
-- **Hindsight dressed as detection.** If it was only visible knowing the ending, it is not a signal
-- **Laundering.** Attributing to an external event what nine months of neglect caused
-- **Blaming the person who held the account**, which reliably ends honest postmortems for everyone
-- **Skipping the correlation check** and fixing thirty times what should be fixed once
-- **Every loss producing a process change.** A postmortem that always finds a fix is not analysing, it is performing
-- **Never writing the postmortem** because the account is gone and it feels like archaeology. The account is gone. The mechanism is still running
+## Rules
 
----
+- **A category is not a mechanism.** "Low adoption" is where analysis starts; it does not tell you which of four things to fix.
+- **Hindsight is not detection.** If it was only visible knowing the ending, it builds vigilance, not a system, and vigilance does not survive a busy quarter.
+- **Laundering is the common sin.** "It was an acquisition" can hide nine months of nobody calling. Ask what the contact history looks like before the event.
+- **Do not blame the person who held the account.** It ends honest postmortems for everyone, and the process that let a gap persist is the thing to fix.
+- **Thirty losses with one mechanism is one product or pricing decision.** Treating them as thirty cases produces thirty coaching talks and no fix.
+- **Not every loss earns a process change.** A customer that went out of business was correctly lost; write that down so the next postmortem is not a performance.
+- **Unknown is a legitimate finding.** A fabricated chain produces confident changes to the wrong thing.
 
-## What good looks like
+## Related (only if installed)
 
-- The mechanism is specific enough to be wrong
-- Detectable and hindsight are visibly separated
-- The gap between losing and noticing has a number
-- The correlation question got asked
-- Something changes, and something is explicitly left alone
-- The person who held the account would still be willing to write the next one
 
----
-
-## Reference files
-
-- `assets/postmortem-template.md` - the postmortem to fill
+`offboarding` to get the exit conversation while it is still possible. `internal-ask` when the mechanism was a product gap. `coverage-model` when losses share a touch level.
