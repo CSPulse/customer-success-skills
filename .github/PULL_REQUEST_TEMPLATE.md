@@ -19,6 +19,7 @@
 - [ ] No unsourced statistic; defaults are labeled as defaults
 - [ ] No real customer, employer or personal names
 - [ ] Trigger phrases are this skill's own (see `docs/TRIGGERS.md`)
+- [ ] `python3 tools/build_readmes.py` run, with a line for any new skill in `tools/readme_why.tsv`
 - [ ] If a skill was added or removed: README tables, role bundles in `.claude-plugin/marketplace.json`, `docs/TRIGGERS.md` and `evals/routing-prompts.tsv` updated
 
 ## Anything a reviewer should look at closely
