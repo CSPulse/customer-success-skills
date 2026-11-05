@@ -2,7 +2,7 @@
 
 **Paste three lines about an account. Get the read you would defend in a forecast call.**
 
-Thirty-three skills for the work customer success actually does: renewals, escalations, hard conversations, QBRs, handoffs, forecasts and the weekly scramble. Free, MIT, and built to be argued with.
+Fifty-four skills for the work customer success actually does: the daily scramble, renewals, escalations, hard conversations, QBRs, handoffs, forecasts, the scorecard and the team. Free, MIT, and built to be argued with.
 
 Works in Claude (app, Cowork, Code) and anything that reads `SKILL.md`. No setup, no connectors, no API keys. Nothing here sends an email or touches your CRM. You press send.
 
@@ -67,7 +67,7 @@ A call, a dollar range, a named decider, evidence separated from guesses, a fals
 | **A CSM** | `csm-toolkit` | Calls, renewals, escalations, hard conversations, customer writing, your own book |
 | **A team lead** | `cs-team-lead-toolkit` | Review your team's reads, coach from a call, forecast, audit health scores, team plays |
 | **A head of CS** | `cs-leader-toolkit` | Forecast, coverage model, board retention narrative, health score design, expansion handoff |
-| **All of it** | `customer-success-skills` | Everything below |
+| **All of it** | `customer-success-skills` | Everything below (54 skills; most people want a role bundle) |
 
 ```
 /plugin marketplace add CSPulse/customer-success-skills
@@ -145,6 +145,43 @@ You do not call skills by name. You describe the situation and the right one fir
 | [`nrr-narrative`](skills/nrr-narrative) | Retention decomposed before it is narrated, with gross next to net |
 | [`csql-motion`](skills/csql-motion) | Expansion signals from CS to sales without burning the relationship |
 
+### Your day
+| Skill | The job |
+| :--- | :--- |
+| [`what-do-i-owe`](skills/what-do-i-owe) | Paste your threads, mentions and tasks; get a ranked list of what you owe, with drafts |
+| [`day-plan`](skills/day-plan) | Your day around your meetings: prep, recaps, reply sprints, a protected block, and what drops if it overruns |
+| [`status-update`](skills/status-update) | Standup, weekly update or end-of-day wrap from rough notes, outcomes first |
+| [`commitments`](skills/commitments) | Every promise from a call or thread, both sides, with owners and dates |
+
+### Prove value and grow accounts
+| Skill | The job |
+| :--- | :--- |
+| [`value-ledger`](skills/value-ledger) | Goals with baselines and the proof you are hitting them, ready for the QBR and the renewal |
+| [`adoption-plan`](skills/adoption-plan) | Low or stalled usage diagnosed by cause, then a 30 day plan matched to it |
+| [`account-review`](skills/account-review) | The monthly account on a page, same shape every time so change shows |
+| [`mutual-action-plan`](skills/mutual-action-plan) | A shared plan where the customer owns rows too |
+| [`expansion-scan`](skills/expansion-scan) | Scan your book for expansion signals, ranked and sized conservatively |
+| [`usage-email`](skills/usage-email) | The monthly usage email to your champion, from the numbers |
+| [`survey-follow-up`](skills/survey-follow-up) | Act on an NPS or CSAT response: detractor, passive or promoter |
+| [`voice-of-customer`](skills/voice-of-customer) | Themes across accounts, counted by accounts and ARR, ready for product |
+
+### Save, price and collect
+| Skill | The job |
+| :--- | :--- |
+| [`save-plan`](skills/save-plan) | A 30 day save plan when there is still a window, with a day-15 go or no-go |
+| [`price-increase`](skills/price-increase) | A price increase as a program: segments, notice, message, concession ladder |
+| [`invoice-chase`](skills/invoice-chase) | The overdue invoice: likely cause, right recipient, the draft, the next step |
+| [`sales-handoff`](skills/sales-handoff) | The closed-won handoff: promises verified, goals captured, kickoff planned |
+
+### Lead a team or the function (more)
+| Skill | The job |
+| :--- | :--- |
+| [`cs-scorecard`](skills/cs-scorecard) | The metrics at three levels with exact definitions, what each hides, and your numbers computed |
+| [`team-rollup`](skills/team-rollup) | The weekly summary upward: asks first, risks early, no surprises |
+| [`book-review`](skills/book-review) | Monthly or quarterly review of a whole book, ending in three decisions |
+| [`csm-ramp`](skills/csm-ramp) | A 30/60/90 ramp for a new CSM, and the manager's checklist |
+| [`csm-hiring`](skills/csm-hiring) | A CSM interview kit: scorecard, questions with signals, a work sample and rubric |
+
 ### Shared
 | Skill | The job |
 | :--- | :--- |
@@ -156,6 +193,7 @@ You do not call skills by name. You describe the situation and the right one fir
 ## Why these are different
 
 - **Short and executable.** Each skill is a page of instructions, not an essay. They load fast and they behave the same way twice.
+- **Covers the whole job.** The big moments and the daily grind: what you owe, your day, your update, your scorecard, your hiring.
 - **Every skill ships a filled example.** Open any `skills/<name>/examples/sample.md` and see exactly what you will get before you install.
 - **Verdict first.** The call, the draft or the answer leads. The reasoning follows.
 - **Evidence is tagged.** Facts are `said`, `seen` or `inferred`, so a guess never passes as a finding.
