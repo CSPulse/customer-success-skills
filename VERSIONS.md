@@ -1,5 +1,9 @@
 # Versions
 
+## 2.1.1
+
+Restored a `README.md` in every skill folder, as a standalone landing page for the skill. They are generated from each skill's own `SKILL.md` by `tools/build_readmes.py`, so a README cannot disagree with its skill, and `tools/check.py` fails if one is missing or out of date. Closes #47.
+
 ## 2.1.0
 
 Twenty-one new skills covering the daily work, proof of value, money and the team, found by mapping the whole job of a CSM, a team lead and a head of CS. 54 skills in total.
@@ -23,7 +27,7 @@ A rebuild, based on an audit of the 1.x library and research into how customer s
 - Role bundles: `csm-toolkit`, `cs-team-lead-toolkit`, `cs-leader-toolkit`. The `customer-success-skills` plugin still installs everything.
 - Removed invented statistics and author-specific style rules.
 - New `tools/check.py` replaces `validate-skills.py` and enforces the spec, including trigger phrase collisions.
-- Removed per-skill READMEs. The root README is the catalog.
+- Removed per-skill READMEs. Restored in 2.1.1.
 
 ## 1.4.0 and earlier
 
