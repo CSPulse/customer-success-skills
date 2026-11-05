@@ -1,5 +1,15 @@
 # Versions
 
+## 2.1.0
+
+Twenty-one new skills covering the daily work, proof of value, money and the team, found by mapping the whole job of a CSM, a team lead and a head of CS. 54 skills in total.
+
+- **Your day:** `what-do-i-owe`, `day-plan`, `status-update`, `commitments`.
+- **Prove value and grow:** `value-ledger`, `adoption-plan`, `account-review`, `mutual-action-plan`, `expansion-scan`, `usage-email`, `survey-follow-up`, `voice-of-customer`.
+- **Save, price and collect:** `save-plan`, `price-increase`, `invoice-chase`, `sales-handoff`.
+- **Lead a team or the function:** `cs-scorecard`, `team-rollup`, `book-review`, `csm-ramp`, `csm-hiring`.
+- Role bundles, the `cs-start` router, README, trigger map and the routing test prompts updated to match.
+
 ## 2.0.0
 
 A rebuild, based on an audit of the 1.x library and research into how customer success work is done and how other skill libraries are used.
