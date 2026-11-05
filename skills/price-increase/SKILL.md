@@ -1,7 +1,7 @@
 ---
 name: price-increase
 description: >
-  Use when the user says "price increase", "renewal uplift", "raise prices on my book", "which accounts do we protect", "notice period for the increase", "price rise letter". Designs the whole program, not one conversation: a segmentation table, a notice timeline from contract terms, one message draft, a concession ladder set in advance, and how to monitor the cost. Not for the live conversation with one customer (use hard-conversation) or a broadcast about a changed plan (use customer-update).
+  Use when the user says "price increase", "renewal uplift", "raise prices on my book", "which accounts do we protect", "notice period for the increase", "price rise letter". Designs the whole program, not one conversation: a segmentation table, a notice timeline from contract terms, one message draft, a concession ladder set in advance, and how to monitor the cost. Not for just writing the announcement or a broadcast notice (use customer-update) or the live conversation with one customer (use hard-conversation).
 ---
 
 # Price Increase
