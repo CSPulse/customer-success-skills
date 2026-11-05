@@ -8,7 +8,7 @@
 
 ## Objective
 
-*One or two. In their words, not ours. "Drive adoption" is our goal about their behaviour, not their objective.*
+*One or two. In their words, not ours. "Drive adoption" is our goal about their behavior, not their objective.*
 
 | | Objective 1 | Objective 2 |
 | :--- | :--- | :--- |

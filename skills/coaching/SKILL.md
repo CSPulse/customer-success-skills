@@ -1,155 +1,76 @@
 ---
 name: coaching
 description: >
-  Runs the one-to-one, the call review and the development conversation so behaviour changes rather than gets described. Trigger whenever the user says "coaching", "coach my team", "call review", "one to one", "1:1", "development conversation", "my CSM is struggling", "how do I give feedback on this call", "performance conversation", "they are not improving", "skill gap on my team", or is preparing to give a colleague feedback on how they work. It diagnoses whether the problem is skill, will, knowledge or environment before choosing an approach, works on one behaviour at a time, asks for self-assessment first, and rehearses rather than advises. Use portfolio-review for the meeting where reads are calibrated, which is not a coaching meeting and should not host one.
+  Use when the user says "coach my CSM", "feedback on this call", "call review", "my CSM keeps making the same mistake", "how do I give feedback on", or pastes a call transcript or a few sentences on what they saw. Produces a one page prep sheet for the conversation: diagnosis (skill, knowledge, will, environment), the single behavior, the opening self-assessment question, the quoted moment, two rehearsal prompts and the next-observation date. Not for calibrating account reads across a team (use portfolio-review) or writing the customer recap (use call-recap).
 ---
 
 # Coaching
 
-Most call reviews describe what happened. The person hears an accurate account of a call they were on, agrees with it, and does the same thing next time.
+A one page prep sheet for the manager, so the conversation changes one behavior instead of describing a call.
 
-The difference between describing and coaching is small and specific: **one behaviour, self-assessed first, rehearsed rather than advised, and observed again.** All four, or it is a conversation.
+## Start here
 
-The failure this exists to prevent: **the list of six things.** Comprehensive, fair, accurate, and impossible to act on. A list of six improvements is a list of zero.
+If the user pasted a transcript, or gave about three sentences on what they saw (who, what happened, what the customer did), go straight to "Do this".
 
----
+Otherwise ask for these in ONE message, then proceed with whatever comes back:
 
-## What this needs
+1. What you saw: the call or artifact, and the moment that bothered you
+2. Whether the person has done this well before, here or elsewhere
+3. Their book size and what they are measured on
 
-**Shared context.** If an `account-context` document exists, read it first so the coaching is about the job here rather than about customer success generally. Where it is absent, carry on.
+Never coach on rumor: if the user only has a secondhand report, say so under "What I could not check" and build the sheet from what exists. If an "Account context" block exists in the conversation, use it.
 
-**Minimum: something you observed.** A call, a written piece, a meeting. Coaching on report is coaching on rumour.
+## Do this
 
-**Better with** the recording or the artefact itself, so the conversation is about a specific moment rather than an impression, and with previous coaching notes so you are not restarting.
-
-**Best with** a pattern across several observations, because one call tells you about a call and three tell you about a person.
-
----
-
-## Step 1: Diagnose before you coach
-
-Four different problems wear the same clothes, and the wrong diagnosis is why coaching fails while everyone tries hard.
-
-- **Skill.** They do not know how. Coaching works: model it, rehearse it, observe it
-- **Knowledge.** They do not know the product, the segment or the account. Coaching does not work. Teaching does, and it is faster
-- **Will.** They know how and are not doing it. Coaching does not work either. This is a motivation, expectation or fit conversation, and disguising it as skill coaching wastes months and insults the person
-- **Environment.** They cannot do it. The book is too big, the tooling does not support it, the incentive rewards something else. **Coaching an environment problem is the most damaging error available**, because it tells someone that a structural failure is their personal deficiency
-
-Ask one question to separate them: **have you done this before, somewhere it worked?** Yes means skill is not the issue. Then ask what stops them here.
-
-Environment is the most commonly misdiagnosed of the four, and it is the manager's own problem in disguise.
-
-## Step 2: Pick one behaviour
-
-Not one topic. One behaviour, observable, that you could see happen or not happen next time.
-
-Bad: "be more consultative", "build better relationships", "have more executive presence". None can be observed and none can be practised.
-
-Good: "ask what outcome they need before you show anything", "when they go quiet, wait rather than filling it", "end every call by naming the next step and who owns it".
-
-**Choose the one with the highest leverage, not the most obvious.** Often the most visible weakness is downstream of something earlier. A recap email that misses things is usually a listening problem in the call, and coaching the email fixes nothing.
-
-## Step 3: Ask for the self-assessment first
-
-Open with their read, always. "How do you think that went, and what would you do differently?"
-
-Two reasons, and the second is the important one. Most people name the thing themselves, and a thing you named yourself is one you act on. And where they do not name it, the gap between their read and yours **is the actual finding**, and it is a bigger one than the behaviour you came in with.
-
-Where the self-assessment is accurate and the behaviour still is not changing, you are in Step 1 territory again and it is probably will or environment.
-
-## Step 4: Be specific about behaviour, never about the person
-
-- **The moment.** "At eleven minutes, when they asked about the integration" rather than "you tend to"
-- **What happened**, described neutrally, without an adjective doing the work
-- **The consequence**, in terms of the outcome rather than your preference. "So the call ended without a date" beats "which was not ideal"
-- **Never the character.** "You did not ask what outcome they wanted" is coachable. "You are not curious enough" is a verdict about a person, and it is unfalsifiable and unactionable
-
-The test: **could they act on this tomorrow?** If not, it is not feedback yet.
-
-## Step 5: Rehearse, do not advise
-
-The step that is almost always skipped, and the one that makes the difference.
-
-Advice is understood and forgotten. **Practice is retained.** So do it in the room:
-
-- "Say the sentence you would open with"
-- "They just told you the budget is frozen. Go"
-- Let it be awkward. It is meant to be
-
-Two minutes of rehearsal beats twenty of explanation, and it also surfaces whether this is really a skill problem, because someone who can produce the behaviour on demand has a different problem.
-
-## Step 6: Agree the observation, or it did not happen
-
-Coaching with no next observation is a conversation with a nice feeling attached.
-
-- **What they will do**, in their words, not yours
-- **Where you will see it.** A named call, a specific document, a date
-- **When you will talk about it again**
-
-Then actually observe it. **The single largest reason coaching fails is that nobody looks again**, which teaches the whole team that these conversations are ceremonial.
-
-## Step 7: Keep it out of the wrong meetings
-
-- **Not in a portfolio review.** Coaching in front of peers is a performance, and it teaches everyone else to bring safe work
-- **Not in a forecast call.** Mixing "is this number right" with "are you good at this" corrupts both, and the forecast is the one that degrades first, because people start managing the number to avoid the second conversation
-- **Not in the same conversation as compensation or performance rating.** Nothing said after money is mentioned is heard as development
-
-Its own meeting, short, regular, and about them.
-
----
+1. **Diagnose before choosing an approach.** Skill (does not know how): coach it. Knowledge (does not know the product or segment): teach it, faster. Will (knows how, not doing it): that is an expectations or fit conversation, not coaching. Environment (book too big, wrong incentive, missing tooling): that is the manager's problem. Give the evidence for the call and the one question that tests it: "have you done this before, somewhere it worked?"
+2. **Pick one behavior.** Observable and repeatable, such as "ask what outcome they need before showing anything". Choose the highest leverage one, which is often upstream of the visible miss. Cut the rest on purpose.
+3. **Write the opening self-assessment question** in the manager's voice: "How do you think that went, and what would you do differently?" Say what each likely answer tells you.
+4. **Quote the moment.** A timestamp or line, what was said, the neutral description and the consequence in outcome terms. Never a trait.
+5. **Write two rehearsal prompts** to run in the room, aloud, such as a customer line to answer cold. Tell the manager to let it be awkward.
+6. **Set the next observation:** the named call or document, a date, and the follow-up conversation date. Flag anything that is an environment problem and therefore the manager's to fix.
 
 ## Output
 
-1. **The diagnosis**: skill, knowledge, will or environment, and the evidence
-2. **The one behaviour**, observable, and why this one has the highest leverage
-3. **Their self-assessment**, and the gap between it and yours if there is one
-4. **The specific moment**, described neutrally, with the consequence
-5. **The rehearsal**, done in the room
-6. **The commitment**, in their words, and where you will observe it
-7. **The date you will look again**
-8. **What is an environment problem and therefore yours**, named as such
+Use this skeleton. It must fit one page.
 
----
+```
+COACHING PREP: [Name], [role] | observed [call or artifact, date]
 
-## Failure modes
+Call: COACH / TEACH / PERFORMANCE CONVERSATION / FIX THE ENVIRONMENT
+Diagnosis: skill / knowledge / will / environment - [evidence, said / seen / inferred]
 
-- **Describing the call.** Accurate, agreed, and nothing changes
-- **Six improvements**, which is zero
-- **Coaching a knowledge gap**, when teaching would take twenty minutes
-- **Coaching a will problem**, which wastes months and reads as evasive to the person
-- **Coaching an environment problem**, which tells someone a structural failure is their fault. The most damaging error here
-- **Unobservable behaviours.** "Be more strategic" cannot be practised or seen
-- **Coaching the visible symptom** rather than the upstream cause
-- **Skipping the self-assessment**, and losing the most informative thing in the meeting
-- **Feedback about the person** rather than about the behaviour
-- **Advising instead of rehearsing.** Understood and forgotten
-- **Never observing again**, which makes the whole thing ceremonial
-- **Coaching in a forecast or portfolio meeting**, which corrupts both and degrades the forecast first
+The one behavior: [observable, one sentence]. Why this one: [leverage]
 
----
+Open with: "[self-assessment question]"
+If they name it: [what to do]. If they do not: [the gap is the finding]
 
-## What good looks like
+The moment: [timestamp] "[quote]" 
+What happened: [neutral]. Consequence: [outcome]
 
-- The diagnosis happened before the coaching, and sometimes the answer was that coaching was the wrong tool
-- Exactly one behaviour was worked on
-- They named it themselves, or the gap between their read and yours became the conversation
-- The feedback pointed at a moment, not at a tendency
-- Something was rehearsed out loud, awkwardly
-- There is a named place you will see it next, and a date
-- You went and looked
-- Anything that turned out to be environment was named as yours
+Rehearse
+1. "[prompt]"
+2. "[prompt]"
 
----
+Next observation: [call or document] on [date]. Follow-up conversation: [date]
+Mine to fix: [environment items, or none]
 
-## Related skills
+What I could not check
+- [gap]
+```
 
-- `portfolio-review` for the read-calibration meeting, which surfaces coaching needs and must not host them
-- `call-recap` and `call-prep` for the artefacts most call coaching is about
-- `coverage-model` when what looks like a performance problem is a book that cannot be covered
-- `internal-escalation` when the environment problem needs fixing above you
+A filled example is in `examples/sample.md`. Match its length.
 
----
+## Rules
 
-## Supporting files
+- **One behavior, never six.** A list of six improvements is accurate, fair and impossible to act on, so nothing changes.
+- **Diagnose first.** Coaching a knowledge gap wastes weeks, coaching a will problem insults the person, and coaching an environment problem tells someone a structural failure is their fault.
+- **Self-assessment before feedback.** A thing they name themselves is one they act on, and where they do not, the gap between their read and yours is the real finding.
+- **Describe the moment, never the person.** "You did not ask what outcome they wanted" can be acted on tomorrow. "You are not curious enough" cannot be argued with or acted on.
+- **Rehearse, do not advise.** Advice is understood and forgotten, and two minutes of practice out loud also shows whether it is really a skill problem.
+- **Coach the cause upstream.** A weak recap email is usually a listening problem in the call, so fixing the email fixes nothing.
+- **No next observation means it did not happen.** If nobody looks again, the team learns these conversations are ceremony.
+- **Keep it out of forecast and portfolio meetings and away from pay talk.** Mixing "is this number right" with "are you good" corrupts both, and nothing said after money is heard as development.
 
-None. The output is a diagnosis, one behaviour and a date, and a template would encourage the list of six this skill exists to prevent.
+## Related (only if installed)
+
+`portfolio-review` for calibrating reads across a team. `call-recap` for the artifact most call coaching is about. `coverage-model` when the performance problem is a book that cannot be covered.
