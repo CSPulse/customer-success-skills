@@ -2,7 +2,7 @@
 
 Which phrases each skill owns, and where it hands off. Generated from the skill descriptions; `tools/check.py` fails if two skills claim the same phrase.
 
-When a user's wording could fit two skills, the 'Not for' column says who wins. Routing is tested against `evals/routing-prompts.tsv` by giving a blind router only the descriptions and comparing its choices to the expected skill (82 of 83 first-choice matches across all 54 skills at last run; the miss was an ambiguous prompt, now clarified).
+When a user's wording could fit two skills, the 'Not for' column says who wins. Routing is tested against `evals/routing-prompts.tsv` by giving a blind router only the descriptions and comparing its choices to the expected skill (82 of 83 first-choice matches at last run; the miss was an ambiguous prompt, now clarified).
 
 | Skill | Owns these phrases | Not for |
 | :--- | :--- | :--- |
