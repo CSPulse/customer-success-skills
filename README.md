@@ -2,7 +2,7 @@
 
 **Paste three lines about an account. Get the read you would defend in a forecast call.**
 
-Fifty-four skills for the work customer success actually does: the daily scramble, renewals, escalations, hard conversations, QBRs, handoffs, forecasts, the scorecard and the team. Free, MIT, and built to be argued with.
+Skills for the work customer success actually does: the daily scramble, renewals, escalations, hard conversations, QBRs, handoffs, forecasts, the scorecard and the team. Free, MIT, and built to be argued with.
 
 Works in Claude (app, Cowork, Code) and anything that reads `SKILL.md`. No setup, no connectors, no API keys. Nothing here sends an email or touches your CRM. You press send.
 
@@ -67,7 +67,7 @@ A call, a dollar range, a named decider, evidence separated from guesses, a fals
 | **A CSM** | `csm-toolkit` | Calls, renewals, escalations, hard conversations, customer writing, your own book |
 | **A team lead** | `cs-team-lead-toolkit` | Review your team's reads, coach from a call, forecast, audit health scores, team plays |
 | **A head of CS** | `cs-leader-toolkit` | Forecast, coverage model, board retention narrative, health score design, expansion handoff |
-| **All of it** | `customer-success-skills` | Everything below (54 skills; most people want a role bundle) |
+| **All of it** | `customer-success-skills` | Everything below (most people want a role bundle) |
 
 ```
 /plugin marketplace add CSPulse/customer-success-skills
